@@ -103,7 +103,7 @@ export function MenuScreen({
             <path d="M16 10a4 4 0 01-8 0"/>
           </svg>
           {cartCount > 0 && (
-            <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5">
+            <span key={cartCount} className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 animate-badge-pop">
               {cartCount}
             </span>
           )}
@@ -181,8 +181,8 @@ export function MenuScreen({
             </p>
           </div>
         ) : (
-          <div className="divide-y divide-white/5">
-            {dishes.map((dish) => (
+          <div className="divide-y divide-white/5" key={activeCategory}>
+            {dishes.map((dish, i) => (
               <DishRow
                 key={dish.id}
                 dish={dish}
@@ -191,6 +191,7 @@ export function MenuScreen({
                 onAddToCart={() => onAddToCart(dish)}
                 onDetail={() => setOpenDish(dish)}
                 onReel={() => onReelOpen(dish.id)}
+                style={{ animationDelay: `${i * 45}ms` }}
               />
             ))}
           </div>
@@ -238,6 +239,7 @@ interface DishRowProps {
   onAddToCart: () => void;
   onDetail: () => void;
   onReel: () => void;
+  style?: React.CSSProperties;
 }
 
 function DishRow({
@@ -247,8 +249,10 @@ function DishRow({
   onAddToCart,
   onDetail,
   onReel,
+  style,
 }: DishRowProps) {
   const [added, setAdded] = useState(false);
+  const [justFaved, setJustFaved] = useState(false);
 
   function handleAdd() {
     onAddToCart();
@@ -256,9 +260,18 @@ function DishRow({
     setTimeout(() => setAdded(false), 1800);
   }
 
+  function handleFav() {
+    if (!isFav) {
+      setJustFaved(true);
+      setTimeout(() => setJustFaved(false), 500);
+    }
+    onToggleFav();
+  }
+
   return (
     <div
-      className="flex gap-3 px-4 py-4 active:bg-white/3 transition-colors cursor-pointer"
+      className="flex gap-3 px-4 py-4 active:bg-white/3 transition-colors cursor-pointer animate-dish-in"
+      style={style}
       onClick={onDetail}
     >
       {/* Thumbnail */}
@@ -325,11 +338,17 @@ function DishRow({
           <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
             {/* Fav */}
             <button
-              onClick={onToggleFav}
+              onClick={handleFav}
               className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
               aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill={isFav ? "hsl(var(--primary))" : "none"} stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="16" height="16" viewBox="0 0 24 24"
+                fill={isFav ? "hsl(var(--primary))" : "none"}
+                stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"}
+                strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+                className={justFaved ? "animate-heart-pop" : ""}
+              >
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
               </svg>
             </button>

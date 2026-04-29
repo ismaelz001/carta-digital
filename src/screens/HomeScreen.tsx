@@ -1,6 +1,13 @@
 import { useConfig } from "@/context/ConfigContext";
 import type { CartItem } from "@/pages/Index";
 
+function useGreeting(): string {
+  const h = new Date().getHours();
+  if (h < 13) return "Buenos días";
+  if (h < 20) return "Buenas tardes";
+  return "Buenas noches";
+}
+
 interface Props {
   cartCount: number;
   onCartOpen: () => void;
@@ -16,6 +23,7 @@ export function HomeScreen({
   onReelOpen,
 }: Props) {
   const config = useConfig();
+  const greeting = useGreeting();
 
   return (
     <div className="flex flex-col h-[100dvh] overflow-hidden bg-app">
@@ -63,7 +71,7 @@ export function HomeScreen({
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
             {cartCount > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-[10px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 leading-none">
+              <span key={cartCount} className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-[10px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 leading-none animate-badge-pop">
                 {cartCount}
               </span>
             )}
@@ -113,7 +121,7 @@ export function HomeScreen({
       {/* ── Category cards ── */}
       <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col min-h-0">
         <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/50 mb-4 flex-shrink-0">
-          Explora la carta
+          {greeting} · Explora la carta
         </p>
 
         <div className="grid grid-cols-2 gap-3 px-4 pb-6">
