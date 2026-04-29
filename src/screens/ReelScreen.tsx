@@ -36,6 +36,14 @@ export function ReelScreen({
     setShowInfo(false);
   }, [currentIdx]);
 
+  // Reset to first slide when category changes
+  useEffect(() => {
+    setCurrentIdx(0);
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
+  }, [activeCategory]);
+
   const dishes = config.dishes.filter(
     (d) => d.category === activeCategory && d.available !== false
   );
@@ -291,6 +299,7 @@ function ReelSlide({
           loop
           playsInline
           preload="auto"
+          poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         />
       ) : (
         <img
