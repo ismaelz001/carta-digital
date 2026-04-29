@@ -41,7 +41,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/12 transition-colors"
+            className="w-11 h-11 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/12 transition-colors"
             aria-label="Cerrar"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">

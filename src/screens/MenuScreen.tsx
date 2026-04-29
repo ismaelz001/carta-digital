@@ -56,7 +56,7 @@ export function MenuScreen({
         {/* Back */}
         <button
           onClick={onBack}
-          className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors min-w-[60px]"
+          className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors min-h-[44px] px-1"
           aria-label="Volver al inicio"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -74,7 +74,7 @@ export function MenuScreen({
                 onClick={() => {
                   onCategoryChange(cat.id);
                 }}
-                className={`px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-wide transition-all whitespace-nowrap ${
+                className={`px-4 min-h-[44px] rounded-full text-[11px] font-semibold uppercase tracking-wide transition-all whitespace-nowrap ${
                   cat.id === activeCategory && !filterFavs
                     ? "bg-primary text-white"
                     : "text-white/50 hover:text-white/80"
@@ -89,7 +89,7 @@ export function MenuScreen({
         {/* Cart */}
         <button
           onClick={onCartOpen}
-          className="relative text-white/70 hover:text-white transition-colors flex-shrink-0"
+          className="relative text-white/70 hover:text-white transition-colors flex-shrink-0 w-11 h-11 flex items-center justify-center -mr-2"
           aria-label="Mi lista"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -114,7 +114,7 @@ export function MenuScreen({
           {config.dishes.some((d) => d.category === activeCategory && d.video) && (
             <button
               onClick={() => onReelOpen()}
-              className="flex items-center gap-1.5 text-[11px] font-medium text-primary border border-primary/30 px-3 py-1.5 rounded-full hover:bg-primary/10 transition-colors"
+              className="flex items-center gap-1.5 text-[11px] font-medium text-primary border border-primary/30 px-3 min-h-[44px] rounded-full hover:bg-primary/10 transition-colors"
             >
               <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
                 <polygon points="2,1 9,5 2,9"/>
@@ -237,7 +237,7 @@ function DishRow({
             }}
             aria-label="Ver vídeo"
           >
-            <div className="w-7 h-7 rounded-full bg-black/60 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-black/60 flex items-center justify-center">
               <svg width="9" height="10" viewBox="0 0 9 10" fill="white">
                 <polygon points="1,0.5 8.5,5 1,9.5"/>
               </svg>
@@ -285,7 +285,7 @@ function DishRow({
             {/* Fav */}
             <button
               onClick={onToggleFav}
-              className="p-1.5 rounded-full hover:bg-white/8 transition-colors"
+              className="w-11 h-11 rounded-full flex items-center justify-center hover:bg-white/8 transition-colors"
               aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill={isFav ? "hsl(var(--primary))" : "none"} stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -296,7 +296,7 @@ function DishRow({
             {/* Info */}
             <button
               onClick={onDetail}
-              className="p-1.5 rounded-full hover:bg-white/8 transition-colors"
+              className="w-11 h-11 rounded-full flex items-center justify-center hover:bg-white/8 transition-colors"
               aria-label="Ver detalles"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -309,7 +309,7 @@ function DishRow({
             {/* Add */}
             <button
               onClick={onAddToCart}
-              className="bg-primary text-white text-[11px] font-bold px-3 py-1.5 rounded-full hover:bg-primary/80 transition-colors uppercase tracking-wide"
+              className="bg-primary text-white text-[11px] font-bold px-3 min-h-[44px] rounded-full hover:bg-primary/80 transition-colors uppercase tracking-wide"
             >
               Añadir
             </button>

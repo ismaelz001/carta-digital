@@ -215,7 +215,7 @@ export function HomeScreen({
 
         {/* Season label — al final del scroll */}
         {config.season && (
-          <p className="text-center text-[10px] uppercase tracking-widest text-white/40 py-4">
+          <p className="text-center text-[10px] uppercase tracking-widest text-white/50 py-4">
             {config.season}
           </p>
         )}
