@@ -105,10 +105,23 @@ export function HomeScreen({
         </div>
       </div>
 
-      {/* ── Logo + Name ── */}
-      <div className="flex flex-col items-center pt-4 pb-6 flex-shrink-0 landscape:pt-2 landscape:pb-3">
+      {/* ── Logo + Name (hero con fondo vintage) ── */}
+      <div className="relative flex flex-col items-center pt-4 pb-6 flex-shrink-0 landscape:pt-2 landscape:pb-3 overflow-hidden">
+        {/* Imagen vintage de fondo */}
+        <img
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=55&auto=format"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+          style={{ opacity: 0.055, filter: 'saturate(0.3) sepia(0.5) brightness(0.7)' }}
+        />
+        {/* Vigneta que funde los bordes con el bg de la app */}
         <div
-          className="w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center"
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, hsl(20 7% 6%) 80%)' }}
+        />
+        <div
+          className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center"
           style={{ boxShadow: "0 0 0 6px rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.5)" }}
         >
           {config.logo ? (
@@ -124,18 +137,18 @@ export function HomeScreen({
           )}
         </div>
 
-        <h1 className="font-display text-[22px] landscape:text-lg font-light text-white tracking-wide text-center px-4">
+        <h1 className="relative z-10 w-full font-display text-[22px] landscape:text-lg font-light text-white tracking-wide text-center px-4">
           {config.name}
         </h1>
         {config.tagline && (
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1 text-center px-4">
+          <p className="relative z-10 w-full text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1 text-center px-4">
             {config.tagline}
           </p>
         )}
 
         {/* Event banner */}
         {config.eventBanner?.active && (
-          <div className="mt-4 mx-6 px-4 py-2 rounded-xl bg-primary/15 border border-primary/25 text-center">
+          <div className="relative z-10 mt-4 mx-6 px-4 py-2 rounded-xl bg-primary/15 border border-primary/25 text-center">
             <p className="text-[12px] text-primary font-medium">
               {config.eventBanner.emoji && `${config.eventBanner.emoji} `}
               {config.eventBanner.text}
@@ -150,7 +163,7 @@ export function HomeScreen({
           {greeting} · Explora la carta
         </p>
 
-        <div className="grid grid-cols-2 gap-3 px-4 pb-6 md:grid-cols-4 md:max-w-3xl md:mx-auto md:w-full">
+        <div className="grid grid-cols-2 gap-3 px-4 pb-6">
           {config.categories.map((cat, i) => {
             const hasDishes = config.dishes.some(
               (d) => d.category === cat.id && d.available !== false
