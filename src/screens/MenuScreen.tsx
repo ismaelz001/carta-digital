@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useConfig } from "@/context/ConfigContext";
 import type { Dish } from "@/types/config";
 import type { CartItem } from "@/pages/Index";
+import { DailyMenuCard } from "@/components/app/DailyMenuCard";
 
 interface Props {
   activeCategory: string;
@@ -121,6 +122,13 @@ export function MenuScreen({
               Ver en vídeo
             </button>
           )}
+        </div>
+      )}
+
+      {/* ── Menú del día ── */}
+      {!filterFavs && config.dailyMenu?.active && (
+        <div className="py-3">
+          <DailyMenuCard menu={config.dailyMenu} />
         </div>
       )}
 

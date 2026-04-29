@@ -256,6 +256,11 @@ function ReelSlide({
           src={dish.image}
           alt={dish.name}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            animation: isActive
+              ? "ken-burns 8s ease-in-out infinite alternate"
+              : "none",
+          }}
         />
       )}
 

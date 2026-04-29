@@ -66,7 +66,7 @@
       "id": "postres",
       "label": "Postres",
       "subtitle": "Dulce final",
-      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80"
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80"
     },
     {
       "id": "bebidas",
@@ -87,7 +87,8 @@
       "tags": ["Vegetariano", "Sin gluten"],
       "signature": true,
       "popular": true,
-      "available": true
+      "available": true,
+      "video": "./assets/videos/desayuno-1.mp4"
     },
     {
       "id": "tuna",
@@ -119,7 +120,8 @@
       "image": "./assets/dish-ribeye.jpg",
       "signature": true,
       "popular": true,
-      "available": true
+      "available": true,
+      "video": "./assets/videos/desayuno-2.mp4"
     },
     {
       "id": "seabass",
@@ -140,7 +142,8 @@
       "image": "./assets/dish-fondant.jpg",
       "signature": true,
       "popular": true,
-      "available": true
+      "available": true,
+      "video": "./assets/videos/desayuno-3.mp4"
     },
     {
       "id": "tiramisu",
