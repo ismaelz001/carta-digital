@@ -84,8 +84,8 @@ export function HomeScreen({
               className="w-full h-full object-cover"
             />
           ) : (
-            <span className="font-display text-4xl font-light text-white/90">
-              {config.initials ?? config.name.charAt(0)}
+            <span className="font-display text-3xl font-light text-white/85 tracking-wide">
+              {config.initials ?? config.name.slice(0, 2).toUpperCase()}
             </span>
           )}
         </div>
@@ -94,7 +94,7 @@ export function HomeScreen({
           {config.name}
         </h1>
         {config.tagline && (
-          <p className="text-[11px] uppercase tracking-[0.18em] text-white/40 mt-1 text-center px-4">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1 text-center px-4">
             {config.tagline}
           </p>
         )}
@@ -204,7 +204,7 @@ export function HomeScreen({
                       Ver en vídeo
                     </button>
                   )}
-                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full uppercase tracking-[0.12em] text-shadow pointer-events-none">
+                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full tracking-[0.08em] text-shadow pointer-events-none">
                     {cat.label}
                   </span>
                 </div>

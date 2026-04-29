@@ -14,9 +14,9 @@ export function DailyMenuCard({ menu }: Props) {
     <div
       className="mx-4 mb-1 rounded-2xl overflow-hidden cursor-pointer select-none"
       style={{
-        background: "linear-gradient(135deg, #1a0f07 0%, #2d1408 50%, #1a0f07 100%)",
-        border: "1px solid rgba(229,71,42,0.3)",
-        boxShadow: "0 0 0 1px rgba(229,71,42,0.08), 0 8px 32px rgba(0,0,0,0.4)",
+        background: "linear-gradient(135deg, hsl(20 30% 8%) 0%, hsl(14 35% 11%) 50%, hsl(20 30% 8%) 100%)",
+        border: "1px solid rgba(229,71,42,0.25)",
+        boxShadow: "0 0 0 1px rgba(229,71,42,0.06), 0 6px 24px rgba(0,0,0,0.35)",
       }}
       onClick={() => setExpanded((v) => !v)}
     >

@@ -297,7 +297,7 @@ function DishRow({
       {/* Info */}
       <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-white leading-tight">
+          <h3 className="text-sm font-semibold text-white leading-tight tracking-wide">
             {dish.name}
           </h3>
           <p className="text-[11px] text-white/50 mt-1 leading-relaxed line-clamp-2">
@@ -308,7 +308,7 @@ function DishRow({
               {dish.tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="text-[9px] text-white/40 border border-white/10 px-1.5 py-0.5 rounded-full"
+                  className="text-[9px] font-medium text-primary/70 bg-primary/10 px-1.5 py-0.5 rounded-full"
                 >
                   {tag}
                 </span>
@@ -318,7 +318,7 @@ function DishRow({
         </div>
 
         <div className="flex items-center justify-between mt-2">
-          <span className="text-base font-semibold text-white">
+          <span className="text-base font-semibold text-white tabular-nums">
             {dish.price.toFixed(2).replace(".", ",")}€
           </span>
 
@@ -326,7 +326,7 @@ function DishRow({
             {/* Fav */}
             <button
               onClick={onToggleFav}
-              className="w-11 h-11 rounded-full flex items-center justify-center hover:bg-white/8 transition-colors"
+              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
               aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill={isFav ? "hsl(var(--primary))" : "none"} stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -337,7 +337,7 @@ function DishRow({
             {/* Info */}
             <button
               onClick={onDetail}
-              className="w-11 h-11 rounded-full flex items-center justify-center hover:bg-white/8 transition-colors"
+              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
               aria-label="Ver detalles"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

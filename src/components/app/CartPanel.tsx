@@ -81,7 +81,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
 
                   {/* Info */}
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-white truncate">
+                    <p className="text-sm font-semibold text-white truncate">
                       {dish.name}
                     </p>
                     <p className="text-[12px] text-white/50 mt-0.5">
@@ -118,7 +118,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
                   {/* Remove */}
                   <button
                     onClick={() => onRemove(dish.id)}
-                    className="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 transition-colors text-white/30 flex-shrink-0"
+                    className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 transition-colors text-white/30 flex-shrink-0"
                     aria-label={`Eliminar ${dish.name}`}
                   >
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
@@ -137,7 +137,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
           <div className="flex-shrink-0 border-t border-white/8 px-5 py-5 pb-safe-bottom" style={{ paddingBottom: "max(env(safe-area-inset-bottom), 20px)" }}>
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm text-white/60">Total estimado</span>
-              <span className="text-lg font-semibold text-white">
+              <span className="text-lg font-semibold text-white tabular-nums">
                 {total.toFixed(2).replace(".", ",")}€
               </span>
             </div>
