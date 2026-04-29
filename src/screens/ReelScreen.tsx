@@ -287,9 +287,10 @@ function ReelSlide({
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'contrast(1.07) saturate(1.1) brightness(0.94)' }}
           muted
+          autoPlay
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
         />
       ) : (
         <img
