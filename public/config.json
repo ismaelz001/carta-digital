@@ -50,10 +50,30 @@
   "languages": ["es"],
 
   "categories": [
-    { "id": "entrantes",   "label": "Entrantes",   "subtitle": "Para empezar" },
-    { "id": "principales", "label": "Principales", "subtitle": "Plato fuerte" },
-    { "id": "postres",     "label": "Postres",      "subtitle": "Dulce final" },
-    { "id": "bebidas",     "label": "Bebidas",      "subtitle": "Coctelería de autor" }
+    {
+      "id": "entrantes",
+      "label": "Entrantes",
+      "subtitle": "Para empezar",
+      "image": "https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=600&q=80"
+    },
+    {
+      "id": "principales",
+      "label": "Principales",
+      "subtitle": "Plato fuerte",
+      "image": "https://images.unsplash.com/photo-1432139509613-5c4255815697?w=600&q=80"
+    },
+    {
+      "id": "postres",
+      "label": "Postres",
+      "subtitle": "Dulce final",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80"
+    },
+    {
+      "id": "bebidas",
+      "label": "Bebidas",
+      "subtitle": "Coctelería de autor",
+      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80"
+    }
   ],
 
   "dishes": [
