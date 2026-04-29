@@ -1,0 +1,146 @@
+{
+  "name": "Casa Olivo",
+  "tagline": "Cocina de mercado · Madrid · Desde 2014",
+  "description": "Cocina de temporada con producto de proximidad. Cada plato, una pequeña película.",
+  "logo": null,
+  "initials": "CO",
+  "founded": 2014,
+
+  "address": "Calle de la Luz 14",
+  "city": "Madrid",
+  "phone": "+34 910 000 000",
+  "reservas": "tel:+34910000000",
+  "mapsUrl": "https://maps.google.com/?q=Calle+de+la+Luz+14+Madrid",
+
+  "social": {
+    "instagram": "https://instagram.com/casaolivo.madrid"
+  },
+
+  "accentColor": "#C0622A",
+  "heroImage": "./assets/hero-restaurant.jpg",
+  "season": "Primavera 2026",
+
+  "eventBanner": {
+    "text": "Este viernes: Cata de vinos de Ribera del Duero · 20:30",
+    "emoji": "🍷",
+    "active": true
+  },
+
+  "dailyMenu": {
+    "label": "Menú del día",
+    "price": 19.50,
+    "includes": [
+      "Primero a elegir entre 3 opciones",
+      "Segundo a elegir entre 3 opciones",
+      "Postre o café",
+      "Pan y bebida incluidos"
+    ],
+    "active": true
+  },
+
+  "openingHours": [
+    { "label": "Lunes – Viernes", "hours": "13:00 – 16:00 · 20:00 – 23:30" },
+    { "label": "Sábados", "hours": "13:00 – 16:30 · 20:00 – 00:00" },
+    { "label": "Domingos", "hours": "13:00 – 16:30" }
+  ],
+
+  "footerQuote": "La buena cocina es honesta, sincera y sencilla.",
+  "footerQuoteAuthor": "Elizabeth David",
+
+  "languages": ["es"],
+
+  "categories": [
+    { "id": "entrantes",   "label": "Entrantes",   "subtitle": "Para empezar" },
+    { "id": "principales", "label": "Principales", "subtitle": "Plato fuerte" },
+    { "id": "postres",     "label": "Postres",      "subtitle": "Dulce final" },
+    { "id": "bebidas",     "label": "Bebidas",      "subtitle": "Coctelería de autor" }
+  ],
+
+  "dishes": [
+    {
+      "id": "burrata",
+      "name": "Burrata di Puglia",
+      "description": "Burrata cremosa, tomate raf, albahaca fresca, aceite de oliva virgen extra y escamas de sal de Maldon.",
+      "price": 16,
+      "category": "entrantes",
+      "image": "./assets/dish-burrata.jpg",
+      "tags": ["Vegetariano", "Sin gluten"],
+      "signature": true,
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": "tuna",
+      "name": "Tataki de Atún Rojo",
+      "description": "Atún rojo de almadraba sellado, sésamo tostado, micro-cilantro y reducción de soja con jengibre.",
+      "price": 22,
+      "category": "entrantes",
+      "image": "./assets/dish-tuna.jpg",
+      "tags": ["Crudo", "Picante suave"],
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": "ravioli",
+      "name": "Ravioli de Calabaza",
+      "description": "Pasta fresca rellena de calabaza asada, mantequilla noisette de salvia, amaretti y parmesano de 24 meses.",
+      "price": 19,
+      "category": "principales",
+      "image": "./assets/dish-ravioli.jpg",
+      "tags": ["Vegetariano"],
+      "available": true
+    },
+    {
+      "id": "ribeye",
+      "name": "Ribeye Madurado 45 días",
+      "description": "Lomo alto de vaca rubia gallega, sal ahumada, romero fresco y verduras carbonizadas a la brasa.",
+      "price": 38,
+      "category": "principales",
+      "image": "./assets/dish-ribeye.jpg",
+      "signature": true,
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": "seabass",
+      "name": "Lubina Salvaje al Azafrán",
+      "description": "Lubina de anzuelo, salsa de azafrán de La Mancha, hinojo confitado y aceite de limón.",
+      "price": 28,
+      "category": "principales",
+      "image": "./assets/dish-seabass.jpg",
+      "tags": ["Sin gluten"],
+      "available": true
+    },
+    {
+      "id": "fondant",
+      "name": "Fondant de Chocolate 70%",
+      "description": "Coulant de chocolate Valrhona, helado artesanal de vainilla bourbon, frambuesa fresca y pan de oro.",
+      "price": 11,
+      "category": "postres",
+      "image": "./assets/dish-fondant.jpg",
+      "signature": true,
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": "tiramisu",
+      "name": "Tiramisú della Casa",
+      "description": "Mascarpone batido a mano, café espresso, bizcocho savoiardi empapado en marsala y cacao puro.",
+      "price": 9,
+      "category": "postres",
+      "image": "./assets/dish-tiramisu.jpg",
+      "tags": ["Contiene alcohol"],
+      "available": true
+    },
+    {
+      "id": "negroni",
+      "name": "Negroni d'Autore",
+      "description": "Gin botánico, Campari, vermut rosso infusionado en casa con naranja sanguina y especias.",
+      "price": 13,
+      "category": "bebidas",
+      "image": "./assets/dish-negroni.jpg",
+      "tags": ["Clásico", "Contiene alcohol"],
+      "available": true
+    }
+  ]
+}
