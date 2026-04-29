@@ -62,6 +62,9 @@ const Index = () => {
       className="fixed inset-0 bg-[#0D0B09] overflow-hidden"
       style={{ height: "100dvh" }}
     >
+      {/* C: App-wide grain ultra-sutil */}
+      <div className="app-grain" aria-hidden="true" />
+
       {/* Intro overlay */}
       {showIntro && <IntroScreen onDone={() => setShowIntro(false)} />}
 

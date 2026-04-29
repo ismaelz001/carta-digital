@@ -121,8 +121,7 @@ export function HomeScreen({
           style={{ background: 'radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, hsl(20 7% 6%) 80%)' }}
         />
         <div
-          className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center"
-          style={{ boxShadow: "0 0 0 6px rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.5)" }}
+          className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center logo-glow"
         >
           {config.logo ? (
             <img
@@ -162,6 +161,29 @@ export function HomeScreen({
         <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/50 mb-4 flex-shrink-0">
           {greeting} · Explora la carta
         </p>
+
+        {/* ── B: Hoy recomendamos ── */}
+        {(() => {
+          const star = config.dishes.find(d => d.signature && d.available !== false) ?? config.dishes.find(d => d.popular && d.available !== false);
+          if (!star) return null;
+          return (
+            <button
+              onClick={() => {
+                const cat = config.categories.find(c => c.id === star.category);
+                if (cat) onCategorySelect(star.category);
+              }}
+              className="animate-pill-in flex-shrink-0 mx-auto mb-4 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm hover:border-primary/40 transition-colors"
+            >
+              <span className="text-[10px] uppercase tracking-[0.18em] text-white/40 font-medium">Hoy recomendamos</span>
+              <span className="w-px h-3 bg-white/15" />
+              <span className="text-[12px] font-semibold text-white">{star.name}</span>
+              <span className="text-[12px] font-light text-primary">{star.price.toFixed(2).replace('.', ',')}€</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="text-white/30">
+                <polyline points="4.5 2 9 6 4.5 10"/>
+              </svg>
+            </button>
+          );
+        })()}
 
         <div className="grid grid-cols-2 gap-3 px-4 pb-6">
           {config.categories.map((cat, i) => {
