@@ -50,7 +50,7 @@ export function MenuScreen({
   }, [activeCategory]);
 
   return (
-    <div className="flex flex-col h-[100dvh] bg-[#0D0B09] overflow-hidden">
+    <div className="flex flex-col h-[100dvh] bg-app overflow-hidden">
       {/* ── Top bar ── */}
       <div className="flex-shrink-0 flex items-center gap-3 px-4 pt-4 pb-3 border-b border-white/7">
         {/* Back */}
@@ -342,7 +342,7 @@ export function BottomNav({
 }: BottomNavProps) {
   return (
     <nav
-      className="flex-shrink-0 flex items-center bg-[#0D0B09] border-t border-white/7 pb-safe-bottom"
+      className="flex-shrink-0 flex items-center bg-app border-t border-white/7 pb-safe-bottom"
       style={{ paddingBottom: "max(env(safe-area-inset-bottom), 8px)" }}
     >
       {/* Favoritos */}

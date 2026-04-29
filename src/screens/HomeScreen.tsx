@@ -18,7 +18,7 @@ export function HomeScreen({
   const config = useConfig();
 
   return (
-    <div className="flex flex-col h-[100dvh] overflow-hidden bg-[#0D0B09]">
+    <div className="flex flex-col h-[100dvh] overflow-hidden bg-app">
       {/* ── Top bar ── */}
       <div className="flex items-center justify-between px-5 pt-safe-top pb-3 pt-4 z-10 flex-shrink-0">
         {config.reservas ? (
@@ -112,7 +112,7 @@ export function HomeScreen({
 
       {/* ── Category cards ── */}
       <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col min-h-0">
-        <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/30 mb-4 flex-shrink-0">
+        <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/50 mb-4 flex-shrink-0">
           Explora la carta
         </p>
 
@@ -125,41 +125,50 @@ export function HomeScreen({
               (d) => d.category === cat.id && d.video && d.available !== false
             );
 
+            const dishCount = config.dishes.filter(
+              (d) => d.category === cat.id && d.available !== false
+            ).length;
+
             return (
-              <button
+              <div
                 key={cat.id}
-                className="relative rounded-2xl overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="relative rounded-2xl overflow-hidden cursor-pointer focus-within:ring-2 focus-within:ring-primary"
                 style={{ aspectRatio: "3/4" }}
-                onClick={() => onCategorySelect(cat.id)}
-                aria-label={`Ver ${cat.label}`}
               >
-                {/* Photo */}
-                {cat.image ? (
-                  <img
-                    src={cat.image}
-                    alt={cat.label}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                ) : (
+                {/* Main tap area */}
+                <button
+                  className="absolute inset-0 w-full h-full focus:outline-none"
+                  onClick={() => onCategorySelect(cat.id)}
+                  aria-label={`Ver ${cat.label}`}
+                >
+                  {/* Photo */}
+                  {cat.image ? (
+                    <img
+                      src={cat.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full"
+                      style={{ background: "linear-gradient(135deg, #1e1c1a 0%, #2e2a27 100%)" }}
+                    />
+                  )}
+
+                  {/* Gradient overlay */}
                   <div
-                    className="w-full h-full"
-                    style={{ background: "linear-gradient(135deg, #1e1c1a 0%, #2e2a27 100%)" }}
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.8) 100%)",
+                    }}
                   />
-                )}
+                </button>
 
-                {/* Gradient overlay */}
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(0,0,0,0.0) 45%, rgba(0,0,0,0.75) 100%)",
-                  }}
-                />
-
-                {/* Video badge */}
+                {/* Video badge — top right */}
                 {hasVideo && (
-                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full">
+                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full pointer-events-none">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="white">
                       <polygon points="2,1 9,5 2,9"/>
                     </svg>
@@ -169,48 +178,44 @@ export function HomeScreen({
                   </div>
                 )}
 
-                {/* Label pill */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center px-3">
-                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full uppercase tracking-[0.12em] text-shadow">
-                    {cat.label}
-                  </span>
-                </div>
-
-                {/* Dish count */}
+                {/* Dish count — top left */}
                 {hasDishes && (
-                  <div className="absolute top-3 left-3">
-                    <span className="text-[10px] text-white/60 bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded-full">
-                      {config.dishes.filter((d) => d.category === cat.id && d.available !== false).length} platos
+                  <div className="absolute top-3 left-3 pointer-events-none">
+                    <span className="text-[10px] text-white/65 bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded-full">
+                      {dishCount} {dishCount === 1 ? "plato" : "platos"}
                     </span>
                   </div>
                 )}
 
-                {/* Video play overlay on long-press hint */}
-                {hasVideo && (
-                  <button
-                    className="absolute inset-x-0 bottom-11 flex justify-center"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onReelOpen(cat.id);
-                    }}
-                    aria-label={`Ver vídeos de ${cat.label}`}
-                  >
-                    <span className="flex items-center gap-1.5 text-[10px] font-medium text-white/80 bg-black/40 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full hover:bg-black/60 transition-colors">
+                {/* Bottom: label + optional reel button */}
+                <div className="absolute bottom-0 inset-x-0 flex flex-col items-center gap-2 pb-4">
+                  {hasVideo && (
+                    <button
+                      className="flex items-center gap-1.5 text-[10px] font-medium text-white/85 bg-black/45 backdrop-blur-sm border border-white/15 px-3 py-1 rounded-full hover:bg-black/65 active:scale-95 transition-all"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onReelOpen(cat.id);
+                      }}
+                      aria-label={`Ver vídeos de ${cat.label}`}
+                    >
                       <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor">
                         <polygon points="2,1 9,5 2,9"/>
                       </svg>
                       Ver en vídeo
-                    </span>
-                  </button>
-                )}
-              </button>
+                    </button>
+                  )}
+                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full uppercase tracking-[0.12em] text-shadow pointer-events-none">
+                    {cat.label}
+                  </span>
+                </div>
+              </div>
             );
           })}
         </div>
 
         {/* Season label — al final del scroll */}
         {config.season && (
-          <p className="text-center text-[10px] uppercase tracking-widest text-white/25 py-4">
+          <p className="text-center text-[10px] uppercase tracking-widest text-white/40 py-4">
             {config.season}
           </p>
         )}

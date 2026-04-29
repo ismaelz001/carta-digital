@@ -31,6 +31,11 @@ export function ReelScreen({
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showInfo, setShowInfo] = useState(false);
 
+  // Reset info panel when slide changes
+  useEffect(() => {
+    setShowInfo(false);
+  }, [currentIdx]);
+
   const dishes = config.dishes.filter(
     (d) => d.category === activeCategory && d.available !== false
   );
@@ -79,7 +84,7 @@ export function ReelScreen({
   };
 
   return (
-    <div className="flex flex-col h-[100dvh] bg-black overflow-hidden">
+    <div className="flex flex-col h-[100dvh] bg-app overflow-hidden">
       {/* ── Top bar ── */}
       <div className="absolute top-0 left-0 right-0 z-30 flex items-center gap-3 px-4 pt-4 pb-3">
         <button
@@ -260,6 +265,7 @@ function ReelSlide({
             animation: isActive
               ? "ken-burns 8s ease-in-out infinite alternate"
               : "none",
+            willChange: isActive ? "transform" : "auto",
           }}
         />
       )}

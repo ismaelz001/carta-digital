@@ -10,6 +10,7 @@
   :root {
     /* Pure dark app */
     --background: 20 7% 6%;
+    --bg-app: 20 7% 6%;
     --foreground: 0 0% 95%;
 
     --card: 20 6% 10%;
@@ -157,6 +158,10 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
+  .bg-app {
+    background-color: hsl(var(--bg-app));
+  }
+
   .animate-fade-in {
     animation: fade-in 0.25s ease both;
   }
