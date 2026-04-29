@@ -147,6 +147,11 @@ Ponlo en `active: false` para ocultarlo sin borrarlo.
     "price": 16.00,
     "category": "entrantes",
     "image": "./assets/dish-burrata.jpg",
+    "images": [
+      "./assets/dish-burrata-1.jpg",
+      "./assets/dish-burrata-2.jpg",
+      "./assets/dish-burrata-3.jpg"
+    ],
     "video": "./assets/videos/burrata.mp4",
     "tags": ["Vegetariano", "Sin gluten"],
     "signature": true,
@@ -163,12 +168,15 @@ Ponlo en `active: false` para ocultarlo sin borrarlo.
 | `description` | string | ✓ | Descripción (se muestra en la ficha del plato) |
 | `price` | number | ✓ | Precio en euros, ej. `16.50` |
 | `category` | string | ✓ | Debe coincidir con el `id` de una categoría |
-| `image` | string | ✓ | Foto del plato |
-| `video` | string | | Vídeo del plato (activa el botón de reel) |
+| `image` | string | ✓ | Foto del plato (usada con animación ken-burns automática) |
+| `images` | string[] | | **Opcional**: 2-3 fotos extra. Si está, hace cross-fade animado entre ellas |
+| `video` | string | | Vídeo del plato. Si está, sustituye a las imágenes y reproduce en loop |
 | `tags` | string[] | | Etiquetas dietéticas (ver lista abajo) |
 | `signature` | boolean | | `true` → aparece como "Plato de autor" + pill en home |
 | `popular` | boolean | | `true` → aparece como "Más pedido" si no hay `signature` |
 | `available` | boolean | | `false` → el plato se oculta de la carta |
+
+> 💡 **Animaciones automáticas**: Por defecto cada plato tiene un sutil zoom ken-burns sobre su foto. Si añades `images` con varias fotos, se hace cross-fade animado entre ellas. Si añades `video`, reproduce vídeo en loop sin botón de play.
 
 ### Etiquetas dietéticas disponibles
 

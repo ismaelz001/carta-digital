@@ -24,6 +24,7 @@ export type Dish = {
   price: number;
   category: string;
   image: string;        // ruta relativa desde public/ o URL absoluta
+  images?: string[];    // opcional: 2-3 fotos extra para cross-fade animado
   video?: string;       // ruta relativa o URL
   tags?: DietTag[];
   signature?: boolean;

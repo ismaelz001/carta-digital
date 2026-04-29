@@ -3,6 +3,7 @@ import { useConfig } from "@/context/ConfigContext";
 import type { Dish } from "@/types/config";
 import type { CartItem } from "@/pages/Index";
 import { DailyMenuCard } from "@/components/app/DailyMenuCard";
+import { DishMedia } from "@/components/app/DishMedia";
 
 interface Props {
   activeCategory: string;
@@ -282,27 +283,7 @@ function DishRow({
     >
       {/* Thumbnail — portrait 3:4 editorial */}
       <div className="relative flex-shrink-0 w-[84px] h-[112px] rounded-2xl overflow-hidden bg-[#1a1714]">
-        {dish.video ? (
-          <video
-            src={dish.video}
-            className="w-full h-full object-cover"
-            muted
-            autoPlay
-            loop
-            playsInline
-            preload="auto"
-            poster={dish.image}
-            aria-label={dish.name}
-          />
-        ) : (
-          <img
-            src={dish.image}
-            alt={dish.name}
-            className="w-full h-full object-cover"
-            loading="lazy"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-          />
-        )}
+        <DishMedia dish={dish} />
         {(dish.signature || dish.popular) && (
           <div className="absolute top-1.5 left-1.5">
             <span className="text-[8px] font-bold bg-primary text-white px-1.5 py-0.5 rounded-full uppercase">
@@ -534,26 +515,7 @@ function DishDetailSheet({
         <div className="overflow-y-auto no-scrollbar">
           {/* Hero image */}
           <div className="relative w-full aspect-[4/3] bg-[#1a1714]">
-            {dish.video ? (
-              <video
-                src={dish.video}
-                className="w-full h-full object-cover"
-                muted
-                autoPlay
-                loop
-                playsInline
-                preload="auto"
-                poster={dish.image}
-                aria-label={dish.name}
-              />
-            ) : (
-              <img
-                src={dish.image}
-                alt={dish.name}
-                className="w-full h-full object-cover"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0'; }}
-              />
-            )}
+            <DishMedia dish={dish} cinematic />
             {/* Gradient */}
             <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 60%, rgba(20,18,16,0.9) 100%)" }} />
 
