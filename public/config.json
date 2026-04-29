@@ -13,7 +13,7 @@
   "mapsUrl": "https://maps.google.com/?q=Avda+Raxoi+3,+15705+Santiago+de+Compostela",
   "website": "https://www.raxoi.es",
   "social": {},
-  "accentColor": "#3D6B43",
+  "accentColor": "#4A8A52",
   "heroImage": "./assets/raxoi/hero-terraza.jpg",
   "season": "Carta 2026",
   "noticeFooter": "Los precios indicados corresponden al consumo en sala. En terraza se aplicará un suplemento del 10%.",
@@ -123,7 +123,7 @@
   "dishes": [
     {
       "id": "desayuno-n-1-1",
-      "name": "Desayuno Nº 1",
+      "name": "Croissant",
       "description": "Croissant",
       "price": 2.2,
       "category": "desayunos",
@@ -132,7 +132,7 @@
     },
     {
       "id": "desayuno-n-2-2",
-      "name": "Desayuno Nº 2",
+      "name": "Croissant a la plancha",
       "description": "Croissant a la plancha",
       "price": 2.4,
       "category": "desayunos",
@@ -141,7 +141,7 @@
     },
     {
       "id": "desayuno-n-3-3",
-      "name": "Desayuno Nº 3",
+      "name": "Croissant relleno de Nutella",
       "description": "Croissant relleno de Nutella",
       "price": 4,
       "category": "desayunos",
@@ -150,7 +150,7 @@
     },
     {
       "id": "desayuno-n-4-4",
-      "name": "Desayuno Nº 4",
+      "name": "Cruasán relleno de crema Kinder",
       "description": "Cruasán relleno de crema Kinder",
       "price": 4,
       "category": "desayunos",
@@ -159,7 +159,7 @@
     },
     {
       "id": "desayuno-n-5-5",
-      "name": "Desayuno Nº 5",
+      "name": "Cruasán a la plancha + pechuga de pavo + queso fundido",
       "description": "Cruasán a la plancha + pechuga de pavo + queso fundido",
       "price": 4,
       "category": "desayunos",
@@ -168,16 +168,16 @@
     },
     {
       "id": "desayuno-n-6-6",
-      "name": "Desayuno Nº 6",
+      "name": "Cruasán a la plancha + jamón serrano + queso fundido",
       "description": "Cruasán a la plancha + jamón serrano + queso fundido",
       "price": 4.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-7-7",
-      "name": "Desayuno Nº 7",
+      "name": "Chocolate con churros",
       "description": "Chocolate con churros",
       "price": 6,
       "category": "desayunos",
@@ -186,7 +186,7 @@
     },
     {
       "id": "desayuno-n-8-8",
-      "name": "Desayuno Nº 8",
+      "name": "Tortitas + Nutella + frutas de temporada",
       "description": "Tortitas + Nutella + frutas de temporada",
       "price": 6.8,
       "category": "desayunos",
@@ -196,7 +196,7 @@
     },
     {
       "id": "desayuno-n-9-9",
-      "name": "Desayuno Nº 9",
+      "name": "Tortitas + crema Kínder + frutos rojos",
       "description": "Tortitas + crema Kínder + frutos rojos",
       "price": 6.8,
       "category": "desayunos",
@@ -206,7 +206,7 @@
     },
     {
       "id": "desayuno-n-10-10",
-      "name": "Desayuno Nº 10",
+      "name": "Tortitas + Nutella + frutos secos",
       "description": "Tortitas + Nutella + frutos secos",
       "price": 4,
       "category": "desayunos",
@@ -216,7 +216,7 @@
     },
     {
       "id": "desayuno-n-11-11",
-      "name": "Desayuno Nº 11",
+      "name": "Cruasán a la plancha + mantequilla + mermelada de fresa casera",
       "description": "Cruasán a la plancha + mantequilla + mermelada de fresa casera",
       "price": 4,
       "category": "desayunos",
@@ -225,7 +225,7 @@
     },
     {
       "id": "desayuno-n-12-12",
-      "name": "Desayuno Nº 12",
+      "name": "Tosta de queso de untar + frutos rojos",
       "description": "Tosta de queso de untar + frutos rojos",
       "price": 5.5,
       "category": "desayunos",
@@ -234,7 +234,7 @@
     },
     {
       "id": "desayuno-n-13-13",
-      "name": "Desayuno Nº 13",
+      "name": "Tosta de mantequilla + mermelada de fresa casera",
       "description": "Tosta de mantequilla + mermelada de fresa casera",
       "price": 4.5,
       "category": "desayunos",
@@ -243,7 +243,7 @@
     },
     {
       "id": "desayuno-n-14-14",
-      "name": "Desayuno Nº 14",
+      "name": "Tosta + aceite de oliva",
       "description": "Tosta + aceite de oliva",
       "price": 3,
       "category": "desayunos",
@@ -252,7 +252,7 @@
     },
     {
       "id": "desayuno-n-15-15",
-      "name": "Desayuno Nº 15",
+      "name": "Tosta + aceite de oliva + tomate",
       "description": "Tosta + aceite de oliva + tomate",
       "price": 4,
       "category": "desayunos",
@@ -261,25 +261,25 @@
     },
     {
       "id": "desayuno-n-16-16",
-      "name": "Desayuno Nº 16",
+      "name": "Tosta + aceite de oliva + tomate + jamón serrano",
       "description": "Tosta + aceite de oliva + tomate + jamón serrano",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-17-17",
-      "name": "Desayuno Nº 17",
+      "name": "Tosta + aceite de oliva + revuelto de jamón serrano + aguacate + mozzarella",
       "description": "Tosta + aceite de oliva + revuelto de jamón serrano + aguacate + mozzarella",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-18-18",
-      "name": "Desayuno Nº 18",
+      "name": "Tosta de guacamole + beicon + queso parmesano",
       "description": "Tosta de guacamole + beicon + queso parmesano",
       "price": 7,
       "category": "desayunos",
@@ -288,25 +288,25 @@
     },
     {
       "id": "desayuno-n-19-19",
-      "name": "Desayuno Nº 19",
+      "name": "Tosta de jamón serrano + aceite + tomate + dos huevos a la plancha",
       "description": "Tosta de jamón serrano + aceite + tomate + dos huevos a la plancha",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-20-20",
-      "name": "Desayuno Nº 20",
+      "name": "Revuelto de jamón serrano + tosta de queso de untar + aguacate",
       "description": "Revuelto de jamón serrano + tosta de queso de untar + aguacate",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-21-21",
-      "name": "Desayuno Nº 21",
+      "name": "Revuelto de huevos + tosta de tomate Cherry + aguacate",
       "description": "Revuelto de huevos + tosta de tomate Cherry + aguacate",
       "price": 7,
       "category": "desayunos",
@@ -315,25 +315,25 @@
     },
     {
       "id": "desayuno-n-22-22",
-      "name": "Desayuno Nº 22",
+      "name": "Revuelto de huevos + queso país",
       "description": "Revuelto de huevos + queso país",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-23-23",
-      "name": "Desayuno Nº 23",
+      "name": "Revuelto de huevos + queso país + jamón serrano",
       "description": "Revuelto de huevos + queso país + jamón serrano",
       "price": 6.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-24-24",
-      "name": "Desayuno Nº 24",
+      "name": "Dos huevos a la plancha + beicon",
       "description": "Dos huevos a la plancha + beicon",
       "price": 6,
       "category": "desayunos",
@@ -342,7 +342,7 @@
     },
     {
       "id": "desayuno-n-25-25",
-      "name": "Desayuno Nº 25",
+      "name": "Dos huevos a la plancha + beicon",
       "description": "Dos huevos a la plancha + beicon",
       "price": 6,
       "category": "desayunos",
@@ -351,16 +351,16 @@
     },
     {
       "id": "desayuno-n-26-26",
-      "name": "Desayuno Nº 26",
+      "name": "Dos huevos a la plancha + jamón serrano + beicon + aguacate",
       "description": "Dos huevos a la plancha + jamón serrano + beicon + aguacate",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-27-27",
-      "name": "Desayuno Nº 27",
+      "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido",
       "description": "Sandwich en pan brioche + pechuga de pavo + queso fundido",
       "price": 5.5,
       "category": "desayunos",
@@ -369,7 +369,7 @@
     },
     {
       "id": "desayuno-n-28-28",
-      "name": "Desayuno Nº 28",
+      "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido + huevo a la plancha",
       "description": "Sandwich en pan brioche + pechuga de pavo + queso fundido + huevo a la plancha",
       "price": 6.5,
       "category": "desayunos",
@@ -378,7 +378,7 @@
     },
     {
       "id": "desayuno-n-29-29",
-      "name": "Desayuno Nº 29",
+      "name": "Sandwich en pan brioche + beicon + queso fundido + aguacate laminado + huevo a la plancha",
       "description": "Sandwich en pan brioche + beicon + queso fundido + aguacate laminado + huevo a la plancha",
       "price": 7.5,
       "category": "desayunos",
@@ -387,7 +387,7 @@
     },
     {
       "id": "desayuno-n-30-30",
-      "name": "Desayuno Nº 30",
+      "name": "Sandwich en pan brioche + beicon + queso fundido + huevo cocido",
       "description": "Sandwich en pan brioche + beicon + queso fundido + huevo cocido",
       "price": 6.5,
       "category": "desayunos",
@@ -396,7 +396,7 @@
     },
     {
       "id": "desayuno-n-31-31",
-      "name": "Desayuno Nº 31",
+      "name": "Sandwich en pan brioche + tomate + aguacate laminado + brotes de ensalada + queso fundido + cebolla caramelizada",
       "description": "Sandwich en pan brioche + tomate + aguacate laminado + brotes de ensalada + queso fundido + cebolla caramelizada",
       "price": 7,
       "category": "desayunos",
@@ -405,16 +405,16 @@
     },
     {
       "id": "desayuno-n-32-32",
-      "name": "Desayuno Nº 32",
+      "name": "Sandwich en pan brioche + jamón serrano + rodajas de tomate + queso país",
       "description": "Sandwich en pan brioche + jamón serrano + rodajas de tomate + queso país",
       "price": 7,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "desayuno-n-33-33",
-      "name": "Desayuno Nº 33",
+      "name": "Bowl de yogur + frutos secos",
       "description": "Bowl de yogur + frutos secos",
       "price": 7.5,
       "category": "desayunos",
@@ -423,7 +423,7 @@
     },
     {
       "id": "desayuno-n-34-34",
-      "name": "Desayuno Nº 34",
+      "name": "Bowl de yogur + frutas de temporada",
       "description": "Bowl de yogur + frutas de temporada",
       "price": 7.5,
       "category": "desayunos",
@@ -432,7 +432,7 @@
     },
     {
       "id": "desayuno-n-35-35",
-      "name": "Desayuno Nº 35",
+      "name": "Bowl de yogur + frutos rojos",
       "description": "Bowl de yogur + frutos rojos",
       "price": 7.5,
       "category": "desayunos",
@@ -441,7 +441,7 @@
     },
     {
       "id": "desayuno-n-36-36",
-      "name": "Desayuno Nº 36",
+      "name": "Tabla de nuestros desayunos variados (dos tostas + un sandwich + tortitas + yogur con frutos secos)",
       "description": "Tabla de nuestros desayunos variados (dos tostas + un sandwich + tortitas + yogur con frutos secos)",
       "price": 22,
       "category": "desayunos",
@@ -451,61 +451,61 @@
     },
     {
       "id": "bocadillo-n-1-37",
-      "name": "Bocadillo Nº 1",
+      "name": "Jamón serrano + aceite de oliva + patatas fritas",
       "description": "Jamón serrano + aceite de oliva + patatas fritas",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-2-38",
-      "name": "Bocadillo Nº 2",
+      "name": "Jamón serrano + aceite de oliva + tomate exprimido + aros de cebolla fritas",
       "description": "Jamón serrano + aceite de oliva + tomate exprimido + aros de cebolla fritas",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-3-39",
-      "name": "Bocadillo Nº 3",
+      "name": "Jamón serrano + aceite de oliva + queso fundido + patatas fritasaros de cebolla",
       "description": "Jamón serrano + aceite de oliva + queso fundido + patatas fritasaros de cebolla",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-4-40",
-      "name": "Bocadillo Nº 4",
+      "name": "Jamón serrano + aceite de oliva + queso fundido + aguacate + aros de cebolla",
       "description": "Jamón serrano + aceite de oliva + queso fundido + aguacate + aros de cebolla",
       "price": 9,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-5-41",
-      "name": "Bocadillo Nº 5",
+      "name": "Jamón ibérico + aceite de oliva + patatas fritas",
       "description": "Jamón ibérico + aceite de oliva + patatas fritas",
       "price": 11,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-6-42",
-      "name": "Bocadillo Nº 6",
+      "name": "Jamón ibérico + aceite de oliva + tomate exprimido + aros de cebolla",
       "description": "Jamón ibérico + aceite de oliva + tomate exprimido + aros de cebolla",
       "price": 12.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-7-43",
-      "name": "Bocadillo Nº 7",
+      "name": "Beicon + queso fundido + tomate + aros de cebolla",
       "description": "Beicon + queso fundido + tomate + aros de cebolla",
       "price": 7,
       "category": "bocadillos",
@@ -514,63 +514,63 @@
     },
     {
       "id": "bocadillo-n-8-44",
-      "name": "Bocadillo Nº 8",
+      "name": "Beicon + queso fundido cheddar + tomate + huevo a la plancha + patatas fritas",
       "description": "Beicon + queso fundido cheddar + tomate + huevo a la plancha + patatas fritas",
       "price": 8,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-9-45",
-      "name": "Bocadillo Nº 9",
+      "name": "Beicon + huevo a la plancha + tomate + brotes de ensalada + cebolla caramelizada + queso fundido + aros de cebolla",
       "description": "Beicon + huevo a la plancha + tomate + brotes de ensalada + cebolla caramelizada + queso fundido + aros de cebolla",
       "price": 8.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-10-46",
-      "name": "Bocadillo Nº 10",
+      "name": "Vegetal: Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas",
       "description": "Vegetal: Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/tostada.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-11-47",
-      "name": "Bocadillo Nº 11",
+      "name": "Pulpo a la plancha + aceite de oliva + aros de cebolla",
       "description": "Pulpo a la plancha + aceite de oliva + aros de cebolla",
       "price": 10,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "bocadillo-n-12-48",
-      "name": "Bocadillo Nº 12",
+      "name": "Pulpo a la plancha + aceite de oliva + queso fundido + patatas fritas",
       "description": "Pulpo a la plancha + aceite de oliva + queso fundido + patatas fritas",
       "price": 12,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "bocadillo-n-13-49",
-      "name": "Bocadillo Nº 13",
+      "name": "Zorza + patatas fritas",
       "description": "Zorza + patatas fritas",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-14-50",
-      "name": "Bocadillo Nº 14",
+      "name": "Zorza + queso fundido + aros de cebolla",
       "description": "Zorza + queso fundido + aros de cebolla",
       "price": 8.5,
       "category": "bocadillos",
@@ -579,7 +579,7 @@
     },
     {
       "id": "bocadillo-n-15-51",
-      "name": "Bocadillo Nº 15",
+      "name": "Pechuga de pollo a la brasa + queso fundido + aros de cebolla",
       "description": "Pechuga de pollo a la brasa + queso fundido + aros de cebolla",
       "price": 7.5,
       "category": "bocadillos",
@@ -588,43 +588,43 @@
     },
     {
       "id": "bocadillo-n-16-52",
-      "name": "Bocadillo Nº 16",
+      "name": "Pechuga de pollo a la brasa + beicon + queso cheddar fundido + tomate exprimido + cebolla caramelizada + patatas fritas",
       "description": "Pechuga de pollo a la brasa + beicon + queso cheddar fundido + tomate exprimido + cebolla caramelizada + patatas fritas",
       "price": 9,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-17-53",
-      "name": "Bocadillo Nº 17",
+      "name": "Calamares + patatas fritas",
       "description": "Calamares + patatas fritas",
       "price": 9,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/calamar-ria.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-18-54",
-      "name": "Bocadillo Nº 18",
+      "name": "Tortilla francesa + queso fundido + patatas fritas",
       "description": "Tortilla francesa + queso fundido + patatas fritas",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/tortilla.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-19-55",
-      "name": "Bocadillo Nº 19",
+      "name": "Tortilla francesa + queso fundido cheddar + beicon + tomate + aros de cebolla",
       "description": "Tortilla francesa + queso fundido cheddar + beicon + tomate + aros de cebolla",
       "price": 9,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/tortilla.jpg",
       "available": true
     },
     {
       "id": "bocadillo-n-20-56",
-      "name": "Bocadillo Nº 20",
+      "name": "Tabla de nuestros bocadillos (nº 1 + nº 5 + nº 10 + nº 15) + patatas fritas + aros de cebolla",
       "description": "Tabla de nuestros bocadillos (nº 1 + nº 5 + nº 10 + nº 15) + patatas fritas + aros de cebolla",
       "price": 29.5,
       "category": "bocadillos",
@@ -633,7 +633,7 @@
     },
     {
       "id": "burger-n-1-57",
-      "name": "Burger Nº 1",
+      "name": "Pollo + queso fundido + beicon ahumado + nuestra salsa barbacoa + patatas fritas",
       "description": "Pollo + queso fundido + beicon ahumado + nuestra salsa barbacoa + patatas fritas",
       "price": 8,
       "category": "hamburguesas",
@@ -642,16 +642,16 @@
     },
     {
       "id": "burger-n-2-58",
-      "name": "Burger Nº 2",
+      "name": "Pollo + queso fundido cheddar inglés + tomate + lechuga + cebolla caramelizada + huevo a la plancha + nuestra salsa de mango + aros de cebolla",
       "description": "Pollo + queso fundido cheddar inglés + tomate + lechuga + cebolla caramelizada + huevo a la plancha + nuestra salsa de mango + aros de cebolla",
       "price": 9.5,
       "category": "hamburguesas",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/hamburguesa.jpg",
       "available": true
     },
     {
       "id": "burger-n-3-59",
-      "name": "Burger Nº 3",
+      "name": "Ternera + queso fundido + cebolla crujiente + tomate + brotes de ensalada + nuestra salsa cheddar + aros de cebolla",
       "description": "Ternera + queso fundido + cebolla crujiente + tomate + brotes de ensalada + nuestra salsa cheddar + aros de cebolla",
       "price": 12,
       "category": "hamburguesas",
@@ -660,7 +660,7 @@
     },
     {
       "id": "burger-n-4-60",
-      "name": "Burger Nº 4",
+      "name": "Ternera + queso fundido cheddar + beicon ahumado + huevo a la plancha + tomate + lechuga + nuestra salsa barbacoa + patatas fritas",
       "description": "Ternera + queso fundido cheddar + beicon ahumado + huevo a la plancha + tomate + lechuga + nuestra salsa barbacoa + patatas fritas",
       "price": 13.5,
       "category": "hamburguesas",
@@ -669,7 +669,7 @@
     },
     {
       "id": "burger-n-5-61",
-      "name": "Burger Nº 5",
+      "name": "Ternera + queso fundido país + beicon ahumado crujiente + huevo a la plancha + cebolla caramelizada + brotes de ensalada + tomate + guacamole + nuestra salsa de boletus + patatas fritas",
       "description": "Ternera + queso fundido país + beicon ahumado crujiente + huevo a la plancha + cebolla caramelizada + brotes de ensalada + tomate + guacamole + nuestra salsa de boletus + patatas fritas",
       "price": 14,
       "category": "hamburguesas",
@@ -678,16 +678,16 @@
     },
     {
       "id": "burger-n-6-62",
-      "name": "Burger Nº 6",
+      "name": "Vegana + brotes de verdura + tomate + cebolla crujiente + aguacate + nuestra salsa rosa + aros de cebolla",
       "description": "Vegana + brotes de verdura + tomate + cebolla crujiente + aguacate + nuestra salsa rosa + aros de cebolla",
       "price": 13.5,
       "category": "hamburguesas",
-      "image": "./assets/raxoi/dishes/hamburguesa.jpg",
+      "image": "./assets/raxoi/dishes/verduras.jpg",
       "available": true
     },
     {
       "id": "burger-n-7-63",
-      "name": "Burger Nº 7",
+      "name": "Doble carne de ternera + queso del país fundido + beicon ahumado crujiente + cebolla caramelizada + huevo a la plancha + rodaje de tomate + nuestra salsa de boletus + patatas fritas",
       "description": "Doble carne de ternera + queso del país fundido + beicon ahumado crujiente + cebolla caramelizada + huevo a la plancha + rodaje de tomate + nuestra salsa de boletus + patatas fritas",
       "price": 15,
       "category": "hamburguesas",
@@ -696,7 +696,7 @@
     },
     {
       "id": "burger-n-8-64",
-      "name": "Burger Nº 8",
+      "name": "Tabla de nuestras hamburguesas (nº 2 + nº 3 + nº 4 + nº 5) + patatas fritas + aros de cebolla",
       "description": "Tabla de nuestras hamburguesas (nº 2 + nº 3 + nº 4 + nº 5) + patatas fritas + aros de cebolla",
       "price": 32,
       "category": "hamburguesas",
@@ -705,7 +705,7 @@
     },
     {
       "id": "tosta-n-1-65",
-      "name": "Tosta Nº 1",
+      "name": "Aceite de oliva",
       "description": "Aceite de oliva",
       "price": 3,
       "category": "tostas",
@@ -714,7 +714,7 @@
     },
     {
       "id": "tosta-n-2-66",
-      "name": "Tosta Nº 2",
+      "name": "Aceite de oliva + tomate",
       "description": "Aceite de oliva + tomate",
       "price": 4,
       "category": "tostas",
@@ -723,52 +723,52 @@
     },
     {
       "id": "tosta-n-3-67",
-      "name": "Tosta Nº 3",
+      "name": "Aceite de oliva + tomate + jamón serrano",
       "description": "Aceite de oliva + tomate + jamón serrano",
       "price": 5.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-4-68",
-      "name": "Tosta Nº 4",
+      "name": "Aceite de oliva + tomate + jamón serrano + lascas de queso parmesano",
       "description": "Aceite de oliva + tomate + jamón serrano + lascas de queso parmesano",
       "price": 6.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-5-69",
-      "name": "Tosta Nº 5",
+      "name": "Aceite de oliva + tomate + jamón serrano + mozzarella",
       "description": "Aceite de oliva + tomate + jamón serrano + mozzarella",
       "price": 6.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-6-70",
-      "name": "Tosta Nº 6",
+      "name": "Aceite de oliva + jamón ibérico",
       "description": "Aceite de oliva + jamón ibérico",
       "price": 8.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-7-71",
-      "name": "Tosta Nº 7",
+      "name": "Aceite de oliva + tomate exprimido + jamón ibérico",
       "description": "Aceite de oliva + tomate exprimido + jamón ibérico",
       "price": 9.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-8-72",
-      "name": "Tosta Nº 8",
+      "name": "Queso de untar + frutos secos",
       "description": "Queso de untar + frutos secos",
       "price": 5.5,
       "category": "tostas",
@@ -777,7 +777,7 @@
     },
     {
       "id": "tosta-n-9-73",
-      "name": "Tosta Nº 9",
+      "name": "Queso de untar + frutos rojos",
       "description": "Queso de untar + frutos rojos",
       "price": 5.5,
       "category": "tostas",
@@ -786,7 +786,7 @@
     },
     {
       "id": "tosta-n-10-74",
-      "name": "Tosta Nº 10",
+      "name": "Queso de untar + aguacate + tomate Cherry + huevo a la plancha",
       "description": "Queso de untar + aguacate + tomate Cherry + huevo a la plancha",
       "price": 7,
       "category": "tostas",
@@ -795,7 +795,7 @@
     },
     {
       "id": "tosta-n-11-75",
-      "name": "Tosta Nº 11",
+      "name": "1 Aceite de oliva + aguacate + beicon + mozzarella",
       "description": "1 Aceite de oliva + aguacate + beicon + mozzarella",
       "price": 6.5,
       "category": "tostas",
@@ -804,7 +804,7 @@
     },
     {
       "id": "tosta-n-12-76",
-      "name": "Tosta Nº 12",
+      "name": "Aguacate + huevo a la plancha + mozzarella + cebolla crujiente",
       "description": "Aguacate + huevo a la plancha + mozzarella + cebolla crujiente",
       "price": 7,
       "category": "tostas",
@@ -813,16 +813,16 @@
     },
     {
       "id": "tosta-n-13-77",
-      "name": "Tosta Nº 13",
+      "name": "Tomate a la plancha + revuelto de jamón serrano + cebolla crujiente",
       "description": "Tomate a la plancha + revuelto de jamón serrano + cebolla crujiente",
       "price": 7.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "tosta-n-14-78",
-      "name": "Tosta Nº 14",
+      "name": "Aceite de oliva + tomate exprimido + beicon + queso fundido",
       "description": "Aceite de oliva + tomate exprimido + beicon + queso fundido",
       "price": 6.5,
       "category": "tostas",
@@ -831,26 +831,26 @@
     },
     {
       "id": "tosta-n-15-79",
-      "name": "Tosta Nº 15",
+      "name": "Tomate Cherry + aguacate + huevo cocido + brotes de ensalada + perlas de mozzarella + queso de untar",
       "description": "Tomate Cherry + aguacate + huevo cocido + brotes de ensalada + perlas de mozzarella + queso de untar",
       "price": 7,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
       "available": true
     },
     {
       "id": "tosta-n-16-80",
-      "name": "Tosta Nº 16",
+      "name": "Pulpo a la plancha + queso fundido país + aceite de oliva",
       "description": "Pulpo a la plancha + queso fundido país + aceite de oliva",
       "price": 8.5,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "tosta-n-17-81",
-      "name": "Tosta Nº 17",
+      "name": "Revuelto de huevos + beicon + aguacate + mozzarella",
       "description": "Revuelto de huevos + beicon + aguacate + mozzarella",
       "price": 7,
       "category": "tostas",
@@ -859,7 +859,7 @@
     },
     {
       "id": "tosta-n-18-82",
-      "name": "Tosta Nº 18",
+      "name": "Revuelto de gulas + nuestra salsa alioli + tomate Cherry + lascas de parmesano",
       "description": "Revuelto de gulas + nuestra salsa alioli + tomate Cherry + lascas de parmesano",
       "price": 8,
       "category": "tostas",
@@ -868,16 +868,16 @@
     },
     {
       "id": "tosta-n-19-83",
-      "name": "Tosta Nº 19",
+      "name": "Guacamole + brotes de ensalada + ventresca + pimiento piquillo + mozzarella fresca + cebolla crujiente",
       "description": "Guacamole + brotes de ensalada + ventresca + pimiento piquillo + mozzarella fresca + cebolla crujiente",
       "price": 8,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
       "available": true
     },
     {
       "id": "tosta-n-20-84",
-      "name": "Tosta Nº 20",
+      "name": "Tabla de nuestras tostas variadas (nº 3 + nº 5 + nº 9 + nº 11 + nº 13)",
       "description": "Tabla de nuestras tostas variadas (nº 3 + nº 5 + nº 9 + nº 11 + nº 13)",
       "price": 29.5,
       "category": "tostas",
@@ -886,7 +886,7 @@
     },
     {
       "id": "racion-n-1-85",
-      "name": "Ración Nº 1",
+      "name": "Pan",
       "description": "Pan",
       "price": 2,
       "category": "raciones",
@@ -895,115 +895,115 @@
     },
     {
       "id": "racion-n-2-86",
-      "name": "Ración Nº 2",
+      "name": "Pan + tomate + aceite de oliva (Pan tumaca)",
       "description": "Pan + tomate + aceite de oliva (Pan tumaca)",
       "price": 3.5,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/tostada.jpg",
       "available": true
     },
     {
       "id": "racion-n-3-87",
-      "name": "Ración Nº 3",
+      "name": "Queso país + anchoas",
       "description": "Queso país + anchoas",
       "price": 17,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
       "available": true
     },
     {
       "id": "racion-n-4-88",
-      "name": "Ración Nº 4",
+      "name": "Jamón ibérico",
       "description": "Jamón ibérico",
       "price": 28,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-5-89",
-      "name": "Ración Nº 5",
+      "name": "Verduras a la brasa",
       "description": "Verduras a la brasa",
       "price": 20,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/verduras.jpg",
       "available": true
     },
     {
       "id": "racion-n-6-90",
-      "name": "Ración Nº 6",
+      "name": "Verduras en tempura + nuestra salsa rosa",
       "description": "Verduras en tempura + nuestra salsa rosa",
       "price": 20,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/verduras.jpg",
       "available": true
     },
     {
       "id": "racion-n-7-91",
-      "name": "Ración Nº 7",
+      "name": "Tabla de embutidos gallegos",
       "description": "Tabla de embutidos gallegos",
       "price": 22,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-8-92",
-      "name": "Ración Nº 8",
+      "name": "Tabla de quesos gallegos",
       "description": "Tabla de quesos gallegos",
       "price": 22,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
       "available": true
     },
     {
       "id": "racion-n-9-93",
-      "name": "Ración Nº 9",
+      "name": "Tabla de embutidos gallegos + quesos gallegos",
       "description": "Tabla de embutidos gallegos + quesos gallegos",
       "price": 22,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-10-94",
-      "name": "Ración Nº 10",
+      "name": "Croquetas de chipirón en su tinta",
       "description": "Croquetas de chipirón en su tinta",
       "price": 16,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/calamar-ria.jpg",
       "available": true
     },
     {
       "id": "racion-n-11-95",
-      "name": "Ración Nº 11",
+      "name": "Croquetas de cecina de wagyu",
       "description": "Croquetas de cecina de wagyu",
       "price": 17,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/croquetas-gallegas.jpg",
       "available": true
     },
     {
       "id": "racion-n-12-96",
-      "name": "Ración Nº 12",
+      "name": "Croquetas de cecina de wagyu",
       "description": "Croquetas de cecina de wagyu",
       "price": 16,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/croquetas-gallegas.jpg",
       "available": true
     },
     {
       "id": "racion-n-13-97",
-      "name": "Ración Nº 13",
+      "name": "Croquetas de boletus y trufa",
       "description": "Croquetas de boletus y trufa",
       "price": 16,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/croquetas-gallegas.jpg",
       "available": true
     },
     {
       "id": "racion-n-14-98",
-      "name": "Ración Nº 14",
+      "name": "Croquetas de bacalao al ajoarriero",
       "description": "Croquetas de bacalao al ajoarriero",
       "price": 17,
       "category": "raciones",
@@ -1012,7 +1012,7 @@
     },
     {
       "id": "racion-n-15-99",
-      "name": "Ración Nº 15",
+      "name": "Tabla de croquetas cremosas variadas (elaboración propia): jamón ibérico, boletus y trufa, cecina de wagyu, chipirones en su tinta, bacalao al ajoarriero",
       "description": "Tabla de croquetas cremosas variadas (elaboración propia): jamón ibérico, boletus y trufa, cecina de wagyu, chipirones en su tinta, bacalao al ajoarriero",
       "price": 22,
       "category": "raciones",
@@ -1021,7 +1021,7 @@
     },
     {
       "id": "racion-n-16-100",
-      "name": "Ración Nº 16",
+      "name": "Huevos rotos a la plancha + patata panadera",
       "description": "Huevos rotos a la plancha + patata panadera",
       "price": 14,
       "category": "raciones",
@@ -1030,25 +1030,25 @@
     },
     {
       "id": "racion-n-17-101",
-      "name": "Ración Nº 17",
+      "name": "Huevos rotos a la plancha + patata panadera + jamón ibérico",
       "description": "Huevos rotos a la plancha + patata panadera + jamón ibérico",
       "price": 22,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-18-102",
-      "name": "Ración Nº 18",
+      "name": "Huevos rotos a la plancha + patata panadera + jamón serrano",
       "description": "Huevos rotos a la plancha + patata panadera + jamón serrano",
       "price": 18,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-19-103",
-      "name": "Ración Nº 19",
+      "name": "Huevos rotos a la plancha + patata panadera + chorizo gallego casero ahumado",
       "description": "Huevos rotos a la plancha + patata panadera + chorizo gallego casero ahumado",
       "price": 16,
       "category": "raciones",
@@ -1057,25 +1057,25 @@
     },
     {
       "id": "racion-n-20-104",
-      "name": "Ración Nº 20",
+      "name": "Huevos rotos a la plancha + langostinos a la plancha + patatas panaderas",
       "description": "Huevos rotos a la plancha + langostinos a la plancha + patatas panaderas",
       "price": 20,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
       "id": "racion-n-21-105",
-      "name": "Ración Nº 21",
+      "name": "Huevos rotos a la plancha + langostinos a la plancha + gulas + patatas panaderas",
       "description": "Huevos rotos a la plancha + langostinos a la plancha + gulas + patatas panaderas",
       "price": 22,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
       "id": "racion-n-22-106",
-      "name": "Ración Nº 22",
+      "name": "Huevos rotos a la plancha + patata panadera + zorza",
       "description": "Huevos rotos a la plancha + patata panadera + zorza",
       "price": 18,
       "category": "raciones",
@@ -1084,16 +1084,16 @@
     },
     {
       "id": "racion-n-23-107",
-      "name": "Ración Nº 23",
+      "name": "Nuestro caldo gallego",
       "description": "Nuestro caldo gallego",
       "price": 8,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/cocido-gallego.jpg",
       "available": true
     },
     {
       "id": "racion-n-24-108",
-      "name": "Ración Nº 24",
+      "name": "Pulpo de la ría a la gallega",
       "description": "Pulpo de la ría a la gallega",
       "price": 19.5,
       "category": "raciones",
@@ -1103,7 +1103,7 @@
     },
     {
       "id": "racion-n-25-109",
-      "name": "Ración Nº 25",
+      "name": "Pulpo de la ría a la brasa con nuestro puré y nuestra ajada",
       "description": "Pulpo de la ría a la brasa con nuestro puré y nuestra ajada",
       "price": 22,
       "category": "raciones",
@@ -1113,7 +1113,7 @@
     },
     {
       "id": "racion-n-26-110",
-      "name": "Ración Nº 26",
+      "name": "Carpaccio de pulpo de la ría con nuestra ajada",
       "description": "Carpaccio de pulpo de la ría con nuestra ajada",
       "price": 19,
       "category": "raciones",
@@ -1123,7 +1123,7 @@
     },
     {
       "id": "racion-n-27-111",
-      "name": "Ración Nº 27",
+      "name": "Pimientos de Padrón (en temporada)",
       "description": "Pimientos de Padrón (en temporada)",
       "price": 10,
       "category": "raciones",
@@ -1132,34 +1132,34 @@
     },
     {
       "id": "racion-n-28-112",
-      "name": "Ración Nº 28",
+      "name": "Revuelto de espárragos trigueros con queso país",
       "description": "Revuelto de espárragos trigueros con queso país",
       "price": 15,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/tarta-queso.jpg",
+      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
       "available": true
     },
     {
       "id": "racion-n-29-113",
-      "name": "Ración Nº 29",
+      "name": "Revuelto de boletus con jamón serrano",
       "description": "Revuelto de boletus con jamón serrano",
       "price": 18,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "racion-n-30-114",
-      "name": "Ración Nº 30",
+      "name": "Revuelto de gulas + langostinos",
       "description": "Revuelto de gulas + langostinos",
       "price": 18,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
       "id": "racion-n-31-115",
-      "name": "Ración Nº 31",
+      "name": "Raxo + patatas fritas",
       "description": "Raxo + patatas fritas",
       "price": 18,
       "category": "raciones",
@@ -1168,7 +1168,7 @@
     },
     {
       "id": "racion-n-32-116",
-      "name": "Ración Nº 32",
+      "name": "Raxo + nuestra salsa de boletus + patatas fritas",
       "description": "Raxo + nuestra salsa de boletus + patatas fritas",
       "price": 21,
       "category": "raciones",
@@ -1177,7 +1177,7 @@
     },
     {
       "id": "racion-n-33-117",
-      "name": "Ración Nº 33",
+      "name": "Zorza + patatas fritas",
       "description": "Zorza + patatas fritas",
       "price": 18,
       "category": "raciones",
@@ -1186,25 +1186,25 @@
     },
     {
       "id": "racion-n-34-118",
-      "name": "Ración Nº 34",
+      "name": "Calamares + patatas fritas",
       "description": "Calamares + patatas fritas",
       "price": 18,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/calamar-ria.jpg",
       "available": true
     },
     {
       "id": "racion-n-35-119",
-      "name": "Ración Nº 35",
+      "name": "Ajillo de gulas + langostinos + zamburiñas",
       "description": "Ajillo de gulas + langostinos + zamburiñas",
       "price": 26,
       "category": "raciones",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
       "id": "racion-n-36-120",
-      "name": "Ración Nº 36",
+      "name": "Tabla de nuestras raciones (nº 11 + nº 14 + nº 27 + nº 32 + nº 35",
       "description": "Tabla de nuestras raciones (nº 11 + nº 14 + nº 27 + nº 32 + nº 35",
       "price": 34,
       "category": "raciones",
@@ -1213,7 +1213,7 @@
     },
     {
       "id": "pizza-n-1-121",
-      "name": "Pizza Nº 1",
+      "name": "Tomate + pechuga de pavo + queso fundido + mozzarella",
       "description": "Tomate + pechuga de pavo + queso fundido + mozzarella",
       "price": 11,
       "category": "pizzas",
@@ -1223,25 +1223,25 @@
     },
     {
       "id": "pizza-n-2-122",
-      "name": "Pizza Nº 2",
+      "name": "Tomate + jamón ibérico + queso parmesano + aceitunas",
       "description": "Tomate + jamón ibérico + queso parmesano + aceitunas",
       "price": 13,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "pizza-n-3-123",
-      "name": "Pizza Nº 3",
+      "name": "Tomate + jamón ibérico + queso parmesano + aceitunas",
       "description": "Tomate + jamón ibérico + queso parmesano + aceitunas",
       "price": 16,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
       "id": "pizza-n-4-124",
-      "name": "Pizza Nº 4",
+      "name": "Tomate + beicon + queso fundido cheddar + mozzarella + pimiento rojo + cebolla crujiente + aceitunas",
       "description": "Tomate + beicon + queso fundido cheddar + mozzarella + pimiento rojo + cebolla crujiente + aceitunas",
       "price": 13,
       "category": "pizzas",
@@ -1250,7 +1250,7 @@
     },
     {
       "id": "pizza-n-5-125",
-      "name": "Pizza Nº 5",
+      "name": "Tomate + ventresca + queso fundido + mozzarella + cebolla crujiente + pimiento piquillo + aceitunas",
       "description": "Tomate + ventresca + queso fundido + mozzarella + cebolla crujiente + pimiento piquillo + aceitunas",
       "price": 14,
       "category": "pizzas",
@@ -1259,7 +1259,7 @@
     },
     {
       "id": "pizza-n-6-126",
-      "name": "Pizza Nº 6",
+      "name": "Tomate + pollo a la barbacoa + queso fundido cheddar + champiñones + mozzarella + cebolla crujiente",
       "description": "Tomate + pollo a la barbacoa + queso fundido cheddar + champiñones + mozzarella + cebolla crujiente",
       "price": 15,
       "category": "pizzas",
@@ -1268,55 +1268,55 @@
     },
     {
       "id": "pizza-n-7-127",
-      "name": "Pizza Nº 7",
+      "name": "Vegetal: tomate + pimiento rojo + champiñones + cebolla caramelizada + cebolla crujiente + mozzarella + huevo cocido + queso fundido",
       "description": "Vegetal: tomate + pimiento rojo + champiñones + cebolla caramelizada + cebolla crujiente + mozzarella + huevo cocido + queso fundido",
       "price": 14,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/cocido-gallego.jpg",
       "available": true
     },
     {
       "id": "pizza-n-8-128",
-      "name": "Pizza Nº 8",
+      "name": "Tomate + langostinos + pulpo + cebolla crujiente + mozzarella + pimiento piquillo + queso fundido país",
       "description": "Tomate + langostinos + pulpo + cebolla crujiente + mozzarella + pimiento piquillo + queso fundido país",
       "price": 15,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "pizza-n-9-129",
-      "name": "Pizza Nº 9",
+      "name": "Tomate + langostinos + pulpo + gulas + zamburiñas + mozzarella + queso cheddar",
       "description": "Tomate + langostinos + pulpo + gulas + zamburiñas + mozzarella + queso cheddar",
       "price": 17,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "pizza-n-10-130",
-      "name": "Pizza Nº 10",
+      "name": "Tomate + queso país + queso parmesano + pesto + tomate Cherry",
       "description": "Tomate + queso país + queso parmesano + pesto + tomate Cherry",
       "price": 13,
       "category": "pizzas",
-      "image": "./assets/raxoi/dishes/pizza.jpg",
+      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
       "popular": true,
       "available": true
     },
     {
       "id": "ensalada-n-1-131",
-      "name": "Ensalada Nº 1",
+      "name": "Lechuga + tomate + maíz + huevo cocido + cebolla crujiente",
       "description": "Lechuga + tomate + maíz + huevo cocido + cebolla crujiente",
       "price": 9,
       "category": "ensaladas",
-      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
+      "image": "./assets/raxoi/dishes/cocido-gallego.jpg",
       "available": true
     },
     {
       "id": "ensalada-n-2-132",
-      "name": "Ensalada Nº 2",
+      "name": "Lechuga + tomate Cherry + cebolla caramelizada + maíz + espárragos + ventresca + pimiento piquillo",
       "description": "Lechuga + tomate Cherry + cebolla caramelizada + maíz + espárragos + ventresca + pimiento piquillo",
       "price": 13,
       "category": "ensaladas",
@@ -1325,7 +1325,7 @@
     },
     {
       "id": "ensalada-n-3-133",
-      "name": "Ensalada Nº 3",
+      "name": "Brotes de ensalada + tomate + huevo cocido + cebolla crujiente + arándanos + burrata + aceitunas + nuestra salsa de mostaza y miel",
       "description": "Brotes de ensalada + tomate + huevo cocido + cebolla crujiente + arándanos + burrata + aceitunas + nuestra salsa de mostaza y miel",
       "price": 14,
       "category": "ensaladas",
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "ensalada-n-4-134",
-      "name": "Ensalada Nº 4",
+      "name": "Ensalada templada: Brotes de ensalada + huevo a la plancha + pollo a la plancha + tomate a la plancha + cebolla a la plancha + queso de cabra a la plancha + nuestra salsa de yogurt",
       "description": "Ensalada templada: Brotes de ensalada + huevo a la plancha + pollo a la plancha + tomate a la plancha + cebolla a la plancha + queso de cabra a la plancha + nuestra salsa de yogurt",
       "price": 18,
       "category": "ensaladas",
@@ -1343,25 +1343,25 @@
     },
     {
       "id": "ensalada-n-5-135",
-      "name": "Ensalada Nº 5",
+      "name": "Ensalada templada de marisco: langostinos + zamburiñas + brotes de ensalada + láminas de queso + cebolla caramelizada + nuestra salsa rosa",
       "description": "Ensalada templada de marisco: langostinos + zamburiñas + brotes de ensalada + láminas de queso + cebolla caramelizada + nuestra salsa rosa",
       "price": 19,
       "category": "ensaladas",
-      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
       "id": "ensalada-n-6-136",
-      "name": "Ensalada Nº 6",
+      "name": "Tomate de la huerta + mozzarella + espárragos + aguacate + ventresca + arándanos + maíz + huevo cocido + nuestra salsa de mostaza y miel",
       "description": "Tomate de la huerta + mozzarella + espárragos + aguacate + ventresca + arándanos + maíz + huevo cocido + nuestra salsa de mostaza y miel",
       "price": 15,
       "category": "ensaladas",
-      "image": "./assets/raxoi/dishes/ensalada-cesar.jpg",
+      "image": "./assets/raxoi/dishes/cocido-gallego.jpg",
       "available": true
     },
     {
       "id": "ensalada-n-7-137",
-      "name": "Ensalada Nº 7",
+      "name": "Lechuga + tomate + pollo + cebolla crujiente + frutas variadas + perlas de mozzarella + espárragos + vinagreta de frambuesa",
       "description": "Lechuga + tomate + pollo + cebolla crujiente + frutas variadas + perlas de mozzarella + espárragos + vinagreta de frambuesa",
       "price": 17,
       "category": "ensaladas",
@@ -1370,7 +1370,7 @@
     },
     {
       "id": "ensalada-n-8-138",
-      "name": "Ensalada Nº 8",
+      "name": "Brotes de ensalada + tomate Cherry + burrata + anchoas al pesto",
       "description": "Brotes de ensalada + tomate Cherry + burrata + anchoas al pesto",
       "price": 16,
       "category": "ensaladas",
@@ -1383,7 +1383,7 @@
       "description": "",
       "price": 58,
       "category": "arroces",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/navajas.jpg",
       "available": true
     },
     {
@@ -1392,7 +1392,7 @@
       "description": "",
       "price": 68,
       "category": "arroces",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/almejas.jpg",
       "available": true
     },
     {
@@ -1401,7 +1401,7 @@
       "description": "",
       "price": 38,
       "category": "arroces",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/verduras.jpg",
       "available": true
     },
     {
@@ -1420,7 +1420,7 @@
       "description": "",
       "price": 45,
       "category": "arroces",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
@@ -1458,7 +1458,7 @@
       "description": "",
       "price": 55,
       "category": "arroces",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/mejillones.jpg",
       "available": true
     },
     {
@@ -1476,7 +1476,7 @@
       "description": "",
       "price": 22,
       "category": "pescados",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/calamar-ria.jpg",
       "available": true
     },
     {
@@ -1512,7 +1512,7 @@
       "description": "",
       "price": 19,
       "category": "pescados",
-      "image": "./assets/raxoi/dishes/rodaballo.jpg",
+      "image": "./assets/raxoi/dishes/verduras.jpg",
       "available": true
     },
     {
@@ -1541,7 +1541,7 @@
       "description": "",
       "price": 19,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/mariscada.jpg",
+      "image": "./assets/raxoi/dishes/mejillones.jpg",
       "available": true
     },
     {
@@ -1568,7 +1568,7 @@
       "description": "",
       "price": 15,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/mariscada.jpg",
+      "image": "./assets/raxoi/dishes/mejillones.jpg",
       "available": true
     },
     {
@@ -1577,7 +1577,7 @@
       "description": "",
       "price": 18,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/mariscada.jpg",
+      "image": "./assets/raxoi/dishes/mejillones.jpg",
       "available": true
     },
     {
@@ -1613,7 +1613,7 @@
       "description": "",
       "price": 52,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
@@ -1696,7 +1696,7 @@
       "description": "",
       "price": 85,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
@@ -1705,7 +1705,7 @@
       "description": "",
       "price": 120,
       "category": "mariscos",
-      "image": "./assets/raxoi/dishes/arroz-marisco.jpg",
+      "image": "./assets/raxoi/dishes/mariscada.jpg",
       "available": true
     },
     {
@@ -1859,7 +1859,7 @@
     },
     {
       "id": "ttarta-de-queso-al-horno-con-pistacho-191",
-      "name": "TTarta de queso al horno con pistacho",
+      "name": "Tarta de queso al horno con pistacho",
       "description": "",
       "price": 7,
       "category": "postres",
@@ -1981,61 +1981,61 @@
     },
     {
       "id": "menu-infantil-n-1-204",
-      "name": "Menú Infantil Nº 1",
+      "name": "Tortilla francesa + croquetas caseras + patatas fritas",
       "description": "Tortilla francesa + croquetas caseras + patatas fritas",
       "price": 12,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/tortilla.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-2-205",
-      "name": "Menú Infantil Nº 2",
+      "name": "Tortilla francesa rellena de queso + hamburguesa de pollo + patatas fritas",
       "description": "Tortilla francesa rellena de queso + hamburguesa de pollo + patatas fritas",
       "price": 13,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/hamburguesa.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-3-206",
-      "name": "Menú Infantil Nº 3",
+      "name": "Milanesa de pollo + patatas",
       "description": "Milanesa de pollo + patatas",
       "price": 14,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-4-207",
-      "name": "Menú Infantil Nº 4",
+      "name": "Milanesa de pollo + dos huevos a la plancha + patatas fritas",
       "description": "Milanesa de pollo + dos huevos a la plancha + patatas fritas",
       "price": 15,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-5-208",
-      "name": "Menú Infantil Nº 5",
+      "name": "Pechuga de pollo a la plancha + dos huevos a la plancha + croquetas caseras + patatas",
       "description": "Pechuga de pollo a la plancha + dos huevos a la plancha + croquetas caseras + patatas",
       "price": 16.5,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-6-209",
-      "name": "Menú Infantil Nº 6",
+      "name": "Hamburguesa de ternera + dos huevos a la plancha + patatas fritas",
       "description": "Hamburguesa de ternera + dos huevos a la plancha + patatas fritas",
       "price": 14,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/hamburguesa.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-7-210",
-      "name": "Menú Infantil Nº 7",
+      "name": "Tallarines a la carbonara",
       "description": "Tallarines a la carbonara",
       "price": 12,
       "category": "infantil",
@@ -2044,7 +2044,7 @@
     },
     {
       "id": "menu-infantil-n-8-211",
-      "name": "Menú Infantil Nº 8",
+      "name": "Tallarines a la boloñesa",
       "description": "Tallarines a la boloñesa",
       "price": 12,
       "category": "infantil",
@@ -2053,47 +2053,47 @@
     },
     {
       "id": "menu-infantil-n-9-212",
-      "name": "Menú Infantil Nº 9",
+      "name": "Raxo + patatas fritas",
       "description": "Raxo + patatas fritas",
       "price": 14,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-10-213",
-      "name": "Menú Infantil Nº 10",
+      "name": "Raxo + dos huevos a la plancha + patatas fritas",
       "description": "Raxo + dos huevos a la plancha + patatas fritas",
       "price": 16,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-11-214",
-      "name": "Menú Infantil Nº 11",
+      "name": "Zorza + patatas fritas",
       "description": "Zorza + patatas fritas",
       "price": 14,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-12-215",
-      "name": "Menú Infantil Nº 12",
+      "name": "Zorza + dos huevos a plancha +patatas fritas",
       "description": "Zorza + dos huevos a plancha +patatas fritas",
       "price": 16,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
       "available": true
     },
     {
       "id": "menu-infantil-n-13-216",
-      "name": "Menú Infantil Nº 13",
+      "name": "Tabla de infantiles (raxo, tortilla francesa con queso, milanesa de pollo, croquetas, patatas fritas)",
       "description": "Tabla de infantiles (raxo, tortilla francesa con queso, milanesa de pollo, croquetas, patatas fritas)",
       "price": 22,
       "category": "infantil",
-      "image": "./assets/raxoi/dishes/menu-infantil.jpg",
+      "image": "./assets/raxoi/dishes/tortilla.jpg",
       "available": true
     }
   ]

@@ -369,6 +369,7 @@ function ReelSlide({
         {/* Add */}
         <button
           onClick={onAddToCart}
+          aria-label={`Añadir ${dish.name}`}
           className="bg-primary text-white text-[11px] font-bold px-3.5 py-2 rounded-full uppercase tracking-wide shadow-lg hover:bg-primary/80 transition-colors"
         >
           Añadir

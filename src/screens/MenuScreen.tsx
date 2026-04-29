@@ -345,6 +345,7 @@ function DishRow({
           <button
             onClick={handleAdd}
             disabled={added}
+            aria-label={added ? `${dish.name} añadido` : `Añadir ${dish.name}`}
             className={`text-[11px] font-semibold px-4 min-h-[40px] rounded-full transition-all uppercase tracking-[0.08em] border ${added ? "border-primary/40 text-primary/60 bg-primary/5 scale-95" : "border-primary/40 text-primary hover:bg-primary hover:text-white"}`}
           >
             {added ? "✓ Añadido" : "+ Añadir"}
@@ -597,6 +598,7 @@ function DishDetailSheet({
 
               <button
                 onClick={onAddToCart}
+                aria-label={`Añadir ${dish?.name ?? ''} a mi lista`}
                 className="flex-1 h-11 bg-primary text-white font-semibold rounded-2xl hover:bg-primary/80 transition-colors uppercase tracking-wide text-sm"
               >
                 Añadir a mi lista
