@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useConfig } from "@/context/ConfigContext";
 import type { CartItem } from "@/pages/Index";
 
@@ -24,6 +25,31 @@ export function HomeScreen({
 }: Props) {
   const config = useConfig();
   const greeting = useGreeting();
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const imgRefs = useRef<(HTMLElement | null)[]>([]);
+
+  // Overdrive C: inner parallax on category card images
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const update = () => {
+      const cRect = container.getBoundingClientRect();
+      const midY = cRect.top + cRect.height / 2;
+      imgRefs.current.forEach((el) => {
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const cardMid = r.top + r.height / 2;
+        const ratio = Math.max(-1.2, Math.min(1.2, (cardMid - midY) / (cRect.height * 0.5)));
+        el.style.transform = `translateY(${ratio * -14}px) scale(1.18)`;
+      });
+    };
+
+    container.addEventListener('scroll', update, { passive: true });
+    update();
+    return () => container.removeEventListener('scroll', update);
+  }, []);
 
   return (
     <div className="flex flex-col h-[100dvh] overflow-hidden bg-app">
@@ -119,13 +145,13 @@ export function HomeScreen({
       </div>
 
       {/* ── Category cards ── */}
-      <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col min-h-0">
+      <div ref={scrollContainerRef} className="flex-1 overflow-y-auto no-scrollbar flex flex-col min-h-0">
         <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/50 mb-4 flex-shrink-0">
           {greeting} · Explora la carta
         </p>
 
         <div className="grid grid-cols-2 gap-3 px-4 pb-6">
-          {config.categories.map((cat) => {
+          {config.categories.map((cat, i) => {
             const hasDishes = config.dishes.some(
               (d) => d.category === cat.id && d.available !== false
             );
@@ -152,15 +178,18 @@ export function HomeScreen({
                   {/* Photo */}
                   {cat.image ? (
                     <img
+                      ref={(el) => { imgRefs.current[i] = el; }}
                       src={cat.image}
                       alt=""
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      style={{ transform: 'translateY(0) scale(1.18)', transition: 'none' }}
                     />
                   ) : (
                     <div
+                      ref={(el) => { imgRefs.current[i] = el; }}
                       className="w-full h-full"
-                      style={{ background: "linear-gradient(135deg, #1e1c1a 0%, #2e2a27 100%)" }}
+                      style={{ background: "linear-gradient(135deg, #1e1c1a 0%, #2e2a27 100%)", transform: 'translateY(0) scale(1.18)', transition: 'none' }}
                     />
                   )}
 

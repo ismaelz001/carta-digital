@@ -86,6 +86,23 @@ export function ReelScreen({
     el?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Velocity-based swipe for spring-physics feel
+  const touchStartRef = useRef<{ y: number; time: number } | null>(null);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = { y: e.touches[0].clientY, time: Date.now() };
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return;
+    const dy = touchStartRef.current.y - e.changedTouches[0].clientY;
+    const dt = Math.max(1, Date.now() - touchStartRef.current.time);
+    const velocity = dy / dt; // px/ms
+    touchStartRef.current = null;
+    if (Math.abs(velocity) > 0.25 && Math.abs(dy) > 35) {
+      if (velocity > 0) goNext();
+      else goPrev();
+    }
+  };
+
   return (
     <div className="flex flex-col h-[100dvh] bg-app overflow-hidden">
       {/* ── Top bar ── */}
@@ -126,6 +143,8 @@ export function ReelScreen({
         ref={containerRef}
         className="flex-1 overflow-y-scroll snap-y-mandatory no-scrollbar"
         style={{ scrollBehavior: "smooth" }}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {dishes.map((dish, idx) => (
           <ReelSlide
@@ -230,6 +249,8 @@ function ReelSlide({
   onToggleInfo,
 }: SlideProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const prevActiveRef = useRef(false);
+  const [springClass, setSpringClass] = useState('');
 
   // Auto-play/pause based on visibility
   useEffect(() => {
@@ -243,6 +264,16 @@ function ReelSlide({
     }
   }, [isActive]);
 
+  // Spring entrance when slide becomes active
+  useEffect(() => {
+    if (isActive && !prevActiveRef.current) {
+      setSpringClass('animate-spring-snap-in');
+      const t = setTimeout(() => setSpringClass(''), 600);
+      return () => clearTimeout(t);
+    }
+    prevActiveRef.current = isActive;
+  }, [isActive]);
+
   return (
     <div
       className="relative h-[100dvh] snap-start overflow-hidden flex-shrink-0"
@@ -254,6 +285,7 @@ function ReelSlide({
           ref={videoRef}
           src={dish.video}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'contrast(1.07) saturate(1.1) brightness(0.94)' }}
           muted
           loop
           playsInline
@@ -269,18 +301,26 @@ function ReelSlide({
               ? "ken-burns 8s ease-in-out infinite alternate"
               : "none",
             willChange: isActive ? "transform" : "auto",
+            filter: 'contrast(1.07) saturate(1.1) brightness(0.94)',
           }}
         />
       )}
 
-      {/* Strong bottom gradient for text */}
+      {/* Cinematic gradient — warm dark bottom, top scrim */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.85) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.08) 18%, transparent 45%, rgba(13,8,5,0.65) 72%, rgba(13,8,5,0.93) 100%)",
         }}
       />
+      {/* Corner vignette */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at 50% 40%, transparent 50%, rgba(0,0,0,0.38) 100%)" }}
+      />
+      {/* Film grain */}
+      {isActive && <div className="reel-grain z-10" />}
 
       {/* Right sidebar actions */}
       <div className="absolute right-4 bottom-28 z-20 flex flex-col gap-4 items-center">
@@ -325,8 +365,8 @@ function ReelSlide({
         </button>
       </div>
 
-      {/* Bottom text overlay */}
-      <div className="absolute bottom-20 left-5 right-20 z-20">
+      {/* Bottom text overlay — spring entrance */}
+      <div className={`absolute bottom-20 left-5 right-20 z-20 ${springClass}`}>
         <h3 className="font-display text-2xl font-light text-white text-shadow leading-tight">
           {dish.name}
         </h3>
