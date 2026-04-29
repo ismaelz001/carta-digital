@@ -8,33 +8,42 @@ interface Props {
   cinematic?: boolean;
   /** Tiempo entre cada foto cuando hay multi-imagen (ms) */
   fadeMs?: number;
+  /** Si false, ignora `dish.video` y usa solo imagen (recomendado para thumbnails pequeños) */
+  enableVideo?: boolean;
 }
 
 /**
  * Render del media de un plato:
- * - Si tiene `video` → reproduce video en loop (autoplay, muted)
+ * - Si `enableVideo` y tiene `video` → reproduce video en loop (autoplay, muted)
  * - Si tiene `images` (>1) → cross-fade entre las fotos cada N segundos + ken-burns
  * - Si solo tiene `image` → muestra la foto con ken-burns sutil
  *
- * Uso:
- *   <DishMedia dish={dish} className="w-full h-full" />
+ * Uso en thumbnail (rápido, sin video): <DishMedia dish={dish} />
+ * Uso en detail/reel (con video):       <DishMedia dish={dish} enableVideo cinematic />
  */
-export function DishMedia({ dish, className = "", cinematic = false, fadeMs = 3500 }: Props) {
+export function DishMedia({
+  dish,
+  className = "",
+  cinematic = false,
+  fadeMs = 3500,
+  enableVideo = false,
+}: Props) {
   const photos = dish.images && dish.images.length > 1 ? dish.images : [dish.image];
   const [idx, setIdx] = useState(0);
   const [videoFailed, setVideoFailed] = useState(false);
+  const showVideo = enableVideo && dish.video && !videoFailed;
 
   // Cross-fade automático cuando hay varias fotos
   useEffect(() => {
-    if (photos.length < 2 || (dish.video && !videoFailed)) return;
+    if (photos.length < 2 || showVideo) return;
     const t = setInterval(() => {
       setIdx((i) => (i + 1) % photos.length);
     }, fadeMs);
     return () => clearInterval(t);
-  }, [photos.length, fadeMs, dish.video, videoFailed]);
+  }, [photos.length, fadeMs, showVideo]);
 
   // Caso 1: video (con fallback a imagen si falla)
-  if (dish.video && !videoFailed) {
+  if (showVideo) {
     return (
       <video
         src={dish.video}

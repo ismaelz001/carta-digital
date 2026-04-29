@@ -515,7 +515,7 @@ function DishDetailSheet({
         <div className="overflow-y-auto no-scrollbar">
           {/* Hero image */}
           <div className="relative w-full aspect-[4/3] bg-[#1a1714]">
-            <DishMedia dish={dish} cinematic />
+            <DishMedia dish={dish} cinematic enableVideo />
             {/* Gradient */}
             <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 60%, rgba(20,18,16,0.9) 100%)" }} />
 
