@@ -114,6 +114,12 @@
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+  /* ── iOS safe area ── */
+  .pt-safe-top  { padding-top:    max(env(safe-area-inset-top),    16px); }
+  .pb-safe-bottom { padding-bottom: max(env(safe-area-inset-bottom),  0px); }
+  .pt-safe      { padding-top:    env(safe-area-inset-top,    0px); }
+  .pb-safe      { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
   .snap-x-mandatory {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;

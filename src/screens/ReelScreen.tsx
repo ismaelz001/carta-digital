@@ -106,7 +106,7 @@ export function ReelScreen({
   return (
     <div className="flex flex-col h-[100dvh] bg-app overflow-hidden">
       {/* ── Top bar ── */}
-      <div className="absolute top-0 left-0 right-0 z-30 flex items-center gap-3 px-4 pt-4 pb-3">
+      <div className="absolute top-0 left-0 right-0 z-30 flex items-center gap-3 px-4 pt-safe-top pb-3">
         <button
           onClick={onBack}
           className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
@@ -142,7 +142,7 @@ export function ReelScreen({
       <div
         ref={containerRef}
         className="flex-1 overflow-y-scroll snap-y-mandatory no-scrollbar"
-        style={{ scrollBehavior: "smooth" }}
+        style={{ scrollBehavior: "smooth", overscrollBehavior: "none", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >

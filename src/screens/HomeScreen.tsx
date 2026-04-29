@@ -54,7 +54,7 @@ export function HomeScreen({
   return (
     <div className="flex flex-col h-[100dvh] overflow-hidden bg-app">
       {/* ── Top bar ── */}
-      <div className="flex items-center justify-between px-5 pt-safe-top pb-3 pt-4 z-10 flex-shrink-0">
+      <div className="flex items-center justify-between px-5 pt-safe-top pb-3 z-10 flex-shrink-0">
         {config.reservas ? (
           <a
             href={config.reservas}
@@ -106,9 +106,9 @@ export function HomeScreen({
       </div>
 
       {/* ── Logo + Name ── */}
-      <div className="flex flex-col items-center pt-4 pb-6 flex-shrink-0">
+      <div className="flex flex-col items-center pt-4 pb-6 flex-shrink-0 landscape:pt-2 landscape:pb-3">
         <div
-          className="w-[120px] h-[120px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center"
+          className="w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center"
           style={{ boxShadow: "0 0 0 6px rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.5)" }}
         >
           {config.logo ? (
@@ -124,7 +124,7 @@ export function HomeScreen({
           )}
         </div>
 
-        <h1 className="font-display text-[22px] font-light text-white tracking-wide text-center px-4">
+        <h1 className="font-display text-[22px] landscape:text-lg font-light text-white tracking-wide text-center px-4">
           {config.name}
         </h1>
         {config.tagline && (
@@ -150,7 +150,7 @@ export function HomeScreen({
           {greeting} · Explora la carta
         </p>
 
-        <div className="grid grid-cols-2 gap-3 px-4 pb-6">
+        <div className="grid grid-cols-2 gap-3 px-4 pb-6 md:grid-cols-4 md:max-w-3xl md:mx-auto md:w-full">
           {config.categories.map((cat, i) => {
             const hasDishes = config.dishes.some(
               (d) => d.category === cat.id && d.available !== false

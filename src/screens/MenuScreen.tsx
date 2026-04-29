@@ -57,7 +57,7 @@ export function MenuScreen({
   return (
     <div className="flex flex-col h-[100dvh] bg-app overflow-hidden">
       {/* ── Top bar ── */}
-      <div className="flex-shrink-0 flex items-center gap-3 px-4 pt-4 pb-3 border-b border-white/7">
+      <div className="flex-shrink-0 flex items-center gap-3 px-4 pt-safe-top pb-3 border-b border-white/7">
         {/* Back */}
         <button
           onClick={onBack}
@@ -181,7 +181,7 @@ export function MenuScreen({
             </p>
           </div>
         ) : (
-          <div className="divide-y divide-white/5" key={activeCategory}>
+          <div className="divide-y divide-white/5 md:max-w-2xl md:mx-auto" key={activeCategory}>
             {dishes.map((dish, i) => (
               <DishRow
                 key={dish.id}
@@ -488,7 +488,7 @@ function NavItem({
       <div className="relative">
         {icon}
         {badge !== undefined && badge > 0 && (
-          <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5">
+          <span key={badge} className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 animate-badge-pop">
             {badge}
           </span>
         )}

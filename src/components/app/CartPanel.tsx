@@ -30,7 +30,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
         aria-label="Mi lista"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 pt-safe-top py-5 border-b border-white/8 flex-shrink-0 pt-6">
+        <div className="flex items-center justify-between px-5 pt-safe-top pb-4 border-b border-white/8 flex-shrink-0">
           <div>
             <h2 className="font-display text-xl font-light text-white">Mi lista</h2>
             <p className="text-[11px] text-white/40 mt-0.5">
