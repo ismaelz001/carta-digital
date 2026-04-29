@@ -31,3 +31,7 @@ dist-ssr
 # Debug / temp screenshots
 tmp-*.png
 tmp-*.jpg
+
+# scaffolding interno multi-cliente
+.tmp/
+
