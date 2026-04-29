@@ -16,7 +16,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
       {/* Backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-40 bg-[#0D0B09]/75 backdrop-blur-sm animate-fade-in"
           onClick={onClose}
         />
       )}
@@ -146,8 +146,8 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
               Llamar al camarero
             </button>
 
-            <p className="text-center text-[10px] text-white/25 mt-3">
-              Muestra esta lista al camarero
+            <p className="text-center text-[10px] text-white/35 mt-3">
+              Tu selección está lista · Muéstrasela al camarero
             </p>
           </div>
         )}

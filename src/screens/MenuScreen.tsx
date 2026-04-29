@@ -31,14 +31,18 @@ export function MenuScreen({
 }: Props) {
   const config = useConfig();
   const [openDish, setOpenDish] = useState<Dish | null>(null);
+  const [dietFilter, setDietFilter] = useState<string | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
 
   // Dishes to show
-  const dishes = filterFavs
+  const baseDishes = filterFavs
     ? filterFavs
     : config.dishes.filter(
         (d) => d.category === activeCategory && d.available !== false
       );
+  const dishes = dietFilter
+    ? baseDishes.filter((d) => d.tags?.includes(dietFilter))
+    : baseDishes;
 
   const activeLabel = filterFavs
     ? "Favoritos"
@@ -47,6 +51,7 @@ export function MenuScreen({
   // Scroll list to top on category change
   useEffect(() => {
     listRef.current?.scrollTo({ top: 0 });
+    setDietFilter(null);
   }, [activeCategory]);
 
   return (
@@ -105,23 +110,51 @@ export function MenuScreen({
         </button>
       </div>
 
-      {/* ── Category title + video shortcut ── */}
+      {/* ── Category title + diet filters + video shortcut ── */}
       {!filterFavs && (
-        <div className="flex-shrink-0 flex items-center justify-between px-5 py-3">
-          <h2 className="font-display text-2xl font-light text-white">
-            {activeLabel}
-          </h2>
-          {config.dishes.some((d) => d.category === activeCategory && d.video) && (
-            <button
-              onClick={() => onReelOpen()}
-              className="flex items-center gap-1.5 text-[11px] font-medium text-primary border border-primary/30 px-3 min-h-[44px] rounded-full hover:bg-primary/10 transition-colors"
-            >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-                <polygon points="2,1 9,5 2,9"/>
-              </svg>
-              Ver en vídeo
-            </button>
-          )}
+        <div className="flex-shrink-0 px-5 pt-3 pb-1">
+          <div className="flex items-center justify-between">
+            <h2 className="font-display text-2xl font-light text-white">
+              {activeLabel}
+            </h2>
+            {config.dishes.some((d) => d.category === activeCategory && d.video) && (
+              <button
+                onClick={() => onReelOpen()}
+                className="flex items-center gap-1.5 text-[11px] font-medium text-primary border border-primary/30 px-3 min-h-[44px] rounded-full hover:bg-primary/10 transition-colors"
+              >
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+                  <polygon points="2,1 9,5 2,9"/>
+                </svg>
+                Ver en vídeo
+              </button>
+            )}
+          </div>
+
+          {/* Diet filter chips */}
+          {(() => {
+            const dietTags = ["Vegetariano", "Sin gluten", "Crudo", "Picante suave"];
+            const available = dietTags.filter((tag) =>
+              config.dishes.some((d) => d.category === activeCategory && d.tags?.includes(tag))
+            );
+            if (available.length === 0) return null;
+            return (
+              <div className="flex gap-2 mt-2.5 mb-1 overflow-x-auto no-scrollbar">
+                {available.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => setDietFilter(dietFilter === tag ? null : tag)}
+                    className={`flex-shrink-0 text-[10px] font-medium px-3 py-1.5 rounded-full border transition-all ${
+                      dietFilter === tag
+                        ? "bg-primary/20 border-primary/60 text-primary"
+                        : "border-white/15 text-white/50 hover:border-white/30 hover:text-white/70"
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            );
+          })()}
         </div>
       )}
 
@@ -215,6 +248,14 @@ function DishRow({
   onDetail,
   onReel,
 }: DishRowProps) {
+  const [added, setAdded] = useState(false);
+
+  function handleAdd() {
+    onAddToCart();
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1800);
+  }
+
   return (
     <div
       className="flex gap-3 px-4 py-4 active:bg-white/3 transition-colors cursor-pointer"
@@ -230,14 +271,14 @@ function DishRow({
         />
         {dish.video && (
           <button
-            className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-colors"
+            className="absolute inset-0 flex items-center justify-center bg-[#0D0B09]/45 hover:bg-[#0D0B09]/65 transition-colors"
             onClick={(e) => {
               e.stopPropagation();
               onReel();
             }}
             aria-label="Ver vídeo"
           >
-            <div className="w-9 h-9 rounded-full bg-black/60 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-[#0D0B09]/70 flex items-center justify-center">
               <svg width="9" height="10" viewBox="0 0 9 10" fill="white">
                 <polygon points="1,0.5 8.5,5 1,9.5"/>
               </svg>
@@ -308,10 +349,11 @@ function DishRow({
 
             {/* Add */}
             <button
-              onClick={onAddToCart}
-              className="bg-primary text-white text-[11px] font-bold px-3 min-h-[44px] rounded-full hover:bg-primary/80 transition-colors uppercase tracking-wide"
+              onClick={handleAdd}
+              disabled={added}
+              className={`text-[11px] font-bold px-3 min-h-[44px] rounded-full transition-all uppercase tracking-wide ${added ? "bg-primary/40 text-white/70 scale-95" : "bg-primary text-white hover:bg-primary/80"}`}
             >
-              Añadir
+              {added ? "✓ Añadido" : "Añadir"}
             </button>
           </div>
         </div>
@@ -465,7 +507,7 @@ function DishDetailSheet({
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm animate-fade-in"
+        className="fixed inset-0 z-40 bg-[#0D0B09]/75 backdrop-blur-sm animate-fade-in"
         onClick={onClose}
       />
 
@@ -490,7 +532,7 @@ function DishDetailSheet({
                 onClick={onReel}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="w-14 h-14 rounded-full bg-black/50 border border-white/20 flex items-center justify-center backdrop-blur-sm">
+                <div className="w-14 h-14 rounded-full bg-[#0D0B09]/65 border border-white/20 flex items-center justify-center backdrop-blur-sm">
                   <svg width="18" height="20" viewBox="0 0 18 20" fill="white">
                     <polygon points="1,0.5 17,10 1,19.5"/>
                   </svg>
@@ -503,7 +545,7 @@ function DishDetailSheet({
             {/* Close */}
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm"
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#0D0B09]/65 flex items-center justify-center backdrop-blur-sm"
               aria-label="Cerrar"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">

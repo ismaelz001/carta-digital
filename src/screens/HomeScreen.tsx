@@ -161,14 +161,14 @@ export function HomeScreen({
                     className="absolute inset-0"
                     style={{
                       background:
-                        "linear-gradient(180deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.8) 100%)",
+                        "linear-gradient(180deg, rgba(13,11,9,0.0) 40%, rgba(13,11,9,0.85) 100%)",
                     }}
                   />
                 </button>
 
                 {/* Video badge — top right */}
                 {hasVideo && (
-                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/50 backdrop-blur-sm px-2 py-1 rounded-full pointer-events-none">
+                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0D0B09]/65 backdrop-blur-sm px-2 py-1 rounded-full pointer-events-none">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="white">
                       <polygon points="2,1 9,5 2,9"/>
                     </svg>
@@ -181,7 +181,7 @@ export function HomeScreen({
                 {/* Dish count — top left */}
                 {hasDishes && (
                   <div className="absolute top-3 left-3 pointer-events-none">
-                    <span className="text-[10px] text-white/65 bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] text-white/65 bg-[#0D0B09]/55 backdrop-blur-sm px-2 py-0.5 rounded-full">
                       {dishCount} {dishCount === 1 ? "plato" : "platos"}
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export function HomeScreen({
                 <div className="absolute bottom-0 inset-x-0 flex flex-col items-center gap-2 pb-4">
                   {hasVideo && (
                     <button
-                      className="flex items-center gap-1.5 text-[10px] font-medium text-white/85 bg-black/45 backdrop-blur-sm border border-white/15 px-3 py-1 rounded-full hover:bg-black/65 active:scale-95 transition-all"
+                      className="flex items-center gap-1.5 text-[10px] font-medium text-white/85 bg-[#0D0B09]/60 backdrop-blur-sm border border-white/15 px-3 py-1 rounded-full hover:bg-[#0D0B09]/75 active:scale-95 transition-all"
                       onClick={(e) => {
                         e.stopPropagation();
                         onReelOpen(cat.id);
