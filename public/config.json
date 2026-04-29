@@ -87,8 +87,7 @@
       "tags": ["Vegetariano", "Sin gluten"],
       "signature": true,
       "popular": true,
-      "available": true,
-      "video": "./assets/videos/desayuno-1.mp4"
+      "available": true
     },
     {
       "id": "tuna",
@@ -141,8 +140,7 @@
       "image": "./assets/dish-fondant.jpg",
       "signature": true,
       "popular": true,
-      "available": true,
-      "video": "./assets/videos/desayuno-3.mp4"
+      "available": true
     },
     {
       "id": "tiramisu",
