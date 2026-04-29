@@ -111,12 +111,12 @@ export function HomeScreen({
       </div>
 
       {/* ── Category cards ── */}
-      <div className="flex-1 overflow-hidden flex flex-col min-h-0">
+      <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col min-h-0">
         <p className="text-center text-[10px] uppercase tracking-[0.22em] text-white/30 mb-4 flex-shrink-0">
           Explora la carta
         </p>
 
-        <div className="flex gap-4 px-5 overflow-x-auto no-scrollbar snap-x-mandatory pb-5 flex-1 items-start">
+        <div className="grid grid-cols-2 gap-3 px-4 pb-6">
           {config.categories.map((cat) => {
             const hasDishes = config.dishes.some(
               (d) => d.category === cat.id && d.available !== false
@@ -128,8 +128,8 @@ export function HomeScreen({
             return (
               <button
                 key={cat.id}
-                className="snap-center flex-none relative rounded-2xl overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                style={{ width: "62vw", maxWidth: 260, aspectRatio: "3/4" }}
+                className="relative rounded-2xl overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                style={{ aspectRatio: "3/4" }}
                 onClick={() => onCategorySelect(cat.id)}
                 aria-label={`Ver ${cat.label}`}
               >
@@ -208,34 +208,14 @@ export function HomeScreen({
           })}
         </div>
 
-        {/* Dots */}
-        <DotsPagination count={config.categories.length} />
+        {/* Season label — al final del scroll */}
+        {config.season && (
+          <p className="text-center text-[10px] uppercase tracking-widest text-white/25 py-4">
+            {config.season}
+          </p>
+        )}
       </div>
 
-      {/* Season label */}
-      {config.season && (
-        <p className="text-center text-[10px] uppercase tracking-widest text-white/25 pb-4 flex-shrink-0">
-          {config.season}
-        </p>
-      )}
-    </div>
-  );
-}
-
-function DotsPagination({ count }: { count: number }) {
-  return (
-    <div className="flex justify-center gap-1.5 py-3 flex-shrink-0">
-      {Array.from({ length: count }).map((_, i) => (
-        <div
-          key={i}
-          className="rounded-full transition-all duration-300"
-          style={{
-            width: i === 0 ? 20 : 6,
-            height: 6,
-            background: i === 0 ? "hsl(var(--primary))" : "rgba(255,255,255,0.2)",
-          }}
-        />
-      ))}
     </div>
   );
 }
