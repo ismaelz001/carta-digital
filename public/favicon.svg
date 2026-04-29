@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#0D0B09"/>
+  <!-- tenedor -->
+  <line x1="10" y1="5" x2="10" y2="13" stroke="#E5472A" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="7.5" y1="5" x2="7.5" y2="10" stroke="#E5472A" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="12.5" y1="5" x2="12.5" y2="10" stroke="#E5472A" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="10" y1="13" x2="10" y2="27" stroke="#E5472A" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- cuchillo -->
+  <path d="M21 5 C21 5 23.5 8 23.5 13 L21 13 L21 27" stroke="#E5472A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
