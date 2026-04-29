@@ -253,11 +253,17 @@ function DishRow({
 }: DishRowProps) {
   const [added, setAdded] = useState(false);
   const [justFaved, setJustFaved] = useState(false);
+  const addingRef = useRef(false);
 
   function handleAdd() {
+    if (addingRef.current) return;
+    addingRef.current = true;
     onAddToCart();
     setAdded(true);
-    setTimeout(() => setAdded(false), 1800);
+    setTimeout(() => {
+      setAdded(false);
+      addingRef.current = false;
+    }, 1800);
   }
 
   function handleFav() {
@@ -281,6 +287,7 @@ function DishRow({
           alt={dish.name}
           className="w-full h-full object-cover"
           loading="lazy"
+          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
         />
         {dish.video && (
           <button
@@ -310,12 +317,14 @@ function DishRow({
       {/* Info */}
       <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
         <div>
-          <h3 className="text-sm font-semibold text-white leading-tight tracking-wide">
+          <h3 className="text-sm font-semibold text-white leading-tight tracking-wide truncate">
             {dish.name}
           </h3>
-          <p className="text-[11px] text-white/50 mt-1 leading-relaxed line-clamp-2">
-            {dish.description}
-          </p>
+          {dish.description && (
+            <p className="text-[11px] text-white/50 mt-1 leading-relaxed line-clamp-2">
+              {dish.description}
+            </p>
+          )}
           {dish.tags && dish.tags.length > 0 && (
             <div className="flex gap-1 mt-1.5 flex-wrap">
               {dish.tags.slice(0, 3).map((tag) => (
@@ -540,11 +549,12 @@ function DishDetailSheet({
         {/* Scrollable content */}
         <div className="overflow-y-auto no-scrollbar">
           {/* Hero image */}
-          <div className="relative w-full aspect-[4/3]">
+          <div className="relative w-full aspect-[4/3] bg-[#1a1714]">
             <img
               src={dish.image}
               alt={dish.name}
               className="w-full h-full object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0'; }}
             />
             {dish.video && (
               <button
@@ -578,7 +588,7 @@ function DishDetailSheet({
           <div className="px-5 pt-4 pb-6">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
-                <h2 className="font-display text-2xl font-light text-white leading-tight">
+                <h2 className="font-display text-2xl font-light text-white leading-tight break-words">
                   {dish.name}
                 </h2>
                 {(dish.signature || dish.popular) && (

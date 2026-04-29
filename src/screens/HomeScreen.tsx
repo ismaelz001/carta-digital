@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useConfig } from "@/context/ConfigContext";
 import type { CartItem } from "@/pages/Index";
 
@@ -27,6 +27,7 @@ export function HomeScreen({
   const greeting = useGreeting();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const imgRefs = useRef<(HTMLElement | null)[]>([]);
+  const [logoError, setLogoError] = useState(false);
 
   // Overdrive C: inner parallax on category card images
   useEffect(() => {
@@ -123,11 +124,12 @@ export function HomeScreen({
         <div
           className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center logo-glow"
         >
-          {config.logo ? (
+          {config.logo && !logoError ? (
             <img
               src={config.logo}
               alt={config.name}
               className="w-full h-full object-cover"
+              onError={() => setLogoError(true)}
             />
           ) : (
             <span className="font-display text-3xl font-light text-white/85 tracking-wide">
@@ -186,7 +188,14 @@ export function HomeScreen({
         })()}
 
         <div className="grid grid-cols-2 gap-3 px-4 pb-6">
-          {config.categories.map((cat, i) => {
+          {config.categories.length === 0 ? (
+            <div className="col-span-2 flex flex-col items-center justify-center py-16 gap-3">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-white/20">
+                <path d="M3 2h18M3 7h18M3 12h18M3 17h6M3 22h6"/>
+              </svg>
+              <p className="text-sm text-white/30 text-center">La carta aún no tiene categorías</p>
+            </div>
+          ) : config.categories.map((cat, i) => {
             const hasDishes = config.dishes.some(
               (d) => d.category === cat.id && d.available !== false
             );
@@ -219,6 +228,14 @@ export function HomeScreen({
                       className="w-full h-full object-cover"
                       loading="lazy"
                       style={{ transform: 'translateY(0) scale(1.18)', transition: 'none' }}
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        if (imgRefs.current[i] === e.currentTarget) {
+                          // fallback al div gradient
+                          const fallback = e.currentTarget.parentElement;
+                          if (fallback) fallback.style.background = 'linear-gradient(135deg, #1e1c1a 0%, #2e2a27 100%)';
+                        }
+                      }}
                     />
                   ) : (
                     <div
@@ -276,7 +293,7 @@ export function HomeScreen({
                       Ver en vídeo
                     </button>
                   )}
-                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full tracking-[0.08em] text-shadow pointer-events-none">
+                  <span className="bg-primary text-white text-[11px] font-semibold px-4 py-1.5 rounded-full tracking-[0.08em] text-shadow pointer-events-none max-w-[90%] truncate block text-center">
                     {cat.label}
                   </span>
                 </div>

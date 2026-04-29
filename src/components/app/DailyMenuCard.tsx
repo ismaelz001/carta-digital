@@ -52,7 +52,7 @@ export function DailyMenuCard({ menu }: Props) {
                 </span>
               </div>
               <p className="text-[11px] text-white/50 mt-0.5">
-                {menu.includes.length} platos incluidos · Pan y bebida
+                {menu.includes.length} {menu.includes.length === 1 ? 'plato incluido' : 'platos incluidos'}
               </p>
             </div>
           </div>

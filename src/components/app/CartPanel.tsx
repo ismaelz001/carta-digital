@@ -76,6 +76,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
                       src={dish.image}
                       alt={dish.name}
                       className="w-full h-full object-cover"
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0'; }}
                     />
                   </div>
 
