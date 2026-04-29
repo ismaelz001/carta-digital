@@ -276,34 +276,32 @@ function DishRow({
 
   return (
     <div
-      className="flex gap-3 px-4 py-4 active:bg-white/3 transition-colors cursor-pointer animate-dish-in"
+      className="flex gap-4 px-4 py-5 active:bg-white/3 transition-colors cursor-pointer animate-dish-in border-b border-white/[0.04]"
       style={style}
       onClick={onDetail}
     >
-      {/* Thumbnail */}
-      <div className="relative flex-shrink-0 w-[88px] h-[88px] rounded-xl overflow-hidden bg-[#1a1714]">
-        <img
-          src={dish.image}
-          alt={dish.name}
-          className="w-full h-full object-cover"
-          loading="lazy"
-          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-        />
-        {dish.video && (
-          <button
-            className="absolute inset-0 flex items-center justify-center bg-[#0D0B09]/45 hover:bg-[#0D0B09]/65 transition-colors"
-            onClick={(e) => {
-              e.stopPropagation();
-              onReel();
-            }}
-            aria-label="Ver vídeo"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#0D0B09]/70 flex items-center justify-center">
-              <svg width="9" height="10" viewBox="0 0 9 10" fill="white">
-                <polygon points="1,0.5 8.5,5 1,9.5"/>
-              </svg>
-            </div>
-          </button>
+      {/* Thumbnail — portrait 3:4 editorial */}
+      <div className="relative flex-shrink-0 w-[84px] h-[112px] rounded-2xl overflow-hidden bg-[#1a1714]">
+        {dish.video ? (
+          <video
+            src={dish.video}
+            className="w-full h-full object-cover"
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="auto"
+            poster={dish.image}
+            aria-label={dish.name}
+          />
+        ) : (
+          <img
+            src={dish.image}
+            alt={dish.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+          />
         )}
         {(dish.signature || dish.popular) && (
           <div className="absolute top-1.5 left-1.5">
@@ -317,16 +315,21 @@ function DishRow({
       {/* Info */}
       <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
         <div>
-          <h3 className="text-sm font-semibold text-white leading-tight tracking-wide truncate">
-            {dish.name}
-          </h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="font-display text-[17px] font-light text-white leading-snug tracking-tight flex-1 min-w-0 truncate">
+              {dish.name}
+            </h3>
+            <span className="font-display text-[17px] font-medium text-primary tabular-nums flex-shrink-0 leading-snug">
+              {dish.price.toFixed(2).replace(".", ",")}€
+            </span>
+          </div>
           {dish.description && (
-            <p className="text-[11px] text-white/50 mt-1 leading-relaxed line-clamp-2">
+            <p className="text-[11.5px] text-white/45 mt-1.5 leading-relaxed line-clamp-2 italic">
               {dish.description}
             </p>
           )}
           {dish.tags && dish.tags.length > 0 && (
-            <div className="flex gap-1 mt-1.5 flex-wrap">
+            <div className="flex gap-1 mt-2 flex-wrap">
               {dish.tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
@@ -339,51 +342,32 @@ function DishRow({
           )}
         </div>
 
-        <div className="flex items-center justify-between mt-2">
-          <span className="text-base font-semibold text-white tabular-nums">
-            {dish.price.toFixed(2).replace(".", ",")}€
-          </span>
-
-          <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
-            {/* Fav */}
-            <button
-              onClick={handleFav}
-              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
-              aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
+        <div className="flex items-center justify-end gap-1 mt-2" onClick={(e) => e.stopPropagation()}>
+          {/* Fav */}
+          <button
+            onClick={handleFav}
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
+            aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
+          >
+            <svg
+              width="16" height="16" viewBox="0 0 24 24"
+              fill={isFav ? "hsl(var(--primary))" : "none"}
+              stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"}
+              strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+              className={justFaved ? "animate-heart-pop" : ""}
             >
-              <svg
-                width="16" height="16" viewBox="0 0 24 24"
-                fill={isFav ? "hsl(var(--primary))" : "none"}
-                stroke={isFav ? "hsl(var(--primary))" : "rgba(255,255,255,0.5)"}
-                strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
-                className={justFaved ? "animate-heart-pop" : ""}
-              >
-                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-              </svg>
-            </button>
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </button>
 
-            {/* Info */}
-            <button
-              onClick={onDetail}
-              className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
-              aria-label="Ver detalles"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
-              </svg>
-            </button>
-
-            {/* Add */}
-            <button
-              onClick={handleAdd}
-              disabled={added}
-              className={`text-[11px] font-bold px-3 min-h-[44px] rounded-full transition-all uppercase tracking-wide ${added ? "bg-primary/40 text-white/70 scale-95" : "bg-primary text-white hover:bg-primary/80"}`}
-            >
-              {added ? "✓ Añadido" : "Añadir"}
-            </button>
-          </div>
+          {/* Add — ghost outlined */}
+          <button
+            onClick={handleAdd}
+            disabled={added}
+            className={`text-[11px] font-semibold px-4 min-h-[40px] rounded-full transition-all uppercase tracking-[0.08em] border ${added ? "border-primary/40 text-primary/60 bg-primary/5 scale-95" : "border-primary/40 text-primary hover:bg-primary hover:text-white"}`}
+          >
+            {added ? "✓ Añadido" : "+ Añadir"}
+          </button>
         </div>
       </div>
     </div>
@@ -550,23 +534,25 @@ function DishDetailSheet({
         <div className="overflow-y-auto no-scrollbar">
           {/* Hero image */}
           <div className="relative w-full aspect-[4/3] bg-[#1a1714]">
-            <img
-              src={dish.image}
-              alt={dish.name}
-              className="w-full h-full object-cover"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0'; }}
-            />
-            {dish.video && (
-              <button
-                onClick={onReel}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="w-14 h-14 rounded-full bg-[#0D0B09]/65 border border-white/20 flex items-center justify-center backdrop-blur-sm">
-                  <svg width="18" height="20" viewBox="0 0 18 20" fill="white">
-                    <polygon points="1,0.5 17,10 1,19.5"/>
-                  </svg>
-                </div>
-              </button>
+            {dish.video ? (
+              <video
+                src={dish.video}
+                className="w-full h-full object-cover"
+                muted
+                autoPlay
+                loop
+                playsInline
+                preload="auto"
+                poster={dish.image}
+                aria-label={dish.name}
+              />
+            ) : (
+              <img
+                src={dish.image}
+                alt={dish.name}
+                className="w-full h-full object-cover"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0'; }}
+              />
             )}
             {/* Gradient */}
             <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 60%, rgba(20,18,16,0.9) 100%)" }} />
