@@ -22,18 +22,19 @@ interface Props {
 export function DishMedia({ dish, className = "", cinematic = false, fadeMs = 3500 }: Props) {
   const photos = dish.images && dish.images.length > 1 ? dish.images : [dish.image];
   const [idx, setIdx] = useState(0);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   // Cross-fade automático cuando hay varias fotos
   useEffect(() => {
-    if (photos.length < 2 || dish.video) return;
+    if (photos.length < 2 || (dish.video && !videoFailed)) return;
     const t = setInterval(() => {
       setIdx((i) => (i + 1) % photos.length);
     }, fadeMs);
     return () => clearInterval(t);
-  }, [photos.length, fadeMs, dish.video]);
+  }, [photos.length, fadeMs, dish.video, videoFailed]);
 
-  // Caso 1: video
-  if (dish.video) {
+  // Caso 1: video (con fallback a imagen si falla)
+  if (dish.video && !videoFailed) {
     return (
       <video
         src={dish.video}
@@ -46,6 +47,7 @@ export function DishMedia({ dish, className = "", cinematic = false, fadeMs = 35
         preload="auto"
         poster={dish.image}
         aria-label={dish.name}
+        onError={() => setVideoFailed(true)}
       />
     );
   }

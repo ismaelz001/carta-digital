@@ -120,8 +120,7 @@
       "image": "./assets/dish-ribeye.jpg",
       "signature": true,
       "popular": true,
-      "available": true,
-      "video": "./assets/videos/desayuno-2.mp4"
+      "available": true
     },
     {
       "id": "seabass",
