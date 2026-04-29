@@ -1,29 +1,29 @@
 {
-  "name": "Casa Olivo",
-  "tagline": "Cocina de mercado · Madrid · Desde 2014",
-  "description": "Cocina de temporada con producto de proximidad. Cada plato, una pequeña película.",
+  "name": "Tu Restaurante",
+  "tagline": "Cocina de temporada · Tu ciudad · Desde 2020",
+  "description": "Carta digital de ejemplo. Sustituye este archivo config.json con los datos reales del cliente.",
   "logo": null,
-  "initials": "CO",
-  "founded": 2014,
+  "initials": "TR",
+  "founded": 2020,
 
-  "address": "Calle de la Luz 14",
-  "city": "Madrid",
-  "phone": "+34 910 000 000",
-  "reservas": "tel:+34910000000",
-  "mapsUrl": "https://maps.google.com/?q=Calle+de+la+Luz+14+Madrid",
+  "address": "Calle Principal 1",
+  "city": "Tu Ciudad",
+  "phone": "+34 600 000 000",
+  "reservas": "tel:+34600000000",
+  "mapsUrl": "https://maps.google.com/",
 
   "social": {
-    "instagram": "https://instagram.com/casaolivo.madrid"
+    "instagram": "https://instagram.com/"
   },
 
   "accentColor": "#C0622A",
   "heroImage": "./assets/hero-restaurant.jpg",
-  "season": "Primavera 2026",
+  "season": "Temporada 2026",
 
   "eventBanner": {
-    "text": "Este viernes: Cata de vinos de Ribera del Duero · 20:30",
-    "emoji": "🍷",
-    "active": true
+    "text": "Menú especial este fin de semana · Reserva tu mesa",
+    "emoji": "🍽️",
+    "active": false
   },
 
   "dailyMenu": {
