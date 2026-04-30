@@ -1,0 +1,1298 @@
+[
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 1",
+    "price": 2.2,
+    "description": "Croissant"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 2",
+    "price": 2.4,
+    "description": "Croissant a la plancha"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 3",
+    "price": 4,
+    "description": "Croissant relleno de Nutella"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 4",
+    "price": 4,
+    "description": "Cruasán relleno de crema Kinder"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 5",
+    "price": 4,
+    "description": "Cruasán a la plancha + pechuga de pavo + queso fundido"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 6",
+    "price": 4.5,
+    "description": "Cruasán a la plancha + jamón serrano + queso fundido"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 7",
+    "price": 6,
+    "description": "Chocolate con churros"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 8",
+    "price": 6.8,
+    "description": "Tortitas + Nutella + frutas de temporada"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 9",
+    "price": 6.8,
+    "description": "Tortitas + crema Kínder + frutos rojos"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 10",
+    "price": 4,
+    "description": "Tortitas + Nutella + frutos secos"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 11",
+    "price": 4,
+    "description": "Cruasán a la plancha + mantequilla + mermelada de fresa casera"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 12",
+    "price": 5.5,
+    "description": "Tosta de queso de untar + frutos rojos"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 13",
+    "price": 4.5,
+    "description": "Tosta de mantequilla + mermelada de fresa casera"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 14",
+    "price": 3,
+    "description": "Tosta + aceite de oliva"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 15",
+    "price": 4,
+    "description": "Tosta + aceite de oliva + tomate"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 16",
+    "price": 6,
+    "description": "Tosta + aceite de oliva + tomate + jamón serrano"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 17",
+    "price": 7.5,
+    "description": "Tosta + aceite de oliva + revuelto de jamón serrano + aguacate + mozzarella"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 18",
+    "price": 7,
+    "description": "Tosta de guacamole + beicon + queso parmesano"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 19",
+    "price": 7.5,
+    "description": "Tosta de jamón serrano + aceite + tomate + dos huevos a la plancha"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 20",
+    "price": 7.5,
+    "description": "Revuelto de jamón serrano + tosta de queso de untar + aguacate"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 21",
+    "price": 7,
+    "description": "Revuelto de huevos + tosta de tomate Cherry + aguacate"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 22",
+    "price": 6,
+    "description": "Revuelto de huevos + queso país"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 23",
+    "price": 6.5,
+    "description": "Revuelto de huevos + queso país + jamón serrano"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 24",
+    "price": 6,
+    "description": "Dos huevos a la plancha + beicon"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 25",
+    "price": 6,
+    "description": "Dos huevos a la plancha + beicon"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 26",
+    "price": 7.5,
+    "description": "Dos huevos a la plancha + jamón serrano + beicon + aguacate"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 27",
+    "price": 5.5,
+    "description": "Sandwich en pan brioche + pechuga de pavo + queso fundido"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 28",
+    "price": 6.5,
+    "description": "Sandwich en pan brioche + pechuga de pavo + queso fundido + huevo a la plancha"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 29",
+    "price": 7.5,
+    "description": "Sandwich en pan brioche + beicon + queso fundido + aguacate laminado + huevo a la plancha"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 30",
+    "price": 6.5,
+    "description": "Sandwich en pan brioche + beicon + queso fundido + huevo cocido"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 31",
+    "price": 7,
+    "description": "Sandwich en pan brioche + tomate + aguacate laminado + brotes de ensalada + queso fundido + cebolla caramelizada"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 32",
+    "price": 7,
+    "description": "Sandwich en pan brioche + jamón serrano + rodajas de tomate + queso país"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 33",
+    "price": 7.5,
+    "description": "Bowl de yogur + frutos secos"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 34",
+    "price": 7.5,
+    "description": "Bowl de yogur + frutas de temporada"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 35",
+    "price": 7.5,
+    "description": "Bowl de yogur + frutos rojos"
+  },
+  {
+    "category": "desayunos",
+    "name": "Desayuno Nº 36",
+    "price": 22,
+    "description": "Tabla de nuestros desayunos variados (dos tostas + un sandwich + tortitas + yogur con frutos secos)"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 1",
+    "price": 7,
+    "description": "Jamón serrano + aceite de oliva + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 2",
+    "price": 7.5,
+    "description": "Jamón serrano + aceite de oliva + tomate exprimido + aros de cebolla fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 3",
+    "price": 7.5,
+    "description": "Jamón serrano + aceite de oliva + queso fundido + patatas fritasaros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 4",
+    "price": 9,
+    "description": "Jamón serrano + aceite de oliva + queso fundido + aguacate + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 5",
+    "price": 11,
+    "description": "Jamón ibérico + aceite de oliva + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 6",
+    "price": 12.5,
+    "description": "Jamón ibérico + aceite de oliva + tomate exprimido + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 7",
+    "price": 7,
+    "description": "Beicon + queso fundido + tomate + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 8",
+    "price": 8,
+    "description": "Beicon + queso fundido cheddar + tomate + huevo a la plancha + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 9",
+    "price": 8.5,
+    "description": "Beicon + huevo a la plancha + tomate + brotes de ensalada + cebolla caramelizada + queso fundido + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 10",
+    "price": 7.5,
+    "description": "Vegetal: Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 11",
+    "price": 10,
+    "description": "Pulpo a la plancha + aceite de oliva + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 12",
+    "price": 12,
+    "description": "Pulpo a la plancha + aceite de oliva + queso fundido + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 13",
+    "price": 7.5,
+    "description": "Zorza + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 14",
+    "price": 8.5,
+    "description": "Zorza + queso fundido + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 15",
+    "price": 7.5,
+    "description": "Pechuga de pollo a la brasa + queso fundido + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 16",
+    "price": 9,
+    "description": "Pechuga de pollo a la brasa + beicon + queso cheddar fundido + tomate exprimido + cebolla caramelizada + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 17",
+    "price": 9,
+    "description": "Calamares + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 18",
+    "price": 7.5,
+    "description": "Tortilla francesa + queso fundido + patatas fritas"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 19",
+    "price": 9,
+    "description": "Tortilla francesa + queso fundido cheddar + beicon + tomate + aros de cebolla"
+  },
+  {
+    "category": "bocadillos",
+    "name": "Bocadillo Nº 20",
+    "price": 29.5,
+    "description": "Tabla de nuestros bocadillos (nº 1 + nº 5 + nº 10 + nº 15) + patatas fritas + aros de cebolla"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 1",
+    "price": 8,
+    "description": "Pollo + queso fundido + beicon ahumado + nuestra salsa barbacoa + patatas fritas"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 2",
+    "price": 9.5,
+    "description": "Pollo + queso fundido cheddar inglés + tomate + lechuga + cebolla caramelizada + huevo a la plancha + nuestra salsa de mango + aros de cebolla"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 3",
+    "price": 12,
+    "description": "Ternera + queso fundido + cebolla crujiente + tomate + brotes de ensalada + nuestra salsa cheddar + aros de cebolla"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 4",
+    "price": 13.5,
+    "description": "Ternera + queso fundido cheddar + beicon ahumado + huevo a la plancha + tomate + lechuga + nuestra salsa barbacoa + patatas fritas"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 5",
+    "price": 14,
+    "description": "Ternera + queso fundido país + beicon ahumado crujiente + huevo a la plancha + cebolla caramelizada + brotes de ensalada + tomate + guacamole + nuestra salsa de boletus + patatas fritas"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 6",
+    "price": 13.5,
+    "description": "Vegana + brotes de verdura + tomate + cebolla crujiente + aguacate + nuestra salsa rosa + aros de cebolla"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 7",
+    "price": 15,
+    "description": "Doble carne de ternera + queso del país fundido + beicon ahumado crujiente + cebolla caramelizada + huevo a la plancha + rodaje de tomate + nuestra salsa de boletus + patatas fritas"
+  },
+  {
+    "category": "hamburguesas",
+    "name": "Burger Nº 8",
+    "price": 32,
+    "description": "Tabla de nuestras hamburguesas (nº 2 + nº 3 + nº 4 + nº 5) + patatas fritas + aros de cebolla"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 1",
+    "price": 3,
+    "description": "Aceite de oliva"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 2",
+    "price": 4,
+    "description": "Aceite de oliva + tomate"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 3",
+    "price": 5.5,
+    "description": "Aceite de oliva + tomate + jamón serrano"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 4",
+    "price": 6.5,
+    "description": "Aceite de oliva + tomate + jamón serrano + lascas de queso parmesano"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 5",
+    "price": 6.5,
+    "description": "Aceite de oliva + tomate + jamón serrano + mozzarella"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 6",
+    "price": 8.5,
+    "description": "Aceite de oliva + jamón ibérico"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 7",
+    "price": 9.5,
+    "description": "Aceite de oliva + tomate exprimido + jamón ibérico"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 8",
+    "price": 5.5,
+    "description": "Queso de untar + frutos secos"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 9",
+    "price": 5.5,
+    "description": "Queso de untar + frutos rojos"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 10",
+    "price": 7,
+    "description": "Queso de untar + aguacate + tomate Cherry + huevo a la plancha"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 11",
+    "price": 6.5,
+    "description": "1 Aceite de oliva + aguacate + beicon + mozzarella"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 12",
+    "price": 7,
+    "description": "Aguacate + huevo a la plancha + mozzarella + cebolla crujiente"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 13",
+    "price": 7.5,
+    "description": "Tomate a la plancha + revuelto de jamón serrano + cebolla crujiente"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 14",
+    "price": 6.5,
+    "description": "Aceite de oliva + tomate exprimido + beicon + queso fundido"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 15",
+    "price": 7,
+    "description": "Tomate Cherry + aguacate + huevo cocido + brotes de ensalada + perlas de mozzarella + queso de untar"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 16",
+    "price": 8.5,
+    "description": "Pulpo a la plancha + queso fundido país + aceite de oliva"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 17",
+    "price": 7,
+    "description": "Revuelto de huevos + beicon + aguacate + mozzarella"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 18",
+    "price": 8,
+    "description": "Revuelto de gulas + nuestra salsa alioli + tomate Cherry + lascas de parmesano"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 19",
+    "price": 8,
+    "description": "Guacamole + brotes de ensalada + ventresca + pimiento piquillo + mozzarella fresca + cebolla crujiente"
+  },
+  {
+    "category": "tostas",
+    "name": "Tosta Nº 20",
+    "price": 29.5,
+    "description": "Tabla de nuestras tostas variadas (nº 3 + nº 5 + nº 9 + nº 11 + nº 13)"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 1",
+    "price": 2,
+    "description": "Pan"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 2",
+    "price": 3.5,
+    "description": "Pan + tomate + aceite de oliva (Pan tumaca)"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 3",
+    "price": 17,
+    "description": "Queso país + anchoas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 4",
+    "price": 28,
+    "description": "Jamón ibérico"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 5",
+    "price": 20,
+    "description": "Verduras a la brasa"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 6",
+    "price": 20,
+    "description": "Verduras en tempura + nuestra salsa rosa"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 7",
+    "price": 22,
+    "description": "Tabla de embutidos gallegos"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 8",
+    "price": 22,
+    "description": "Tabla de quesos gallegos"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 9",
+    "price": 22,
+    "description": "Tabla de embutidos gallegos + quesos gallegos"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 10",
+    "price": 16,
+    "description": "Croquetas de chipirón en su tinta"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 11",
+    "price": 17,
+    "description": "Croquetas de cecina de wagyu"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 12",
+    "price": 16,
+    "description": "Croquetas de cecina de wagyu"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 13",
+    "price": 16,
+    "description": "Croquetas de boletus y trufa"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 14",
+    "price": 17,
+    "description": "Croquetas de bacalao al ajoarriero"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 15",
+    "price": 22,
+    "description": "Tabla de croquetas cremosas variadas (elaboración propia): jamón ibérico, boletus y trufa, cecina de wagyu, chipirones en su tinta, bacalao al ajoarriero"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 16",
+    "price": 14,
+    "description": "Huevos rotos a la plancha + patata panadera"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 17",
+    "price": 22,
+    "description": "Huevos rotos a la plancha + patata panadera + jamón ibérico"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 18",
+    "price": 18,
+    "description": "Huevos rotos a la plancha + patata panadera + jamón serrano"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 19",
+    "price": 16,
+    "description": "Huevos rotos a la plancha + patata panadera + chorizo gallego casero ahumado"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 20",
+    "price": 20,
+    "description": "Huevos rotos a la plancha + langostinos a la plancha + patatas panaderas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 21",
+    "price": 22,
+    "description": "Huevos rotos a la plancha + langostinos a la plancha + gulas + patatas panaderas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 22",
+    "price": 18,
+    "description": "Huevos rotos a la plancha + patata panadera + zorza"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 23",
+    "price": 8,
+    "description": "Nuestro caldo gallego"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 24",
+    "price": 19.5,
+    "description": "Pulpo de la ría a la gallega"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 25",
+    "price": 22,
+    "description": "Pulpo de la ría a la brasa con nuestro puré y nuestra ajada"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 26",
+    "price": 19,
+    "description": "Carpaccio de pulpo de la ría con nuestra ajada"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 27",
+    "price": 10,
+    "description": "Pimientos de Padrón (en temporada)"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 28",
+    "price": 15,
+    "description": "Revuelto de espárragos trigueros con queso país"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 29",
+    "price": 18,
+    "description": "Revuelto de boletus con jamón serrano"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 30",
+    "price": 18,
+    "description": "Revuelto de gulas + langostinos"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 31",
+    "price": 18,
+    "description": "Raxo + patatas fritas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 32",
+    "price": 21,
+    "description": "Raxo + nuestra salsa de boletus + patatas fritas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 33",
+    "price": 18,
+    "description": "Zorza + patatas fritas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 34",
+    "price": 18,
+    "description": "Calamares + patatas fritas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 35",
+    "price": 26,
+    "description": "Ajillo de gulas + langostinos + zamburiñas"
+  },
+  {
+    "category": "raciones",
+    "name": "Ración Nº 36",
+    "price": 34,
+    "description": "Tabla de nuestras raciones (nº 11 + nº 14 + nº 27 + nº 32 + nº 35"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 1",
+    "price": 11,
+    "description": "Tomate + pechuga de pavo + queso fundido + mozzarella"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 2",
+    "price": 13,
+    "description": "Tomate + jamón ibérico + queso parmesano + aceitunas"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 3",
+    "price": 16,
+    "description": "Tomate + jamón ibérico + queso parmesano + aceitunas"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 4",
+    "price": 13,
+    "description": "Tomate + beicon + queso fundido cheddar + mozzarella + pimiento rojo + cebolla crujiente + aceitunas"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 5",
+    "price": 14,
+    "description": "Tomate + ventresca + queso fundido + mozzarella + cebolla crujiente + pimiento piquillo + aceitunas"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 6",
+    "price": 15,
+    "description": "Tomate + pollo a la barbacoa + queso fundido cheddar + champiñones + mozzarella + cebolla crujiente"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 7",
+    "price": 14,
+    "description": "Vegetal: tomate + pimiento rojo + champiñones + cebolla caramelizada + cebolla crujiente + mozzarella + huevo cocido + queso fundido"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 8",
+    "price": 15,
+    "description": "Tomate + langostinos + pulpo + cebolla crujiente + mozzarella + pimiento piquillo + queso fundido país"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 9",
+    "price": 17,
+    "description": "Tomate + langostinos + pulpo + gulas + zamburiñas + mozzarella + queso cheddar"
+  },
+  {
+    "category": "pizzas",
+    "name": "Pizza Nº 10",
+    "price": 13,
+    "description": "Tomate + queso país + queso parmesano + pesto + tomate Cherry"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 1",
+    "price": 9,
+    "description": "Lechuga + tomate + maíz + huevo cocido + cebolla crujiente"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 2",
+    "price": 13,
+    "description": "Lechuga + tomate Cherry + cebolla caramelizada + maíz + espárragos + ventresca + pimiento piquillo"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 3",
+    "price": 14,
+    "description": "Brotes de ensalada + tomate + huevo cocido + cebolla crujiente + arándanos + burrata + aceitunas + nuestra salsa de mostaza y miel"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 4",
+    "price": 18,
+    "description": "Ensalada templada: Brotes de ensalada + huevo a la plancha + pollo a la plancha + tomate a la plancha + cebolla a la plancha + queso de cabra a la plancha + nuestra salsa de yogurt"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 5",
+    "price": 19,
+    "description": "Ensalada templada de marisco: langostinos + zamburiñas + brotes de ensalada + láminas de queso + cebolla caramelizada + nuestra salsa rosa"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 6",
+    "price": 15,
+    "description": "Tomate de la huerta + mozzarella + espárragos + aguacate + ventresca + arándanos + maíz + huevo cocido + nuestra salsa de mostaza y miel"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 7",
+    "price": 17,
+    "description": "Lechuga + tomate + pollo + cebolla crujiente + frutas variadas + perlas de mozzarella + espárragos + vinagreta de frambuesa"
+  },
+  {
+    "category": "ensaladas",
+    "name": "Ensalada Nº 8",
+    "price": 16,
+    "description": "Brotes de ensalada + tomate Cherry + burrata + anchoas al pesto"
+  },
+  {
+    "category": "mariscos",
+    "name": "Berberechos al vapor con aceite de oliva",
+    "price": 19,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Almejas a la plancha con aceite de oliva y ajo picado",
+    "price": 19,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Almejas a la marinera con nuestra salsa",
+    "price": 22,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Mejillones al vapor con aceite de oliva",
+    "price": 15,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Mejillones con nuestra salsa marinera",
+    "price": 18,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Langostinos a la parrilla con aceite de oliva y ajo",
+    "price": 18,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Langostinos crujientes con nuestra salsa rosa",
+    "price": 20,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Bogavante a la parrilla (unidad)",
+    "price": 42,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Bogavante a la parrilla + huevos fritos + patata panadera",
+    "price": 52,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Camarones según temporada (300gr.)",
+    "price": 58,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Navajas con aceite de oliva + ajo picado",
+    "price": 21,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Volandeiras con aceite de oliva",
+    "price": 21,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Volandeiras gratinadas con nuestra salsa",
+    "price": 26,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Vieiras gratinadas con nuestra salsa (unidad)",
+    "price": 9.5,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Cigalas según temporada a la parrilla o cocidas (1 kg)",
+    "price": 97,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Pulpo de la ría con almejas",
+    "price": 28,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Pulpo de la ría con langostinos",
+    "price": 26,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Tabla de nuestros mariscos (nº 1 + nº 4 + nº 6 + nº 11 + nº 12)",
+    "price": 85,
+    "description": ""
+  },
+  {
+    "category": "mariscos",
+    "name": "Tabla de nuestros mariscos (nº 3 + nº 8 + nº 10 + nº 14 + nº 15)",
+    "price": 120,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Mariscos: mejillones, berberechos, langostinos, zamburiñas, navajas",
+    "price": 58,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Mariscos: mejillones almejas, zamburiñas, langostinos, cigalas",
+    "price": 68,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Vegetal: verduras según temporada",
+    "price": 38,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Calamar de la ría y pulpo",
+    "price": 50,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Langostinos y zamburiñas",
+    "price": 45,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Arroz negro con calamar de la ría + nuestras salsas alioli",
+    "price": 45,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Arroz negro + calamar de la ría + zamburiñas + nuestras salsas alioli",
+    "price": 58,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Bovagante",
+    "price": 65,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Mixta (mejillones, langostinos, zamburiñas, secreto Ibérico, pollo)",
+    "price": 55,
+    "description": ""
+  },
+  {
+    "category": "arroces",
+    "name": "Mixta de carne (secreto ibérico + entrecot de vaca + costilla de Angus)",
+    "price": 60,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Calamar de la ría + nuestro puré de patata",
+    "price": 22,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Lubina + patata panadera + verduras salteadas",
+    "price": 21.5,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Dorada + patata panadera + verduras salteadas",
+    "price": 21.5,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Rodaballo + patata panadera + verduras salteadas",
+    "price": 26,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Salmón + puré + verduras salteadas",
+    "price": 19,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Brocheta de pulpo + langostinos + nuestro puré de patata + verduras + ajada",
+    "price": 22,
+    "description": ""
+  },
+  {
+    "category": "pescados",
+    "name": "Parrillada de pescados (lubina + dorada + salmón + rodaballo + calamar de la ría)",
+    "price": 58,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Entrecot de vaca Angus + patata panadera + verduras a la plancha",
+    "price": 28,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Chuletón de ternera + patata panadera + verduras a la plancha",
+    "price": 36,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Chuletón de vaca madurada Angus + patatas panaderas + verduras a la plancha",
+    "price": 67,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Chuleta de ternera + patatas fritas + verduras a la plancha",
+    "price": 26,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Picaña de vaca Angus + patatas fritas + verduras a la plancha",
+    "price": 30,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Chuletillas de cordero lechal + patatas fritas + verduras a la plancha",
+    "price": 28,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Secreto ibérico + patatas fritas",
+    "price": 28,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Churrasco de ternera + patatas fritas",
+    "price": 24,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Costilla de cerdo ibérico + patatas fritas",
+    "price": 20,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Churrasco de vaca Angus + patatas panaderas",
+    "price": 30,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Solomillo de vaca Angus + puré de patata + verduras a la plancha",
+    "price": 32,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Parrillada con nuestras carnes: churrasco de ternera + costilla de cerdo + secreto ibérico + entrecot + chorizo criollo + chorizo rojo + patatas fritas (Mínimo 2 personas)",
+    "price": 52,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Parrillada con nuestras carnes Angus: churrasco de vaca + solomillo + entrecot + secreto ibérico + chorizo criollo + patatas fritas (Mínimo 2 personas)",
+    "price": 62,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Tabla de nuestras carnes (nº 4 + nº 5 + nº 6 + nº 7 + nº 8)",
+    "price": 85,
+    "description": ""
+  },
+  {
+    "category": "carnes",
+    "name": "Nuestras salsas (chimichurri, barbacoa, mango, boletus)",
+    "price": 1.5,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tarta de queso al horno",
+    "price": 6.8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "TTarta de queso al horno con pistacho",
+    "price": 7,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tarta de queso con frutos rojos",
+    "price": 7,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tiramisú",
+    "price": 6.8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tiramisú con chocolate caliente",
+    "price": 8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tarta de Lotus",
+    "price": 6.8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tarta de chocolate Sacher",
+    "price": 6.8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Flan de queso",
+    "price": 5.8,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Coulant de chocolate con helado",
+    "price": 7.5,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Helados variados Bico de xeado (3 bolas)",
+    "price": 7,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tortitas (Nutella + frutas variadas de temporada + bola de helado)",
+    "price": 8.5,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tortitas (Crema Kinder + frutos rojos + bola de helado)",
+    "price": 8.5,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Cruasán de dos chocolates (Crema Kinder + Nutella + bola de helado)",
+    "price": 5.5,
+    "description": ""
+  },
+  {
+    "category": "postres",
+    "name": "Tabla de nuestros postres (tarta de queso al horno + tiramisú + flan de queso + tarta de Lotus + helados variados)",
+    "price": 30,
+    "description": ""
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 1",
+    "price": 12,
+    "description": "Tortilla francesa + croquetas caseras + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 2",
+    "price": 13,
+    "description": "Tortilla francesa rellena de queso + hamburguesa de pollo + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 3",
+    "price": 14,
+    "description": "Milanesa de pollo + patatas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 4",
+    "price": 15,
+    "description": "Milanesa de pollo + dos huevos a la plancha + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 5",
+    "price": 16.5,
+    "description": "Pechuga de pollo a la plancha + dos huevos a la plancha + croquetas caseras + patatas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 6",
+    "price": 14,
+    "description": "Hamburguesa de ternera + dos huevos a la plancha + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 7",
+    "price": 12,
+    "description": "Tallarines a la carbonara"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 8",
+    "price": 12,
+    "description": "Tallarines a la boloñesa"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 9",
+    "price": 14,
+    "description": "Raxo + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 10",
+    "price": 16,
+    "description": "Raxo + dos huevos a la plancha + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 11",
+    "price": 14,
+    "description": "Zorza + patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 12",
+    "price": 16,
+    "description": "Zorza + dos huevos a plancha +patatas fritas"
+  },
+  {
+    "category": "infantil",
+    "name": "Menú Infantil Nº 13",
+    "price": 22,
+    "description": "Tabla de infantiles (raxo, tortilla francesa con queso, milanesa de pollo, croquetas, patatas fritas)"
+  }
+]

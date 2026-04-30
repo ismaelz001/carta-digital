@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import QRGenerator from "./pages/QRGenerator.tsx";
+import WebHome from "./pages/WebHome.tsx";
 import { useConfigState } from "./context/ConfigContext.tsx";
 
 const queryClient = new QueryClient();
@@ -48,9 +49,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* La carta requiere config cargado */}
+          {/* Web del restaurante — no requiere config */}
+          <Route path="/" element={<WebHome />} />
+          {/* Carta digital — requiere config cargado */}
           <Route
-            path="/"
+            path="/carta"
             element={
               <ConfigGate>
                 <Index />

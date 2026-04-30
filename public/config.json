@@ -1,166 +1,65 @@
-{
-  "name": "Tu Restaurante",
-  "tagline": "Cocina de temporada · Tu ciudad · Desde 2020",
-  "description": "Carta digital de ejemplo. Sustituye este archivo config.json con los datos reales del cliente.",
+﻿{
+  "name": "Café Bar Polígono",
+  "tagline": "Cocina casera de siempre",
+  "description": "Más de 30 años sirviendo a los trabajadores del Área Empresarial do Tambre y a toda Santiago. Bufé libre, menú del día, desayunos y los mejores bocadillos de la ciudad.",
   "logo": null,
-  "initials": "TR",
-  "founded": 2020,
-
-  "address": "Calle Principal 1",
-  "city": "Tu Ciudad",
-  "phone": "+34 600 000 000",
-  "reservas": "tel:+34600000000",
-  "mapsUrl": "https://maps.google.com/",
-
-  "social": {
-    "instagram": "https://instagram.com/"
-  },
-
-  "accentColor": "#C0622A",
-  "heroImage": "./assets/hero-restaurant.jpg",
-  "season": "Temporada 2026",
-
-  "eventBanner": {
-    "text": "Menú especial este fin de semana · Reserva tu mesa",
-    "emoji": "🍽️",
-    "active": false
-  },
-
-  "dailyMenu": {
-    "label": "Menú del día",
-    "price": 19.50,
-    "includes": [
-      "Primero a elegir entre 3 opciones",
-      "Segundo a elegir entre 3 opciones",
-      "Postre o café",
-      "Pan y bebida incluidos"
-    ],
-    "active": true
-  },
-
+  "initials": "CBP",
+  "address": "Vía Galileo, 15 — Área Empresarial do Tambre",
+  "city": "Santiago de Compostela",
+  "phone": "+34 981 56 19 33",
+  "reservas": "tel:+34981561933",
+  "email": "",
+  "mapsUrl": "https://maps.google.com/?q=Via+Galileo,+15,+15890+Santiago+de+Compostela",
+  "website": "/",
+  "social": { "instagram": "https://www.instagram.com/cafebarpoligono/" },
+  "accentColor": "#1B4F8A",
+  "heroImage": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=1200&q=80",
+  "season": "Carta 2026",
+  "noticeFooter": "Precios con IVA incluido. Menú del día disponible de lunes a viernes.",
+  "eventBanner": { "text": "Menú del día desde 9,50 € · Lunes a Viernes", "emoji": "🍽️", "active": true },
+  "dailyMenu": { "active": false },
   "openingHours": [
-    { "label": "Lunes – Viernes", "hours": "13:00 – 16:00 · 20:00 – 23:30" },
-    { "label": "Sábados", "hours": "13:00 – 16:30 · 20:00 – 00:00" },
-    { "label": "Domingos", "hours": "13:00 – 16:30" }
+    { "label": "Lunes - Viernes", "hours": "07:30 - 21:00" },
+    { "label": "Sábado", "hours": "08:00 - 15:00" },
+    { "label": "Domingo", "hours": "Cerrado" }
   ],
-
-  "footerQuote": "La buena cocina es honesta, sincera y sencilla.",
-  "footerQuoteAuthor": "Elizabeth David",
-
+  "footerQuote": "Cocina de siempre, sabor de verdad.",
+  "footerQuoteAuthor": "Café Bar Polígono",
   "languages": ["es"],
-
   "categories": [
-    {
-      "id": "entrantes",
-      "label": "Entrantes",
-      "subtitle": "Para empezar",
-      "image": "https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=600&q=80"
-    },
-    {
-      "id": "principales",
-      "label": "Principales",
-      "subtitle": "Plato fuerte",
-      "image": "https://images.unsplash.com/photo-1432139509613-5c4255815697?w=600&q=80"
-    },
-    {
-      "id": "postres",
-      "label": "Postres",
-      "subtitle": "Dulce final",
-      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80"
-    },
-    {
-      "id": "bebidas",
-      "label": "Bebidas",
-      "subtitle": "Coctelería de autor",
-      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80"
-    }
+    { "id": "desayunos", "label": "Desayunos", "subtitle": "Hasta las 12:00", "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" },
+    { "id": "bocadillos", "label": "Bocadillos", "subtitle": "Barra y terraza", "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" },
+    { "id": "raciones", "label": "Raciones", "subtitle": "Para compartir", "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80" },
+    { "id": "menu-dia", "label": "Menú del Día", "subtitle": "Lun-Vie · Todo incluido", "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" },
+    { "id": "postres", "label": "Postres", "subtitle": "Dulce final", "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" },
+    { "id": "bebidas", "label": "Bebidas", "subtitle": "Calientes y frías", "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" }
   ],
-
   "dishes": [
-    {
-      "id": "burrata",
-      "name": "Burrata di Puglia",
-      "description": "Burrata cremosa, tomate raf, albahaca fresca, aceite de oliva virgen extra y escamas de sal de Maldon.",
-      "price": 16,
-      "category": "entrantes",
-      "image": "./assets/dish-burrata.jpg",
-      "tags": ["Vegetariano", "Sin gluten"],
-      "signature": true,
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "tuna",
-      "name": "Tataki de Atún Rojo",
-      "description": "Atún rojo de almadraba sellado, sésamo tostado, micro-cilantro y reducción de soja con jengibre.",
-      "price": 22,
-      "category": "entrantes",
-      "image": "./assets/dish-tuna.jpg",
-      "tags": ["Crudo", "Picante suave"],
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "ravioli",
-      "name": "Ravioli de Calabaza",
-      "description": "Pasta fresca rellena de calabaza asada, mantequilla noisette de salvia, amaretti y parmesano de 24 meses.",
-      "price": 19,
-      "category": "principales",
-      "image": "./assets/dish-ravioli.jpg",
-      "tags": ["Vegetariano"],
-      "available": true
-    },
-    {
-      "id": "ribeye",
-      "name": "Ribeye Madurado 45 días",
-      "description": "Lomo alto de vaca rubia gallega, sal ahumada, romero fresco y verduras carbonizadas a la brasa.",
-      "price": 38,
-      "category": "principales",
-      "image": "./assets/dish-ribeye.jpg",
-      "signature": true,
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "seabass",
-      "name": "Lubina Salvaje al Azafrán",
-      "description": "Lubina de anzuelo, salsa de azafrán de La Mancha, hinojo confitado y aceite de limón.",
-      "price": 28,
-      "category": "principales",
-      "image": "./assets/dish-seabass.jpg",
-      "tags": ["Sin gluten"],
-      "available": true
-    },
-    {
-      "id": "fondant",
-      "name": "Fondant de Chocolate 70%",
-      "description": "Coulant de chocolate Valrhona, helado artesanal de vainilla bourbon, frambuesa fresca y pan de oro.",
-      "price": 11,
-      "category": "postres",
-      "image": "./assets/dish-fondant.jpg",
-      "signature": true,
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "tiramisu",
-      "name": "Tiramisú della Casa",
-      "description": "Mascarpone batido a mano, café espresso, bizcocho savoiardi empapado en marsala y cacao puro.",
-      "price": 9,
-      "category": "postres",
-      "image": "./assets/dish-tiramisu.jpg",
-      "tags": ["Contiene alcohol"],
-      "available": true
-    },
-    {
-      "id": "negroni",
-      "name": "Negroni d'Autore",
-      "description": "Gin botánico, Campari, vermut rosso infusionado en casa con naranja sanguina y especias.",
-      "price": 13,
-      "category": "bebidas",
-      "image": "./assets/dish-negroni.jpg",
-      "tags": ["Clásico", "Contiene alcohol"],
-      "available": true
-    }
+    { "id": "cafe-leche", "name": "Café con Leche", "description": "Espresso con leche cremosa templada.", "price": 1.40, "category": "desayunos", "image": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80", "popular": true, "available": true },
+    { "id": "cortado", "name": "Cortado", "description": "Espresso cortado con un toque de leche.", "price": 1.30, "category": "desayunos", "image": "https://images.unsplash.com/photo-1561882468-9110d70d2a78?w=600&q=80", "available": true },
+    { "id": "tostada-jamon", "name": "Tostada con Jamón Ibérico", "description": "Pan de hogaza tostado, aceite de oliva virgen y jamón ibérico.", "price": 3.50, "category": "desayunos", "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80", "popular": true, "available": true },
+    { "id": "tostada-tomate", "name": "Tostada con Tomate", "description": "Pan tostado con aceite de oliva virgen extra y tomate natural rallado.", "price": 2.20, "category": "desayunos", "image": "https://images.unsplash.com/photo-1472423553882-7f73e7c0a804?w=600&q=80", "available": true },
+    { "id": "churros-chocolate", "name": "Churros con Chocolate", "description": "Churros recién hechos con taza de chocolate caliente espeso.", "price": 3.20, "category": "desayunos", "image": "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=600&q=80", "popular": true, "available": true },
+    { "id": "croissant", "name": "Croissant de Mantequilla", "description": "Croissant hojaldrado calentado al momento.", "price": 1.80, "category": "desayunos", "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80", "available": true },
+    { "id": "boc-calamares", "name": "Bocadillo de Calamares", "description": "Calamares rebozados y fritos en pan de barra crujiente. El clásico.", "price": 4.50, "category": "bocadillos", "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80", "popular": true, "available": true },
+    { "id": "boc-jamon", "name": "Bocadillo de Jamón Serrano", "description": "Jamón serrano en pan de barra con aceite y tomate.", "price": 3.80, "category": "bocadillos", "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80", "popular": true, "available": true },
+    { "id": "boc-lomo", "name": "Bocadillo de Lomo", "description": "Lomo de cerdo a la plancha en pan de barra.", "price": 3.50, "category": "bocadillos", "image": "https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=600&q=80", "available": true },
+    { "id": "boc-mixto", "name": "Bocadillo Mixto", "description": "Jamón york y queso fundido en pan tostado.", "price": 3.20, "category": "bocadillos", "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&q=80", "available": true },
+    { "id": "boc-tortilla", "name": "Bocadillo de Tortilla", "description": "Tortilla de patata casera en pan de barra.", "price": 3.00, "category": "bocadillos", "image": "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=600&q=80", "available": true },
+    { "id": "croquetas", "name": "Croquetas Caseras (6 ud)", "description": "Croquetas de jamón y bechamel, crujientes por fuera y cremosas por dentro.", "price": 6.50, "category": "raciones", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80", "popular": true, "available": true },
+    { "id": "tortilla-patata", "name": "Tortilla de Patata", "description": "Tortilla española con patata y cebolla, jugosa por dentro.", "price": 7.00, "category": "raciones", "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80", "popular": true, "available": true },
+    { "id": "pulpo-feira", "name": "Pulpo á Feira", "description": "Pulpo gallego cocido con pimentón de La Vera, aceite y sal gruesa sobre tabla de madera.", "price": 14.00, "category": "raciones", "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=600&q=80", "signature": true, "available": true },
+    { "id": "patatas-bravas", "name": "Patatas Bravas", "description": "Patatas fritas con salsa brava casera picante.", "price": 5.50, "category": "raciones", "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=600&q=80", "available": true },
+    { "id": "menu-completo", "name": "Menú Completo", "description": "1er plato + 2º plato + postre o café + bebida (agua, refresco o vino de la casa). Lunes a viernes.", "price": 9.50, "category": "menu-dia", "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80", "popular": true, "available": true, "signature": true },
+    { "id": "menu-primer", "name": "Opciones Primer Plato", "description": "Sopa del día · Ensalada mixta · Verduras salteadas · Pasta", "price": 0, "category": "menu-dia", "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80", "available": true },
+    { "id": "menu-segundo", "name": "Opciones Segundo Plato", "description": "Filete de cerdo · Merluza a la plancha · Pollo asado · Huevos fritos con jamón", "price": 0, "category": "menu-dia", "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80", "available": true },
+    { "id": "flan-casero", "name": "Flan Casero", "description": "Flan de huevo artesanal con caramelo tostado.", "price": 2.50, "category": "postres", "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80", "popular": true, "available": true },
+    { "id": "tarta-queso", "name": "Tarta de Queso", "description": "Tarta de queso cremosa, textura suave. Servida fría.", "price": 3.00, "category": "postres", "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80", "available": true },
+    { "id": "fruta-temporada", "name": "Fruta de Temporada", "description": "Selección de frutas frescas de temporada.", "price": 2.00, "category": "postres", "image": "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&q=80", "available": true },
+    { "id": "agua", "name": "Agua Mineral", "description": "Botella de agua mineral 50 cl.", "price": 1.20, "category": "bebidas", "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&q=80", "available": true },
+    { "id": "refrescos", "name": "Refrescos", "description": "Coca-Cola, Fanta, Nestea, agua con gas. Lata 33 cl.", "price": 1.80, "category": "bebidas", "image": "https://images.unsplash.com/photo-1581006852262-e4307cf6283a?w=600&q=80", "available": true },
+    { "id": "cana", "name": "Caña de Cerveza", "description": "Cerveza de grifo, bien fría. 20 cl.", "price": 1.60, "category": "bebidas", "image": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=600&q=80", "popular": true, "available": true },
+    { "id": "vino-casa", "name": "Vino de la Casa", "description": "Vino blanco o tinto gallego de la casa. Copa o jarra.", "price": 1.80, "category": "bebidas", "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80", "available": true },
+    { "id": "cafe-solo", "name": "Café Solo", "description": "Espresso corto e intenso.", "price": 1.20, "category": "bebidas", "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80", "available": true }
   ]
 }
