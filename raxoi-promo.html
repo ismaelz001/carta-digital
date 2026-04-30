@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Raxoi · Carta 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0D0B09; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+    [data-composition-id="raxoi-showcase"] {
+      width: 1080px;
+      height: 1920px;
+      position: relative;
+      overflow: hidden;
+      background: #0D0B09;
+      flex-shrink: 0;
+    }
+
+    .scene {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .scene img.bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .scene .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.55) 38%,
+        rgba(0,0,0,0.18) 65%,
+        transparent 100%
+      );
+    }
+
+    .scene .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 80px 180px;
+      box-sizing: border-box;
+    }
+
+    .category-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #4A8A52;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+      width: fit-content;
+    }
+
+    .dish-name {
+      font-family: 'Fraunces', serif;
+      font-size: 96px;
+      font-weight: 300;
+      color: #F7F3EC;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+    }
+
+    .accent-bar {
+      width: 72px;
+      height: 5px;
+      background: #4A8A52;
+      border-radius: 3px;
+      margin-top: 36px;
+    }
+
+    /* ── Intro ── */
+    #scene-intro {
+      z-index: 1;
+      background: #0D0B09;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    #intro-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 260px;
+      font-weight: 300;
+      color: #F7F3EC;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    #intro-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 54px;
+      font-weight: 600;
+      color: #4A8A52;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+
+    #intro-divider {
+      width: 90px;
+      height: 3px;
+      background: #4A8A52;
+      border-radius: 2px;
+      margin-top: 48px;
+    }
+
+    #intro-tagline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 36px;
+      font-weight: 300;
+      color: rgba(247,243,236,0.45);
+      letter-spacing: 0.04em;
+      margin-top: 28px;
+    }
+
+    /* ── Outro ── */
+    #scene-outro {
+      z-index: 15;
+      background: #0D0B09;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .outro-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #outro-name {
+      font-family: 'Fraunces', serif;
+      font-size: 140px;
+      font-weight: 300;
+      color: #F7F3EC;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    #outro-divider {
+      width: 100px;
+      height: 3px;
+      background: #4A8A52;
+      border-radius: 2px;
+      margin: 52px auto;
+    }
+
+    #outro-address {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: rgba(247,243,236,0.45);
+      letter-spacing: 0.06em;
+    }
+
+    #outro-url {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #4A8A52;
+      letter-spacing: 0.04em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div data-composition-id="raxoi-showcase" data-width="1080" data-height="1920">
+
+    <!-- INTRO -->
+    <div id="scene-intro" class="scene"
+         data-start="0" data-duration="3.3" data-track-index="1">
+      <div class="intro-inner">
+        <div id="intro-logo">RX</div>
+        <div id="intro-name">Raxoi</div>
+        <div id="intro-divider"></div>
+        <div id="intro-tagline">Nuestra Carta · 2026</div>
+      </div>
+    </div>
+
+    <!-- S1: Desayunos -->
+    <div id="s1" class="scene" style="z-index:2"
+         data-start="3.1" data-duration="2.8" data-track-index="2">
+      <img id="s1-bg" class="bg" src="./public/assets/raxoi/dishes/croissant.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s1-pill" class="category-pill">Desayunos</div>
+        <div id="s1-name" class="dish-name">Croissant<br>artesanal</div>
+        <div id="s1-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S2: Bocadillos -->
+    <div id="s2" class="scene" style="z-index:3"
+         data-start="5.7" data-duration="2.8" data-track-index="1">
+      <img id="s2-bg" class="bg" src="./public/assets/raxoi/dishes/bocadillo.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s2-pill" class="category-pill">Bocadillos</div>
+        <div id="s2-name" class="dish-name">Bocadillo<br>del día</div>
+        <div id="s2-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S3: Hamburguesas -->
+    <div id="s3" class="scene" style="z-index:4"
+         data-start="8.3" data-duration="2.8" data-track-index="2">
+      <img id="s3-bg" class="bg" src="./public/assets/raxoi/dishes/hamburguesa.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s3-pill" class="category-pill">Hamburguesas</div>
+        <div id="s3-name" class="dish-name">Hamburguesa<br>artesanal</div>
+        <div id="s3-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S4: Tostas -->
+    <div id="s4" class="scene" style="z-index:5"
+         data-start="10.9" data-duration="2.8" data-track-index="1">
+      <img id="s4-bg" class="bg" src="./public/assets/raxoi/dishes/tostada.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s4-pill" class="category-pill">Tostas</div>
+        <div id="s4-name" class="dish-name">Tosta<br>artesanal</div>
+        <div id="s4-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S5: Raciones -->
+    <div id="s5" class="scene" style="z-index:6"
+         data-start="13.5" data-duration="2.8" data-track-index="2">
+      <img id="s5-bg" class="bg" src="./public/assets/raxoi/dishes/empanada.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s5-pill" class="category-pill">Raciones</div>
+        <div id="s5-name" class="dish-name">Empanada<br>gallega</div>
+        <div id="s5-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S6: Pizzas -->
+    <div id="s6" class="scene" style="z-index:7"
+         data-start="16.1" data-duration="2.8" data-track-index="1">
+      <img id="s6-bg" class="bg" src="./public/assets/raxoi/dishes/pizza-margarita.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s6-pill" class="category-pill">Pizzas</div>
+        <div id="s6-name" class="dish-name">Pizza<br>Margarita</div>
+        <div id="s6-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S7: Ensaladas -->
+    <div id="s7" class="scene" style="z-index:8"
+         data-start="18.7" data-duration="2.8" data-track-index="2">
+      <img id="s7-bg" class="bg" src="./public/assets/raxoi/dishes/ensalada-cesar.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s7-pill" class="category-pill">Ensaladas</div>
+        <div id="s7-name" class="dish-name">Ensalada<br>César</div>
+        <div id="s7-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S8: Arroces -->
+    <div id="s8" class="scene" style="z-index:9"
+         data-start="21.3" data-duration="2.8" data-track-index="1">
+      <img id="s8-bg" class="bg" src="./public/assets/raxoi/dishes/arroz-marisco.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s8-pill" class="category-pill">Arroces</div>
+        <div id="s8-name" class="dish-name">Arroz<br>con mariscos</div>
+        <div id="s8-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S9: Pescados -->
+    <div id="s9" class="scene" style="z-index:10"
+         data-start="23.9" data-duration="2.8" data-track-index="2">
+      <img id="s9-bg" class="bg" src="./public/assets/raxoi/dishes/rodaballo.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s9-pill" class="category-pill">Pescados</div>
+        <div id="s9-name" class="dish-name">Rodaballo<br>a la plancha</div>
+        <div id="s9-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S10: Mariscos -->
+    <div id="s10" class="scene" style="z-index:11"
+         data-start="26.5" data-duration="2.8" data-track-index="1">
+      <img id="s10-bg" class="bg" src="./public/assets/raxoi/dishes/pulpo-feira.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s10-pill" class="category-pill">Mariscos</div>
+        <div id="s10-name" class="dish-name">Pulpo<br>á feira</div>
+        <div id="s10-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S11: Carnes -->
+    <div id="s11" class="scene" style="z-index:12"
+         data-start="29.1" data-duration="2.8" data-track-index="2">
+      <img id="s11-bg" class="bg" src="./public/assets/raxoi/dishes/chuleton.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s11-pill" class="category-pill">Carnes</div>
+        <div id="s11-name" class="dish-name">Chuleta<br>de ternera</div>
+        <div id="s11-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S12: Postres -->
+    <div id="s12" class="scene" style="z-index:13"
+         data-start="31.7" data-duration="2.8" data-track-index="1">
+      <img id="s12-bg" class="bg" src="./public/assets/raxoi/dishes/tarta-queso.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s12-pill" class="category-pill">Postres</div>
+        <div id="s12-name" class="dish-name">Tarta de<br>queso al horno</div>
+        <div id="s12-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- S13: Menú Infantil -->
+    <div id="s13" class="scene" style="z-index:14"
+         data-start="34.3" data-duration="2.8" data-track-index="2">
+      <img id="s13-bg" class="bg" src="./public/assets/raxoi/dishes/menu-infantil.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="content">
+        <div id="s13-pill" class="category-pill">Menú Infantil</div>
+        <div id="s13-name" class="dish-name">Para los<br>más pequeños</div>
+        <div id="s13-bar" class="accent-bar"></div>
+      </div>
+    </div>
+
+    <!-- OUTRO -->
+    <div id="scene-outro" class="scene"
+         data-start="36.9" data-duration="4.0" data-track-index="1">
+      <div class="outro-inner">
+        <div id="outro-name">Raxoi</div>
+        <div id="outro-divider"></div>
+        <div id="outro-address">Avda Raxoi 3 · Santiago de Compostela</div>
+        <div id="outro-url">raxoi.es</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+
+    // ── INTRO ──────────────────────────────────────────────
+    tl.from("#intro-logo",    { y: 80, opacity: 0, duration: 0.9, ease: "expo.out" },    0.2);
+    tl.from("#intro-name",    { y: 30, opacity: 0, duration: 0.6, ease: "power3.out" },  0.7);
+    tl.from("#intro-divider", { scaleX: 0, transformOrigin: "left", duration: 0.5, ease: "power2.out" }, 1.1);
+    tl.from("#intro-tagline", { y: 20, opacity: 0, duration: 0.5, ease: "power2.out" },  1.4);
+
+    // ── HELPER: scene entrance ──────────────────────────────
+    function sceneIn(n, t, dir) {
+      // dir: 1=from-right, -1=from-left (alternates for visual variety)
+      const xOffset = dir * 50;
+      tl.from(`#s${n}`,      { opacity: 0, duration: 0.25, ease: "none" },                     t);
+      tl.from(`#s${n}-bg`,   { scale: 1.10, duration: 2.8, ease: "power1.out" },               t);
+      tl.from(`#s${n}-pill`, { x: xOffset, opacity: 0, duration: 0.55, ease: "expo.out" },     t + 0.25);
+      tl.from(`#s${n}-name`, { y: 55, opacity: 0, duration: 0.65, ease: "power3.out" },        t + 0.4);
+      tl.from(`#s${n}-bar`,  { scaleX: 0, transformOrigin: "left", duration: 0.45, ease: "power2.out" }, t + 0.75);
+    }
+
+    sceneIn(1,  3.1,  1);
+    sceneIn(2,  5.7, -1);
+    sceneIn(3,  8.3,  1);
+    sceneIn(4, 10.9, -1);
+    sceneIn(5, 13.5,  1);
+    sceneIn(6, 16.1, -1);
+    sceneIn(7, 18.7,  1);
+    sceneIn(8, 21.3, -1);
+    sceneIn(9, 23.9,  1);
+    sceneIn(10, 26.5, -1);
+    sceneIn(11, 29.1,  1);
+    sceneIn(12, 31.7, -1);
+    sceneIn(13, 34.3,  1);
+
+    // ── OUTRO ──────────────────────────────────────────────
+    const ot = 36.9;
+    tl.from("#scene-outro",  { opacity: 0, duration: 0.35, ease: "none" },                     ot);
+    tl.from("#outro-name",   { y: 60, opacity: 0, duration: 0.85, ease: "expo.out" },          ot + 0.3);
+    tl.from("#outro-divider",{ scaleX: 0, transformOrigin: "center", duration: 0.5, ease: "power2.out" }, ot + 0.9);
+    tl.from("#outro-address",{ y: 25, opacity: 0, duration: 0.5, ease: "power2.out" },         ot + 1.2);
+    tl.from("#outro-url",    { y: 20, opacity: 0, duration: 0.45, ease: "power2.out" },        ot + 1.5);
+    // Final fade out
+    tl.to("#scene-outro",    { opacity: 0, duration: 0.6, ease: "power2.in" },                 ot + 3.2);
+
+    window.__timelines["raxoi-showcase"] = tl;
+
+    // ── Browser preview player (not used by HyperFrames renderer) ──
+    if (!window.__hyperframes) {
+      const DURATION = 40.9;
+      let start = null;
+      let raf = null;
+      let playing = false;
+
+      function tick(now) {
+        if (!start) start = now;
+        const t = Math.min((now - start) / 1000, DURATION);
+        tl.seek(t);
+        if (t < DURATION && playing) {
+          raf = requestAnimationFrame(tick);
+        } else if (t >= DURATION) {
+          playing = false;
+          start = null;
+          tl.seek(0);
+        }
+      }
+
+      document.addEventListener("click", () => {
+        if (!playing) {
+          playing = true;
+          start = null;
+          raf = requestAnimationFrame(tick);
+        } else {
+          playing = false;
+          cancelAnimationFrame(raf);
+        }
+      });
+
+      // Show first frame
+      tl.seek(0.21);
+    }
+  </script>
+</body>
+</html>

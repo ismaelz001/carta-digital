@@ -96,6 +96,8 @@ export type RestaurantConfig = {
   // Quote del footer
   footerQuote?: string;
   footerQuoteAuthor?: string;
+  noticeFooter?: string;
+  imageDisclaimer?: string;
 
   // Idiomas disponibles
   languages?: string[];  // ["es", "en"]

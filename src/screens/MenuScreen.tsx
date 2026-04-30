@@ -197,6 +197,16 @@ export function MenuScreen({
             ))}
           </div>
         )}
+
+        {/* ── Footer notices ── */}
+        <div className="px-5 pt-4 pb-2 space-y-1 md:max-w-2xl md:mx-auto">
+          {config.noticeFooter && (
+            <p className="text-[10px] text-white/30 leading-relaxed">{config.noticeFooter}</p>
+          )}
+          {config.imageDisclaimer && (
+            <p className="text-[10px] text-white/25 leading-relaxed">📷 {config.imageDisclaimer}</p>
+          )}
+        </div>
       </div>
 
       {/* ── Bottom nav ── */}
