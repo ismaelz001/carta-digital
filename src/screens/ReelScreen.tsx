@@ -183,7 +183,7 @@ export function ReelScreen({
         <div className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2">
           <button
             onClick={goPrev}
-            className={`w-10 h-10 rounded-full bg-[#0D0B09]/55 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === 0 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
+            className={`w-11 h-11 rounded-full bg-[#0D0B09]/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === 0 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
             aria-label="Anterior"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -192,7 +192,7 @@ export function ReelScreen({
           </button>
           <button
             onClick={goNext}
-            className={`w-10 h-10 rounded-full bg-[#0D0B09]/55 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === dishes.length - 1 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
+            className={`w-11 h-11 rounded-full bg-[#0D0B09]/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === dishes.length - 1 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
             aria-label="Siguiente"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -396,7 +396,7 @@ function ReelSlide({
             {dish.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="text-[10px] text-white/70 border border-white/20 px-2 py-0.5 rounded-full backdrop-blur-sm bg-[#0D0B09]/35"
+                className="text-[10px] text-white/70 border border-white/15 px-2 py-0.5 rounded-full bg-[#0D0B09]/80"
               >
                 {tag}
               </span>

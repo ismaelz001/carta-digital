@@ -13,6 +13,8 @@ export function DailyMenuCard({ menu }: Props) {
   return (
     <div
       className="mx-4 mb-1 rounded-2xl overflow-hidden cursor-pointer select-none"
+      role="button"
+      aria-expanded={expanded}
       style={{
         background: "linear-gradient(135deg, hsl(20 30% 8%) 0%, hsl(14 35% 11%) 50%, hsl(20 30% 8%) 100%)",
         border: "1px solid rgba(229,71,42,0.25)",

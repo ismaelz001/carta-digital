@@ -98,7 +98,7 @@ export function HomeScreen({
               <path d="M16 10a4 4 0 01-8 0"/>
             </svg>
             {cartCount > 0 && (
-              <span key={cartCount} className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-[10px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 leading-none animate-badge-pop">
+              <span key={cartCount} aria-live="polite" aria-atomic="true" className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-[10px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 leading-none animate-badge-pop">
                 {cartCount}
               </span>
             )}
@@ -215,7 +215,7 @@ export function HomeScreen({
               >
                 {/* Main tap area */}
                 <button
-                  className="absolute inset-0 w-full h-full focus:outline-none"
+                  className="absolute inset-0 w-full h-full focus:outline-none focus-visible:outline-none"
                   onClick={() => onCategorySelect(cat.id)}
                   aria-label={`Ver ${cat.label}`}
                 >
@@ -257,7 +257,7 @@ export function HomeScreen({
 
                 {/* Video badge — top right */}
                 {hasVideo && (
-                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0D0B09]/65 backdrop-blur-sm px-2 py-1 rounded-full pointer-events-none">
+                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0D0B09]/80 px-2 py-1 rounded-full pointer-events-none">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="white">
                       <polygon points="2,1 9,5 2,9"/>
                     </svg>
@@ -270,7 +270,7 @@ export function HomeScreen({
                 {/* Dish count — top left */}
                 {hasDishes && (
                   <div className="absolute top-3 left-3 pointer-events-none">
-                    <span className="text-[10px] text-white/65 bg-[#0D0B09]/55 backdrop-blur-sm px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] text-white/65 bg-[#0D0B09]/80 px-2 py-0.5 rounded-full">
                       {dishCount} {dishCount === 1 ? "plato" : "platos"}
                     </span>
                   </div>

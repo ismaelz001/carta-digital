@@ -104,7 +104,7 @@ export function MenuScreen({
             <path d="M16 10a4 4 0 01-8 0"/>
           </svg>
           {cartCount > 0 && (
-            <span key={cartCount} className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 animate-badge-pop">
+            <span key={cartCount} aria-live="polite" aria-atomic="true" className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 text-[9px] font-bold bg-primary text-white rounded-full flex items-center justify-center px-0.5 animate-badge-pop">
               {cartCount}
             </span>
           )}
@@ -282,7 +282,7 @@ function DishRow({
       onClick={onDetail}
     >
       {/* Thumbnail — portrait 3:4 editorial */}
-      <div className="relative flex-shrink-0 w-[84px] h-[112px] rounded-2xl overflow-hidden bg-[#1a1714]">
+      <div className="relative flex-shrink-0 w-[84px] h-[112px] rounded-2xl overflow-hidden bg-card">
         <DishMedia dish={dish} />
         {(dish.signature || dish.popular) && (
           <div className="absolute top-1.5 left-1.5">
@@ -327,7 +327,7 @@ function DishRow({
           {/* Fav */}
           <button
             onClick={handleFav}
-            className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
+            className="w-11 h-11 rounded-full flex items-center justify-center transition-colors hover:bg-white/8 active:scale-90"
             aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
           >
             <svg
@@ -346,7 +346,7 @@ function DishRow({
             onClick={handleAdd}
             disabled={added}
             aria-label={added ? `${dish.name} añadido` : `Añadir ${dish.name}`}
-            className={`text-[11px] font-semibold px-4 min-h-[40px] rounded-full transition-all uppercase tracking-[0.08em] border ${added ? "border-primary/40 text-primary/60 bg-primary/5 scale-95" : "border-primary/40 text-primary hover:bg-primary hover:text-white"}`}
+            className={`text-[11px] font-semibold px-4 min-h-[44px] rounded-full transition-all uppercase tracking-[0.08em] border ${added ? "border-primary/40 text-primary/60 bg-primary/5 scale-95" : "border-primary/40 text-primary hover:bg-primary hover:text-white"}`}
           >
             {added ? "✓ Añadido" : "+ Añadir"}
           </button>
@@ -506,7 +506,7 @@ function DishDetailSheet({
       />
 
       {/* Sheet */}
-      <div className="fixed inset-x-0 bottom-0 z-50 animate-slide-up rounded-t-3xl overflow-hidden bg-[#141210] max-h-[90dvh] flex flex-col">
+      <div className="fixed inset-x-0 bottom-0 z-50 animate-slide-up rounded-t-3xl overflow-hidden bg-card max-h-[90dvh] flex flex-col">
         {/* Drag handle */}
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
           <div className="w-10 h-1 rounded-full bg-white/15" />
@@ -515,7 +515,7 @@ function DishDetailSheet({
         {/* Scrollable content */}
         <div className="overflow-y-auto no-scrollbar">
           {/* Hero image */}
-          <div className="relative w-full aspect-[4/3] bg-[#1a1714]">
+          <div className="relative w-full aspect-[4/3] bg-card">
             <DishMedia dish={dish} cinematic enableVideo />
             {/* Gradient */}
             <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 60%, rgba(20,18,16,0.9) 100%)" }} />
@@ -523,7 +523,7 @@ function DishDetailSheet({
             {/* Close */}
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#0D0B09]/65 flex items-center justify-center backdrop-blur-sm"
+              className="absolute top-3 right-3 w-11 h-11 rounded-full bg-[#0D0B09]/80 flex items-center justify-center"
               aria-label="Cerrar"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">

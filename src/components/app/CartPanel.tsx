@@ -71,7 +71,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
               {items.map(({ dish, qty }) => (
                 <div key={dish.id} className="flex items-center gap-3 px-5 py-3.5">
                   {/* Image */}
-                  <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-[#1a1714]">
+                  <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-card">
                     <img
                       src={dish.image}
                       alt={dish.name}
@@ -94,7 +94,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <button
                       onClick={() => onQtyChange(dish.id, qty - 1)}
-                      className="w-7 h-7 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/15 transition-colors"
+                      className="w-11 h-11 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/15 transition-colors"
                       aria-label="Reducir cantidad"
                     >
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">
@@ -106,7 +106,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
                     </span>
                     <button
                       onClick={() => onQtyChange(dish.id, qty + 1)}
-                      className="w-7 h-7 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/15 transition-colors"
+                      className="w-11 h-11 rounded-full bg-white/8 flex items-center justify-center hover:bg-white/15 transition-colors"
                       aria-label="Aumentar cantidad"
                     >
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">
@@ -119,7 +119,7 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
                   {/* Remove */}
                   <button
                     onClick={() => onRemove(dish.id)}
-                    className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 transition-colors text-white/30 flex-shrink-0"
+                    className="w-11 h-11 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 transition-colors text-white/30 flex-shrink-0"
                     aria-label={`Eliminar ${dish.name}`}
                   >
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
