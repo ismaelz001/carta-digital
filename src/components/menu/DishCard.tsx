@@ -105,9 +105,11 @@ export const DishCard = ({ dish, index, onOpen }: Props) => {
         </div>
       </div>
 
-      <p className="mt-4 line-clamp-2 max-w-[44ch] text-sm leading-relaxed text-muted-foreground">
-        {dish.description}
-      </p>
+      {dish.description && (
+        <p className="mt-4 line-clamp-2 max-w-[44ch] text-sm leading-relaxed text-muted-foreground">
+          {dish.description}
+        </p>
+      )}
     </button>
   );
 };

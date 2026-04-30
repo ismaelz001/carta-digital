@@ -551,9 +551,11 @@ function DishDetailSheet({
               </span>
             </div>
 
-            <p className="mt-3 text-[13px] leading-relaxed text-white/65">
-              {dish.description}
-            </p>
+            {dish.description && (
+              <p className="mt-3 text-[13px] leading-relaxed text-white/65">
+                {dish.description}
+              </p>
+            )}
 
             {dish.tags && dish.tags.length > 0 && (
               <div className="flex flex-wrap gap-1.5 mt-4">

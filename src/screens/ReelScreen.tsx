@@ -385,7 +385,7 @@ function ReelSlide({
           {dish.price.toFixed(2).replace(".", ",")}€
         </p>
 
-        {showInfo && (
+        {showInfo && dish.description && (
           <p className="text-[13px] text-white/80 mt-2 leading-relaxed text-shadow max-w-[260px] animate-fade-in">
             {dish.description}
           </p>

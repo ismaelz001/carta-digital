@@ -29,7 +29,7 @@ export const DishModal = ({ dish, onClose }: Props) => {
 
   const handleShare = async () => {
     if (!dish) return;
-    const text = `${dish.name} — ${config.name}\n${dish.description}\n${window.location.href}`;
+    const text = `${dish.name} — ${config.name}${dish.description ? `\n${dish.description}` : ''}\n${window.location.href}`;
     if (navigator.share) {
       await navigator.share({ title: dish.name, text, url: window.location.href }).catch(() => {});
     } else {
@@ -120,9 +120,11 @@ export const DishModal = ({ dish, onClose }: Props) => {
 
             <div className="my-8 h-px w-16 bg-border" />
 
-            <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-              {dish.description}
-            </p>
+            {dish.description && (
+              <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                {dish.description}
+              </p>
+            )}
 
             {dish.tags && dish.tags.length > 0 && (
               <div className="mt-8 flex flex-wrap gap-2">
