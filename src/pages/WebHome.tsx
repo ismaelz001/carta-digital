@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -256,46 +257,53 @@ export default function WebHome() {
     );
   }, []);
 
-  // GSAP ScrollTrigger config: usa el scroller del container
+  // Lenis smooth scroll + GSAP ScrollTrigger sync
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    const lenis = new Lenis({
+      wrapper: container,
+      content: container.firstElementChild as HTMLElement,
+      duration: 1.4,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      touchMultiplier: 2,
+    });
+    lenisRef.current = lenis;
+
+    // Sync Lenis scroll → ScrollTrigger
+    lenis.on("scroll", (e: { scroll: number }) => {
+      ScrollTrigger.update();
+      setScrolled(e.scroll > 50);
+      setParallax(e.scroll * 0.3);
+    });
+
+    // Sync Lenis RAF → GSAP ticker
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
     ScrollTrigger.defaults({ scroller: container });
-    return () => { ScrollTrigger.defaults({ scroller: undefined }); };
-  }, []);
 
-  const onScroll = useCallback(() => {
-    const top = containerRef.current?.scrollTop ?? 0;
-    setScrolled(top > 50);
-    setParallax(top * 0.3);
-  }, []);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    let ticking = false;
-    const handler = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          onScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
+    return () => {
+      lenis.destroy();
+      lenisRef.current = null;
+      ScrollTrigger.defaults({ scroller: undefined });
     };
-    el.addEventListener("scroll", handler, { passive: true });
-    return () => el.removeEventListener("scroll", handler);
-  }, [onScroll]);
+  }, []);
+
+  const onScroll = useCallback(() => {}, []);
 
   const scrollTo = (id: string) => {
     setMenuOpen(false);
     const target = document.getElementById(id);
-    const container = containerRef.current;
-    if (!target || !container) return;
-    container.scrollTo({ top: target.offsetTop - 64, behavior: "smooth" });
+    if (!target) return;
+    lenisRef.current?.scrollTo(target, { offset: -64, duration: 1.6 });
   };
 
-  const scrollToTop = () => containerRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => lenisRef.current?.scrollTo(0, { duration: 1.6 });
 
   return (
     <>
@@ -310,12 +318,12 @@ export default function WebHome() {
         ref={containerRef}
         style={{
           height: "100%",
-          overflowY: "auto",
-          overflowX: "hidden",
+          overflow: "hidden",
           fontFamily: "'Bricolage Grotesque', sans-serif",
           color: "#1C1C1C",
         }}
       >
+        <div>
         {/* ── NAVBAR ── */}
         <nav
           className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
@@ -729,6 +737,7 @@ export default function WebHome() {
             </p>
           </div>
         </footer>
+        </div>
       </div>
     </>
   );
