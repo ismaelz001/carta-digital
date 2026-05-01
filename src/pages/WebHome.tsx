@@ -301,6 +301,9 @@ export default function WebHome() {
     <>
       <style>{`
         @keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .gallery-card { transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease; }
+        .gallery-card:hover { transform: rotate(0deg) scale(1.04) !important; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
       `}</style>
 
       <div
@@ -452,6 +455,21 @@ export default function WebHome() {
           </div>
         </section>
 
+        {/* ── MARQUEE ── */}
+        <div style={{ background: "#D4A017", overflow: "hidden", padding: "13px 0", borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+          <div style={{ display: "flex", animation: "marquee 28s linear infinite", width: "max-content", willChange: "transform" }}>
+            {[0, 1].map(n => (
+              <span key={n} style={{ display: "flex", whiteSpace: "nowrap" }}>
+                {["Café Bar Polígono", "·", "Santiago de Compostela", "·", "Menú del día desde 9,50€", "·", "Bufé libre", "·", "Más de 30 años", "·", "Bocadillos y tapas", "·", "Desayunos", "·"].map((txt, i) => (
+                  <span key={i} style={{ padding: "0 1.6rem", fontWeight: 700, fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#1B2F5A" }}>
+                    {txt}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* ── SERVICIOS ── */}
         <section id="servicios" style={{ background: "#F7F5F0" }} className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-5">
@@ -501,8 +519,11 @@ export default function WebHome() {
                 const isWide = i === 0 || i === 5;
                 return (
                   <Reveal key={img.alt} delay={i * 60} className={isWide ? "col-span-2" : "col-span-1"} scrollContainer={containerRef}>
-                    <div className="overflow-hidden rounded-xl w-full"
-                      style={{ aspectRatio: isWide ? "16/9" : "1/1" }}>
+                    <div className="overflow-hidden rounded-2xl w-full gallery-card"
+                      style={{
+                        aspectRatio: isWide ? "16/9" : "1/1",
+                        transform: `rotate(${["-1.5deg","1.2deg","-0.8deg","1.5deg","-1deg","0.9deg","-1.3deg","1.1deg"][i]})`
+                      }}>
                       <img src={img.src} alt={img.alt} loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                       />
@@ -511,6 +532,29 @@ export default function WebHome() {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* ── STATEMENT FULL-WIDTH ── */}
+        <section style={{ position: "relative", height: "58vh", minHeight: 360, overflow: "hidden" }}>
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=85"
+            alt="Cocina casera"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.04)" }}
+          />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(8,15,34,0.88) 0%, rgba(8,15,34,0.55) 60%, rgba(8,15,34,0.35) 100%)" }} />
+          <div style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", padding: "0 1.5rem" }}>
+            <Reveal scrollContainer={containerRef}>
+              <p style={{ color: "#D4A017", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", fontSize: "0.7rem" }}>
+                Desde 1994
+              </p>
+              <h2 style={{ fontFamily: "'Rufina', serif", fontSize: "clamp(2.2rem,6.5vw,5rem)", fontWeight: 700, color: "#fff", lineHeight: 1.08, marginTop: "0.5rem", maxWidth: "18ch" }}>
+                Cocina de verdad,<br />sin artificios.
+              </h2>
+              <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "clamp(0.9rem,1.5vw,1.1rem)", marginTop: "1.2rem", maxWidth: "48ch" }}>
+                Cada día, producto fresco. Cada semana, el menú que esperas.
+              </p>
+            </Reveal>
           </div>
         </section>
 
