@@ -1,39 +1,140 @@
 ﻿import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ─── Hook: Scroll reveal ──────────────────────────────────────────────────────
-function useInView(threshold = 0.12) {
+gsap.registerPlugin(ScrollTrigger);
+
+// ─── Canvas: Vapor / Heat effect ─────────────────────────────────────────────
+function HeatCanvas() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let W = canvas.offsetWidth;
+    let H = canvas.offsetHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    const resize = () => {
+      W = canvas.offsetWidth;
+      H = canvas.offsetHeight;
+      canvas.width = W;
+      canvas.height = H;
+    };
+    window.addEventListener("resize", resize);
+
+    // Partículas de vapor
+    const COUNT = 38;
+    type P = { x: number; y: number; vy: number; vx: number; r: number; alpha: number; life: number; maxLife: number };
+    const particles: P[] = [];
+
+    const spawn = (): P => ({
+      x: Math.random() * W,
+      y: H + Math.random() * 80,
+      vy: -(0.35 + Math.random() * 0.55),
+      vx: (Math.random() - 0.5) * 0.3,
+      r: 60 + Math.random() * 120,
+      alpha: 0,
+      life: 0,
+      maxLife: 220 + Math.random() * 180,
+    });
+
+    for (let i = 0; i < COUNT; i++) {
+      const p = spawn();
+      p.y = Math.random() * H; // scatter inicial
+      p.life = Math.random() * p.maxLife;
+      particles.push(p);
+    }
+
+    let raf: number;
+    const draw = () => {
+      ctx.clearRect(0, 0, W, H);
+
+      for (const p of particles) {
+        p.life++;
+        const progress = p.life / p.maxLife;
+        // fade in / fade out
+        p.alpha = progress < 0.3
+          ? (progress / 0.3) * 0.09
+          : progress > 0.7
+            ? ((1 - progress) / 0.3) * 0.09
+            : 0.09;
+
+        p.y += p.vy;
+        p.x += p.vx + Math.sin(p.life * 0.018) * 0.25;
+
+        if (p.life >= p.maxLife) Object.assign(p, spawn());
+
+        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+        grad.addColorStop(0, `rgba(255,220,130,${p.alpha})`);
+        grad.addColorStop(0.5, `rgba(200,160,80,${p.alpha * 0.4})`);
+        grad.addColorStop(1, "rgba(0,0,0,0)");
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    draw();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: "absolute", inset: 0, width: "100%", height: "100%",
+        pointerEvents: "none", zIndex: 2, mixBlendMode: "screen",
+      }}
+      aria-hidden="true"
+    />
+  );
+}
+
+// ─── GSAP Reveal wrapper ──────────────────────────────────────────────────────
+function Reveal({ children, delay = 0, className = "", scrollContainer }: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+  scrollContainer?: React.RefObject<HTMLDivElement>;
+}) {
   const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setInView(true); obs.disconnect(); } },
-      { threshold, rootMargin: "0px 0px -60px 0px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, inView };
-}
 
-// ─── Reveal wrapper ───────────────────────────────────────────────────────────
-function Reveal({ children, delay = 0, className = "" }: {
-  children: React.ReactNode; delay?: number; className?: string;
-}) {
-  const { ref, inView } = useInView();
+    gsap.fromTo(el,
+      { opacity: 0, y: 48 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.9,
+        delay: delay / 1000,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          scroller: scrollContainer?.current ?? undefined,
+          start: "top 88%",
+          once: true,
+        },
+      }
+    );
+    return () => ScrollTrigger.getAll().forEach(t => t.vars.trigger === el && t.kill());
+  }, [delay, scrollContainer]);
+
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(36px)",
-        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
-      }}
-    >
+    <div ref={ref} className={className} style={{ opacity: 0 }}>
       {children}
     </div>
   );
@@ -74,13 +175,13 @@ const SERVICES = [
 // Swap these for real client photos when available
 const GALLERY = [
   { src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80", alt: "Comedor" },
-  { src: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=900&q=80", alt: "Desayuno" },
-  { src: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=80", alt: "Bocadillo" },
-  { src: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&q=80", alt: "Tostada" },
-  { src: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=900&q=80", alt: "Menú del día" },
-  { src: "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=900&q=80", alt: "Pulpo" },
+  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", alt: "Plato del día" },
+  { src: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=900&q=80", alt: "Café" },
+  { src: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&q=80", alt: "Cocina" },
+  { src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80", alt: "Menú" },
   { src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80", alt: "Terraza" },
   { src: "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=900&q=80", alt: "Barra" },
+  { src: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=900&q=80", alt: "Desayuno" },
 ];
 
 function Stars({ rating }: { rating: number }) {
@@ -123,6 +224,46 @@ export default function WebHome() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [parallax, setParallax] = useState(0);
 
+  // Hero text GSAP entrance
+  const heroRatingRef = useRef<HTMLDivElement>(null);
+  const heroH1Ref = useRef<HTMLHeadingElement>(null);
+  const heroTagRef = useRef<HTMLParagraphElement>(null);
+  const heroDescRef = useRef<HTMLParagraphElement>(null);
+  const heroCtasRef = useRef<HTMLDivElement>(null);
+  const heroMetaRef = useRef<HTMLDivElement>(null);
+  const scrollLineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const els = [
+      heroRatingRef.current,
+      heroH1Ref.current,
+      heroTagRef.current,
+      heroDescRef.current,
+      heroCtasRef.current,
+      heroMetaRef.current,
+      scrollLineRef.current,
+    ].filter(Boolean);
+
+    gsap.fromTo(els,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+        delay: 0.2,
+      }
+    );
+  }, []);
+
+  // GSAP ScrollTrigger config: usa el scroller del container
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    ScrollTrigger.defaults({ scroller: container });
+    return () => { ScrollTrigger.defaults({ scroller: undefined }); };
+  }, []);
+
   const onScroll = useCallback(() => {
     const top = containerRef.current?.scrollTop ?? 0;
     setScrolled(top > 50);
@@ -160,14 +301,6 @@ export default function WebHome() {
     <>
       <style>{`
         @keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
-        @keyframes fadeUp   { from { opacity:0; transform:translateY(40px);  } to { opacity:1; transform:translateY(0); } }
-        .hero-rating { animation: fadeDown 0.8s ease 0.1s both; }
-        .hero-text-1 { animation: fadeUp 0.9s ease 0.2s both; }
-        .hero-text-2 { animation: fadeUp 0.9s ease 0.4s both; }
-        .hero-text-3 { animation: fadeUp 0.9s ease 0.6s both; }
-        .hero-ctas   { animation: fadeUp 0.9s ease 0.8s both; }
-        .hero-meta   { animation: fadeUp 0.9s ease 1.0s both; }
-        .scroll-line { animation: fadeUp 1.2s ease 1.5s both; }
       `}</style>
 
       <div
@@ -257,10 +390,11 @@ export default function WebHome() {
             <div className="absolute inset-0" style={{
               background: "linear-gradient(to top, rgba(8,18,40,0.97) 0%, rgba(8,18,40,0.55) 45%, rgba(8,18,40,0.12) 100%)"
             }} />
+            <HeatCanvas />
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-            <div className="hero-rating flex items-center gap-3 mb-5">
+            <div ref={heroRatingRef} className="flex items-center gap-3 mb-5" style={{ opacity: 0 }}>
               <div className="flex items-center gap-2 rounded-full px-4 py-1.5" style={{ background: "rgba(212,160,23,0.15)", border: "1px solid rgba(212,160,23,0.35)" }}>
                 <Stars rating={R.rating} />
                 <span className="font-bold text-sm" style={{ color: "#D4A017" }}>{R.rating.toFixed(1)}</span>
@@ -269,29 +403,29 @@ export default function WebHome() {
               </div>
             </div>
 
-            <h1 className="hero-text-1" style={{
+            <h1 ref={heroH1Ref} style={{
               fontFamily: "'Rufina', serif",
               fontSize: "clamp(2.6rem,6.5vw,5rem)",
-              fontWeight: 700, color: "#fff", lineHeight: 1.05, margin: 0,
+              fontWeight: 700, color: "#fff", lineHeight: 1.05, margin: 0, opacity: 0,
             }}>
               {R.name}
             </h1>
 
-            <p className="hero-text-2" style={{
+            <p ref={heroTagRef} style={{
               fontSize: "clamp(1.1rem,2.5vw,1.5rem)",
-              color: "#D4A017", fontWeight: 600, marginTop: "0.6rem",
+              color: "#D4A017", fontWeight: 600, marginTop: "0.6rem", opacity: 0,
             }}>
               {R.tagline}
             </p>
 
-            <p className="hero-text-3 max-w-xl leading-relaxed" style={{
+            <p ref={heroDescRef} className="max-w-xl leading-relaxed" style={{
               marginTop: "1rem", color: "rgba(255,255,255,0.68)",
-              fontSize: "clamp(0.9rem,1.5vw,1.05rem)",
+              fontSize: "clamp(0.9rem,1.5vw,1.05rem)", opacity: 0,
             }}>
               {R.description}
             </p>
 
-            <div className="hero-ctas flex flex-wrap gap-3 mt-8">
+            <div ref={heroCtasRef} className="flex flex-wrap gap-3 mt-8" style={{ opacity: 0 }}>
               <Link to="/carta"
                 className="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:brightness-110"
                 style={{ background: "#D4A017", color: "#1B2F5A", boxShadow: "0 4px 20px rgba(212,160,23,0.4)" }}>
@@ -305,14 +439,14 @@ export default function WebHome() {
               </a>
             </div>
 
-            <div className="hero-meta flex flex-wrap gap-x-6 gap-y-1.5 mt-9 text-white/45 text-sm">
+            <div ref={heroMetaRef} className="flex flex-wrap gap-x-6 gap-y-1.5 mt-9 text-white/45 text-sm" style={{ opacity: 0 }}>
               <span>🕐 Lun–Vie 07:30–21:00</span>
               <span>📍 Vía Galileo 15, Santiago</span>
               <span>💶 Menú desde 9,50 €</span>
             </div>
           </div>
 
-          <div className="scroll-line absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <div ref={scrollLineRef} className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ opacity: 0 }}>
             <span className="text-white/25 text-xs tracking-widest uppercase">Scroll</span>
             <div style={{ width: 1, height: 40, background: "linear-gradient(to bottom, rgba(255,255,255,0.45), transparent)" }} />
           </div>
@@ -321,7 +455,7 @@ export default function WebHome() {
         {/* ── SERVICIOS ── */}
         <section id="servicios" style={{ background: "#F7F5F0" }} className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-5">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-14" scrollContainer={containerRef}>
               <p style={{ color: "#D4A017", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "0.75rem" }}>
                 Lo que ofrecemos
               </p>
@@ -331,7 +465,7 @@ export default function WebHome() {
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {SERVICES.map(({ icon, title, desc }, i) => (
-                <Reveal key={title} delay={i * 80}>
+                <Reveal key={title} delay={i * 80} scrollContainer={containerRef}>
                   <div className="rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                     style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
                     <div className="text-3xl mb-4" aria-hidden="true">{icon}</div>
@@ -341,7 +475,7 @@ export default function WebHome() {
                 </Reveal>
               ))}
             </div>
-            <Reveal delay={200} className="text-center mt-12">
+            <Reveal delay={200} className="text-center mt-12" scrollContainer={containerRef}>
               <Link to="/carta"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105"
                 style={{ background: "#1B2F5A", color: "#fff" }}>
@@ -354,7 +488,7 @@ export default function WebHome() {
         {/* ── GALERÍA ── */}
         <section id="galeria" style={{ background: "#fff" }} className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-5">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-14" scrollContainer={containerRef}>
               <p style={{ color: "#D4A017", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "0.75rem" }}>
                 Imágenes del local
               </p>
@@ -363,16 +497,19 @@ export default function WebHome() {
               </h2>
             </Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {GALLERY.map((img, i) => (
-                <Reveal key={img.alt} delay={i * 60} className={i === 0 || i === 4 ? "col-span-2" : ""}>
-                  <div className="overflow-hidden rounded-xl"
-                    style={{ aspectRatio: (i === 0 || i === 4) ? "16/9" : "3/4" }}>
-                    <img src={img.src} alt={img.alt} loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                    />
-                  </div>
-                </Reveal>
-              ))}
+              {GALLERY.map((img, i) => {
+                const isWide = i === 0 || i === 5;
+                return (
+                  <Reveal key={img.alt} delay={i * 60} className={isWide ? "col-span-2" : "col-span-1"} scrollContainer={containerRef}>
+                    <div className="overflow-hidden rounded-xl w-full"
+                      style={{ aspectRatio: isWide ? "16/9" : "1/1" }}>
+                      <img src={img.src} alt={img.alt} loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                      />
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -380,7 +517,7 @@ export default function WebHome() {
         {/* ── NOSOTROS ── */}
         <section id="nosotros" style={{ background: "#1B2F5A" }} className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
-            <Reveal>
+            <Reveal scrollContainer={containerRef}>
               <p style={{ color: "#D4A017", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "0.75rem" }}>
                 Nuestra historia
               </p>
@@ -412,7 +549,7 @@ export default function WebHome() {
                 </div>
               </div>
             </Reveal>
-            <Reveal delay={150}>
+            <Reveal delay={150} scrollContainer={containerRef}>
               <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80"
                   alt="Interior" loading="lazy"
@@ -426,7 +563,7 @@ export default function WebHome() {
         {/* ── CONTACTO ── */}
         <section id="contacto" style={{ background: "#F7F5F0" }} className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-5">
-            <Reveal className="text-center mb-14">
+            <Reveal className="text-center mb-14" scrollContainer={containerRef}>
               <p style={{ color: "#D4A017", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", fontSize: "0.75rem" }}>
                 Encuéntranos
               </p>
@@ -436,7 +573,7 @@ export default function WebHome() {
             </Reveal>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <Reveal><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
+                <Reveal scrollContainer={containerRef}><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
                   <h3 className="font-semibold text-xs uppercase tracking-widest mb-3" style={{ color: "#9CA3AF" }}>📍 Dónde estamos</h3>
                   <p className="font-medium" style={{ color: "#1B2F5A" }}>{R.address}</p>
                   <p style={{ color: "#374151" }}>{R.city}</p>
@@ -446,13 +583,13 @@ export default function WebHome() {
                   </a>
                 </div></Reveal>
 
-                <Reveal delay={80}><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
+                <Reveal delay={80} scrollContainer={containerRef}><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
                   <h3 className="font-semibold text-xs uppercase tracking-widest mb-3" style={{ color: "#9CA3AF" }}>📞 Teléfono</h3>
                   <a href={R.phoneTel} className="text-2xl font-bold" style={{ color: "#1B2F5A" }}>{R.phone}</a>
                   <p className="mt-1 text-sm" style={{ color: "#9CA3AF" }}>Reservas y encargos</p>
                 </div></Reveal>
 
-                <Reveal delay={160}><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
+                <Reveal delay={160} scrollContainer={containerRef}><div className="rounded-2xl p-6" style={{ background: "#fff", border: "1px solid #EAE6DC" }}>
                   <h3 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: "#9CA3AF" }}>🕐 Horario</h3>
                   <div className="space-y-2.5">
                     {R.hours.map((h) => (
@@ -464,7 +601,7 @@ export default function WebHome() {
                   </div>
                 </div></Reveal>
 
-                <Reveal delay={240}>
+                <Reveal delay={240} scrollContainer={containerRef}>
                   <a href={R.instagram} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{ background: "linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)", color: "#fff" }}>
@@ -479,7 +616,7 @@ export default function WebHome() {
                 </Reveal>
               </div>
 
-              <Reveal delay={100}>
+              <Reveal delay={100} scrollContainer={containerRef}>
                 <div className="rounded-2xl overflow-hidden h-full" style={{ minHeight: 420, border: "1px solid #EAE6DC" }}>
                   <iframe
                     title="Ubicación Café Bar Polígono"
