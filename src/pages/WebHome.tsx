@@ -4,8 +4,165 @@ import { Phone } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import * as THREE from "three";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// ─── WebGL Hero: displacement shader en mouse move ────────────────────────────
+const VERT = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
+const FRAG = `
+  uniform sampler2D uTexture;
+  uniform vec2 uMouse;       // 0..1 normalizado
+  uniform float uTime;
+  uniform float uParallax;
+  varying vec2 vUv;
+
+  void main() {
+    vec2 uv = vUv;
+
+    // parallax vertical sutil
+    uv.y -= uParallax * 0.06;
+    uv.y = clamp(uv.y, 0.0, 1.0);
+
+    // distorsión líquida siguiendo el ratón
+    vec2 delta = uv - uMouse;
+    float dist = length(delta);
+    float strength = 0.045 / (dist * dist + 0.08);
+    float wave = sin(dist * 18.0 - uTime * 3.2) * strength;
+    uv += normalize(delta + 0.001) * wave * 0.012;
+
+    // cobertura tipo object-fit: cover
+    // asumimos la imagen tiene aspect 16/9 y el canvas es 16/9 aprox
+    gl_FragColor = texture2D(uTexture, uv);
+  }
+`;
+
+function HeroGL({ parallax }: { parallax: number }) {
+  const mountRef = useRef<HTMLDivElement>(null);
+  const stateRef = useRef<{
+    renderer: THREE.WebGLRenderer;
+    scene: THREE.Scene;
+    camera: THREE.OrthographicCamera;
+    mesh: THREE.Mesh;
+    uMouse: THREE.Vector2;
+    uTime: { value: number };
+    uParallax: { value: number };
+    raf: number;
+  } | null>(null);
+  const [webglFailed, setWebglFailed] = useState(false);
+
+  useEffect(() => {
+    const el = mountRef.current;
+    if (!el) return;
+
+    // Limpiar el container (fix React StrictMode double-mount)
+    while (el.firstChild) el.removeChild(el.firstChild as Node);
+
+    const W = el.offsetWidth;
+    const H = el.offsetHeight;
+
+    // Probar soporte WebGL antes de inicializar Three.js
+    const testCanvas = document.createElement("canvas");
+    const testCtx = testCanvas.getContext("webgl") ?? testCanvas.getContext("webgl2");
+    if (!testCtx) { setWebglFailed(true); return; }
+
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false });
+    } catch {
+      setWebglFailed(true);
+      return;
+    }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H);
+    renderer.domElement.style.cssText = "position:absolute;inset:0;width:100%;height:100%;";
+    el.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+    camera.position.z = 1;
+
+    const uMouse = new THREE.Vector2(0.5, 0.5);
+    const uniforms = {
+      uTexture: { value: new THREE.Texture() },
+      uMouse: { value: uMouse },
+      uTime: { value: 0 },
+      uParallax: { value: 0 },
+    };
+
+    const geo = new THREE.PlaneGeometry(2, 2);
+    const mat = new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: FRAG, uniforms });
+    const mesh = new THREE.Mesh(geo, mat);
+    scene.add(mesh);
+
+    // Cargar textura
+    new THREE.TextureLoader().load(HERO_IMG, (tex) => {
+      tex.minFilter = THREE.LinearFilter;
+      tex.magFilter = THREE.LinearFilter;
+      uniforms.uTexture.value = tex;
+    });
+
+    // Mouse
+    const onMouse = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      uMouse.x = (e.clientX - rect.left) / rect.width;
+      uMouse.y = 1.0 - (e.clientY - rect.top) / rect.height;
+    };
+    el.addEventListener("mousemove", onMouse);
+
+    // Resize
+    const onResize = () => {
+      const W2 = el.offsetWidth;
+      const H2 = el.offsetHeight;
+      renderer.setSize(W2, H2);
+    };
+    window.addEventListener("resize", onResize);
+
+    let raf: number;
+    const tick = () => {
+      uniforms.uTime.value += 0.016;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(tick);
+    };
+    tick();
+
+    stateRef.current = { renderer, scene, camera, mesh, uMouse, uTime: uniforms.uTime, uParallax: uniforms.uParallax, raf };
+
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("mousemove", onMouse);
+      window.removeEventListener("resize", onResize);
+      try { renderer.forceContextLoss(); } catch { /* ignore */ }
+      renderer.dispose();
+      if (renderer.domElement.parentNode === el) el.removeChild(renderer.domElement);
+    };
+  }, []);
+
+  // Actualizar parallax desde props sin re-montar
+  useEffect(() => {
+    if (stateRef.current) stateRef.current.uParallax.value = parallax;
+  }, [parallax]);
+
+  if (webglFailed) {
+    return (
+      <img src={HERO_IMG} alt="Café Bar Polígono" loading="eager"
+        style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover", transform: `translateY(${parallax}px)`, willChange: "transform",
+        }}
+      />
+    );
+  }
+
+  return <div ref={mountRef} style={{ position: "absolute", inset: 0 }} aria-hidden="true" />;
+}
 
 // ─── Canvas: Vapor / Heat effect ─────────────────────────────────────────────
 function HeatCanvas() {
@@ -394,10 +551,7 @@ export default function WebHome() {
         {/* ── HERO ── */}
         <section className="relative flex items-end" style={{ minHeight: "100vh", paddingBottom: "clamp(3rem,8vh,7rem)" }}>
           <div className="absolute inset-0 overflow-hidden">
-            <img src={HERO_IMG} alt="Café Bar Polígono" loading="eager"
-              className="w-full h-full object-cover"
-              style={{ transform: `translateY(${parallax}px)`, willChange: "transform" }}
-            />
+            <HeroGL parallax={parallax} />
             <div className="absolute inset-0" style={{
               background: "linear-gradient(to top, rgba(8,18,40,0.97) 0%, rgba(8,18,40,0.55) 45%, rgba(8,18,40,0.12) 100%)"
             }} />
