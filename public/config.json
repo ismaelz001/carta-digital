@@ -452,6 +452,7 @@
       "price": 11,
       "category": "bocadillos",
       "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
       "available": true
     },
     {
@@ -460,6 +461,7 @@
       "price": 12.5,
       "category": "bocadillos",
       "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
       "available": true
     },
     {
@@ -831,6 +833,7 @@
       "price": 28,
       "category": "raciones",
       "image": "./assets/raxoi/dishes/jamon.jpg",
+      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
       "available": true
     },
     {
