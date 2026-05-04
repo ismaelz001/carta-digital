@@ -42,6 +42,11 @@
     --ring: 14 79% 54%;
 
     --radius: 1rem;
+
+    /* Overlay / panel / surface — dark glass tokens */
+    --overlay: 20 18% 4%;
+    --panel:   20 11% 7%;
+    --surface: 20 8%  9%;
   }
 
   .dark {
@@ -88,7 +93,7 @@
   }
 
   h1, h2, h3, h4, .font-display {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: 'Rufina', Georgia, serif;
     font-optical-sizing: auto;
   }
 }
@@ -146,6 +151,15 @@
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+
+  /* ── Global focus-visible rings (a11y) ── */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid hsl(var(--primary) / 0.65);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   @media (prefers-reduced-motion: reduce) {

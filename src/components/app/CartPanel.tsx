@@ -16,14 +16,14 @@ export function CartPanel({ items, open, onClose, onRemove, onQtyChange }: Props
       {/* Backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-[#0D0B09]/75 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-40 bg-overlay/75 backdrop-blur-sm animate-fade-in"
           onClick={onClose}
         />
       )}
 
       {/* Panel */}
       <div
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-sm flex flex-col bg-[#141210] border-l border-white/8 transition-transform duration-300"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-sm flex flex-col bg-panel border-l border-white/8 transition-transform duration-300"
         style={{ transform: open ? "translateX(0)" : "translateX(100%)" }}
         aria-hidden={!open}
         role="dialog"

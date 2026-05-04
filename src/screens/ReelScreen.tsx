@@ -136,7 +136,7 @@ export function ReelScreen({
                 className={`px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-wide transition-all whitespace-nowrap ${
                   cat.id === activeCategory
                     ? "bg-primary text-white"
-                    : "text-white/50 bg-[#0D0B09]/45 backdrop-blur-sm hover:text-white/80"
+                    : "text-white/50 bg-overlay/45 backdrop-blur-sm hover:text-white/80"
                 }`}
               >
                 {cat.label}
@@ -169,7 +169,7 @@ export function ReelScreen({
         ))}
 
         {dishes.length === 0 && (
-          <div className="h-[100dvh] flex flex-col items-center justify-center gap-3">
+          <div role="status" aria-live="polite" className="h-[100dvh] flex flex-col items-center justify-center gap-3">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1.2">
               <polygon points="5 3 19 12 5 21 5 3"/>
             </svg>
@@ -183,7 +183,7 @@ export function ReelScreen({
         <div className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2">
           <button
             onClick={goPrev}
-            className={`w-11 h-11 rounded-full bg-[#0D0B09]/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === 0 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
+            className={`w-11 h-11 rounded-full bg-overlay/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === 0 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
             aria-label="Anterior"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -192,7 +192,7 @@ export function ReelScreen({
           </button>
           <button
             onClick={goNext}
-            className={`w-11 h-11 rounded-full bg-[#0D0B09]/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === dishes.length - 1 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
+            className={`w-11 h-11 rounded-full bg-overlay/80 border border-white/10 flex items-center justify-center transition-opacity ${currentIdx === dishes.length - 1 ? "opacity-20 pointer-events-none" : "opacity-80 hover:opacity-100"}`}
             aria-label="Siguiente"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -340,7 +340,7 @@ function ReelSlide({
           className="flex flex-col items-center gap-1"
           aria-label={isFav ? "Quitar de favoritos" : "Añadir a favoritos"}
         >
-          <div className="w-11 h-11 rounded-full bg-[#0D0B09]/55 backdrop-blur-sm flex items-center justify-center">
+          <div className="w-11 h-11 rounded-full bg-overlay/55 backdrop-blur-sm flex items-center justify-center">
             <svg width="20" height="20" viewBox="0 0 24 24" fill={isFav ? "hsl(var(--primary))" : "none"} stroke={isFav ? "hsl(var(--primary))" : "white"} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
             </svg>
@@ -356,7 +356,7 @@ function ReelSlide({
           className="flex flex-col items-center gap-1"
           aria-label="Ver descripción"
         >
-          <div className={`w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-sm transition-colors ${showInfo ? "bg-white/20" : "bg-[#0D0B09]/55"}`}>
+          <div className={`w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-sm transition-colors ${showInfo ? "bg-white/20" : "bg-overlay/55"}`}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <line x1="12" y1="8" x2="12" y2="12"/>
@@ -396,7 +396,7 @@ function ReelSlide({
             {dish.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="text-[10px] text-white/70 border border-white/15 px-2 py-0.5 rounded-full bg-[#0D0B09]/80"
+                className="text-[10px] text-white/70 border border-white/15 px-2 py-0.5 rounded-full bg-overlay/80"
               >
                 {tag}
               </span>

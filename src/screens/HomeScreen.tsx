@@ -122,7 +122,7 @@ export function HomeScreen({
           style={{ background: 'radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, hsl(20 7% 6%) 80%)' }}
         />
         <div
-          className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-[#1a1714] mb-4 flex items-center justify-center logo-glow"
+          className="relative z-10 w-[120px] h-[120px] landscape:w-[72px] landscape:h-[72px] rounded-full overflow-hidden border border-white/10 bg-card mb-4 flex items-center justify-center logo-glow"
         >
           {config.logo && !logoError ? (
             <img
@@ -257,7 +257,7 @@ export function HomeScreen({
 
                 {/* Video badge — top right */}
                 {hasVideo && (
-                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0D0B09]/80 px-2 py-1 rounded-full pointer-events-none">
+                  <div className="absolute top-3 right-3 flex items-center gap-1 bg-overlay/80 px-2 py-1 rounded-full pointer-events-none">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="white">
                       <polygon points="2,1 9,5 2,9"/>
                     </svg>
@@ -270,7 +270,7 @@ export function HomeScreen({
                 {/* Dish count — top left */}
                 {hasDishes && (
                   <div className="absolute top-3 left-3 pointer-events-none">
-                    <span className="text-[10px] text-white/65 bg-[#0D0B09]/80 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] text-white/65 bg-overlay/80 px-2 py-0.5 rounded-full">
                       {dishCount} {dishCount === 1 ? "plato" : "platos"}
                     </span>
                   </div>
