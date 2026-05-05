@@ -238,7 +238,7 @@
       "description": "Elige tu opción: + aceite + patatas fritas (11€) · + aceite + tomate + aros de cebolla (12.50€)",
       "price": 11,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/jamon.jpg",
+      "image": "./assets/raxoi/dishes/serrano.png",
       "available": true
     },
     {
