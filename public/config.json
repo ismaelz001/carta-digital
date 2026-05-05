@@ -229,7 +229,7 @@
       "description": "Elige tu opción: + patatas fritas (7€) · + aceite + tomate + aros de cebolla (7.50€) · + queso fundido + patatas + aros de cebolla (7.50€) · + queso fundido + aguacate + aros de cebolla (9€)",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/serrano.png",
+      "image": "./assets/raxoi/dishes/bocadillojamonserrano.png",
       "available": true
     },
     {
@@ -265,7 +265,7 @@
       "description": "Calamares + patatas fritas",
       "price": 9,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/calamar-ria.jpg",
+      "image": "./assets/raxoi/dishes/bocadillocalamares.png",
       "available": true
     },
     {
@@ -274,7 +274,7 @@
       "description": "Elige tu opción: + queso fundido + patatas fritas (7.50€) · + queso cheddar + beicon + tomate + aros de cebolla (9€)",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/tortilla.jpg",
+      "image": "./assets/raxoi/dishes/bocadillotortillafrancesa.png",
       "available": true
     },
     {
@@ -283,7 +283,7 @@
       "description": "Elige tu opción: a la plancha + aceite + aros de cebolla (10€) · a la plancha + queso fundido + patatas fritas (12€)",
       "price": 10,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
+      "image": "./assets/raxoi/dishes/bocadillopulpoqueso.png",
       "video": "./assets/raxoi/dishes/pulpoqueso.mp4",
       "popular": true,
       "available": true
