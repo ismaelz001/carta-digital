@@ -312,7 +312,12 @@
       "description": "Jamón serrano + jamón ibérico + vegetal + pollo — con patatas fritas y aros de cebolla",
       "price": 29.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/bocadillojamonserrano.png",
+      "images": [
+        "./assets/raxoi/dishes/vegetal.png",
+        "./assets/raxoi/dishes/pollobrasa.png",
+        "./assets/raxoi/dishes/zorza.png"
+      ],
       "available": true
     },
     {
