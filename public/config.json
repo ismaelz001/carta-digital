@@ -175,7 +175,8 @@
       "name": "Chocolate con churros",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/fondant.jpg",
+      "image": "./assets/raxoi/dishes/churros.jpg",
+      "video": "./assets/raxoi/dishes/churros.mp4",
       "available": true
     },
     {
@@ -274,7 +275,8 @@
       "name": "Tosta de jamón serrano + aceite + tomate + dos huevos a la plancha",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
+      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
       "available": true
     },
     {
@@ -282,7 +284,8 @@
       "name": "Revuelto de jamón serrano + tosta de queso de untar + aguacate",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/revuelto.jpg",
+      "video": "./assets/raxoi/dishes/revuelto.mp4",
       "available": true
     },
     {
@@ -290,7 +293,8 @@
       "name": "Revuelto de huevos + tosta de tomate Cherry + aguacate",
       "price": 7,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/revuelto.jpg",
+      "video": "./assets/raxoi/dishes/revuelto.mp4",
       "available": true
     },
     {
@@ -298,7 +302,8 @@
       "name": "Revuelto de huevos + queso país",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tabla-quesos.jpg",
+      "image": "./assets/raxoi/dishes/revuelto.jpg",
+      "video": "./assets/raxoi/dishes/revuelto.mp4",
       "available": true
     },
     {
@@ -306,7 +311,8 @@
       "name": "Revuelto de huevos + queso país + jamón serrano",
       "price": 6.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/revuelto.jpg",
+      "video": "./assets/raxoi/dishes/revuelto.mp4",
       "available": true
     },
     {
@@ -314,7 +320,8 @@
       "name": "Dos huevos a la plancha + beicon",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
+      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
       "available": true
     },
     {
@@ -322,7 +329,8 @@
       "name": "Dos huevos a la plancha + beicon",
       "price": 6,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
+      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
       "available": true
     },
     {
@@ -330,7 +338,8 @@
       "name": "Dos huevos a la plancha + jamón serrano + beicon + aguacate",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
+      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
+      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
       "available": true
     },
     {
@@ -338,7 +347,8 @@
       "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido",
       "price": 5.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
@@ -346,7 +356,8 @@
       "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido + huevo a la plancha",
       "price": 6.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
@@ -354,7 +365,8 @@
       "name": "Sandwich en pan brioche + beicon + queso fundido + aguacate laminado + huevo a la plancha",
       "price": 7.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
@@ -362,7 +374,8 @@
       "name": "Sandwich en pan brioche + beicon + queso fundido + huevo cocido",
       "price": 6.5,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
@@ -370,7 +383,8 @@
       "name": "Sandwich en pan brioche + tomate + aguacate laminado + brotes de ensalada + queso fundido + cebolla caramelizada",
       "price": 7,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
@@ -378,7 +392,8 @@
       "name": "Sandwich en pan brioche + jamón serrano + rodajas de tomate + queso país",
       "price": 7,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
+      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
       "available": true
     },
     {
