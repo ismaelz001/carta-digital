@@ -229,7 +229,7 @@
       "description": "Elige tu opción: + patatas fritas (7€) · + aceite + tomate + aros de cebolla (7.50€) · + queso fundido + patatas + aros de cebolla (7.50€) · + queso fundido + aguacate + aros de cebolla (9€)",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo-jamon-serrano.jpg",
+      "image": "./assets/raxoi/dishes/serrano.png",
       "available": true
     },
     {
@@ -247,7 +247,7 @@
       "description": "Elige tu opción: + queso fundido + tomate + aros de cebolla (7€) · + queso cheddar + tomate + huevo a la plancha + patatas (8€) · + huevo a la plancha + tomate + brotes + cebolla caramelizada + queso + aros (8.50€)",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo-beicon.jpg",
+      "image": "./assets/raxoi/dishes/beicon.png",
       "available": true
     },
     {
@@ -256,7 +256,7 @@
       "description": "Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas (7.50€)",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo-vegetal.jpg",
+      "image": "./assets/raxoi/dishes/vegetal.png",
       "available": true
     },
     {
@@ -294,7 +294,7 @@
       "description": "Elige tu opción: + patatas fritas (7.50€) · + queso fundido + aros de cebolla (8.50€)",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo-zorza.jpg",
+      "image": "./assets/raxoi/dishes/zorza.png",
       "available": true
     },
     {
@@ -303,7 +303,7 @@
       "description": "Elige tu opción: + queso fundido + aros de cebolla (7.50€) · + beicon + queso cheddar + tomate + cebolla caramelizada + patatas fritas (9€)",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo-pollo.jpg",
+      "image": "./assets/raxoi/dishes/pollobrasa.png",
       "available": true
     },
     {
