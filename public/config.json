@@ -511,6 +511,7 @@
       "price": 12,
       "category": "raciones",
       "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
+      "video": "./assets/raxoi/dishes/pulpoqueso.mp4",
       "popular": true,
       "available": true
     },
@@ -1003,6 +1004,7 @@
       "price": 22,
       "category": "raciones",
       "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
+      "video": "./assets/raxoi/dishes/pulpoqueso.mp4",
       "popular": true,
       "available": true
     },
