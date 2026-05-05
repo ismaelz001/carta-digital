@@ -380,164 +380,19 @@
       "available": true
     },
     {
-      "id": "tosta-n-1-65",
-      "name": "Aceite de oliva",
+      "id": "tosta",
+      "name": "Tosta",
+      "description": "Elige tu opción: aceite de oliva (3€) · aceite + tomate (4€) · aceite + tomate + jamón serrano (5.50€) · aceite + tomate + jamón serrano + parmesano (6.50€) · aceite + tomate + jamón serrano + mozzarella (6.50€) · aceite + jamón ibérico (8.50€) · aceite + tomate exprimido + jamón ibérico (9.50€) · queso de untar + frutos secos (5.50€) · queso de untar + frutos rojos (5.50€) · queso de untar + aguacate + tomate cherry + huevo a la plancha (7€) · aceite + aguacate + beicon + mozzarella (6.50€) · aguacate + huevo a la plancha + mozzarella + cebolla crujiente (7€) · tomate a la plancha + revuelto de jamón serrano + cebolla crujiente (7.50€) · aceite + tomate exprimido + beicon + queso fundido (6.50€) · tomate cherry + aguacate + huevo cocido + brotes + perlas de mozzarella + queso de untar (7€) · pulpo a la plancha + queso fundido + aceite de oliva (8.50€) · revuelto de huevos + beicon + aguacate + mozzarella (7€) · revuelto de gulas + alioli + tomate cherry + parmesano (8€) · guacamole + brotes + ventresca + pimiento piquillo + mozzarella + cebolla crujiente (8€) · Tabla variada nº 3+5+9+11+13 (29.50€)",
       "price": 3,
       "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-2-66",
-      "name": "Aceite de oliva + tomate",
-      "price": 4,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-3-67",
-      "name": "Aceite de oliva + tomate + jamón serrano",
-      "price": 5.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-4-68",
-      "name": "Aceite de oliva + tomate + jamón serrano + lascas de queso parmesano",
-      "price": 6.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-5-69",
-      "name": "Aceite de oliva + tomate + jamón serrano + mozzarella",
-      "price": 6.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-6-70",
-      "name": "Aceite de oliva + jamón ibérico",
-      "price": 8.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-7-71",
-      "name": "Aceite de oliva + tomate exprimido + jamón ibérico",
-      "price": 9.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-8-72",
-      "name": "Queso de untar + frutos secos",
-      "price": 5.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-9-73",
-      "name": "Queso de untar + frutos rojos",
-      "price": 5.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-10-74",
-      "name": "Queso de untar + aguacate + tomate Cherry + huevo a la plancha",
-      "price": 7,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-11-75",
-      "name": "1 Aceite de oliva + aguacate + beicon + mozzarella",
-      "price": 6.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-12-76",
-      "name": "Aguacate + huevo a la plancha + mozzarella + cebolla crujiente",
-      "price": 7,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-13-77",
-      "name": "Tomate a la plancha + revuelto de jamón serrano + cebolla crujiente",
-      "price": 7.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-14-78",
-      "name": "Aceite de oliva + tomate exprimido + beicon + queso fundido",
-      "price": 6.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-15-79",
-      "name": "Tomate Cherry + aguacate + huevo cocido + brotes de ensalada + perlas de mozzarella + queso de untar",
-      "price": 7,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-16-80",
-      "name": "Pulpo a la plancha + queso fundido país + aceite de oliva",
-      "price": 8.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
+      "image": "./assets/raxoi/dishes/tostaserrano.png",
+      "images": [
+        "./assets/raxoi/dishes/quesobeicon.png",
+        "./assets/raxoi/dishes/aguacate.png",
+        "./assets/raxoi/dishes/aceite.png",
+        "./assets/raxoi/dishes/tomate.png"
+      ],
       "popular": true,
-      "available": true
-    },
-    {
-      "id": "tosta-n-17-81",
-      "name": "Revuelto de huevos + beicon + aguacate + mozzarella",
-      "price": 7,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-18-82",
-      "name": "Revuelto de gulas + nuestra salsa alioli + tomate Cherry + lascas de parmesano",
-      "price": 8,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-19-83",
-      "name": "Guacamole + brotes de ensalada + ventresca + pimiento piquillo + mozzarella fresca + cebolla crujiente",
-      "price": 8,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "tosta-n-20-84",
-      "name": "Tabla de nuestras tostas variadas (nº 3 + nº 5 + nº 9 + nº 11 + nº 13)",
-      "price": 29.5,
-      "category": "tostas",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
       "available": true
     },
     {
