@@ -124,48 +124,9 @@
   "dishes": [
     {
       "id": "desayuno-n-1-1",
-      "name": "Croissant",
+      "name": "Cruasán",
+      "description": "Elige tu opción: natural (2.20€) · a la plancha (2.40€) · relleno de Nutella (4€) · relleno de crema Kinder (4€) · plancha + mantequilla + mermelada de fresa casera (4€) · plancha + pechuga de pavo + queso fundido (4€) · plancha + jamón serrano + queso fundido (4.50€)",
       "price": 2.2,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-2-2",
-      "name": "Croissant a la plancha",
-      "price": 2.4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-3-3",
-      "name": "Croissant relleno de Nutella",
-      "price": 4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-4-4",
-      "name": "Cruasán relleno de crema Kinder",
-      "price": 4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-5-5",
-      "name": "Cruasán a la plancha + pechuga de pavo + queso fundido",
-      "price": 4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-6-6",
-      "name": "Cruasán a la plancha + jamón serrano + queso fundido",
-      "price": 4.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/croissant.jpg",
       "available": true
@@ -204,14 +165,6 @@
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/tortitas.jpg",
       "popular": true,
-      "available": true
-    },
-    {
-      "id": "desayuno-n-11-11",
-      "name": "Cruasán a la plancha + mantequilla + mermelada de fresa casera",
-      "price": 4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
       "available": true
     },
     {
