@@ -28,6 +28,8 @@ export function HomeScreen({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const imgRefs = useRef<(HTMLElement | null)[]>([]);
   const [logoError, setLogoError] = useState(false);
+  const [showDishVideo, setShowDishVideo] = useState(false);
+  const dishVideoRef = useRef<HTMLVideoElement>(null);
 
   // Overdrive C: inner parallax on category card images
   useEffect(() => {
@@ -170,10 +172,7 @@ export function HomeScreen({
           if (!star) return null;
           return (
             <button
-              onClick={() => {
-                const cat = config.categories.find(c => c.id === star.category);
-                if (cat) onCategorySelect(star.category);
-              }}
+              onClick={() => setShowDishVideo(true)}
               className="animate-pill-in flex-shrink-0 mx-auto mb-4 flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm hover:border-primary/40 transition-colors"
             >
               <span className="text-[10px] uppercase tracking-[0.18em] text-white/40 font-medium">Hoy recomendamos</span>
@@ -186,6 +185,47 @@ export function HomeScreen({
             </button>
           );
         })()}
+
+        {/* ── Modal video Hoy recomendamos ── */}
+        {showDishVideo && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center"
+            style={{ background: "rgba(0,0,0,0.85)" }}
+            onClick={() => {
+              setShowDishVideo(false);
+              if (dishVideoRef.current) dishVideoRef.current.pause();
+            }}
+          >
+            <div
+              className="relative w-full max-w-[360px] rounded-2xl overflow-hidden"
+              style={{ aspectRatio: "9/16" }}
+              onClick={e => e.stopPropagation()}
+            >
+              <video
+                ref={dishVideoRef}
+                src="./assets/raxoi/hoy-recomendamos.mp4"
+                autoPlay
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                onEnded={() => setShowDishVideo(false)}
+              />
+              <button
+                onClick={() => {
+                  setShowDishVideo(false);
+                  if (dishVideoRef.current) dishVideoRef.current.pause();
+                }}
+                className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center"
+                aria-label="Cerrar"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+                  <line x1="2" y1="2" x2="12" y2="12"/>
+                  <line x1="12" y1="2" x2="2" y2="12"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-2 gap-3 px-4 pb-6">
           {config.categories.length === 0 ? (
