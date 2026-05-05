@@ -46,7 +46,7 @@
       "id": "desayunos",
       "label": "Desayunos",
       "subtitle": "Hasta media mañana",
-      "image": "./assets/raxoi/dishes/croissant.jpg"
+      "image": "./assets/raxoi/dishes/normal.png"
     },
     {
       "id": "bocadillos",
@@ -128,7 +128,12 @@
       "description": "Elige tu opción: natural (2.20€) · a la plancha (2.40€) · relleno de Nutella (4€) · relleno de crema Kinder (4€) · plancha + mantequilla + mermelada de fresa casera (4€) · plancha + pechuga de pavo + queso fundido (4€) · plancha + jamón serrano + queso fundido (4.50€)",
       "price": 2.2,
       "category": "desayunos",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
+      "image": "./assets/raxoi/dishes/normal.png",
+      "images": [
+        "./assets/raxoi/dishes/nutella.png",
+        "./assets/raxoi/dishes/yorkqueso.png",
+        "./assets/raxoi/dishes/pavo.png"
+      ],
       "available": true
     },
     {
@@ -219,165 +224,92 @@
       "available": true
     },
     {
-      "id": "bocadillo-n-1-37",
-      "name": "Jamón serrano + aceite de oliva + patatas fritas",
+      "id": "bocadillo-jamon-serrano",
+      "name": "Bocadillo de jamón serrano",
+      "description": "Elige tu opción: + patatas fritas (7€) · + aceite + tomate + aros de cebolla (7.50€) · + queso fundido + patatas + aros de cebolla (7.50€) · + queso fundido + aguacate + aros de cebolla (9€)",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/bocadillo-jamon-serrano.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-2-38",
-      "name": "Jamón serrano + aceite de oliva + tomate exprimido + aros de cebolla fritas",
-      "price": 7.5,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-3-39",
-      "name": "Jamón serrano + aceite de oliva + queso fundido + patatas fritasaros de cebolla",
-      "price": 7.5,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-4-40",
-      "name": "Jamón serrano + aceite de oliva + queso fundido + aguacate + aros de cebolla",
-      "price": 9,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-5-41",
-      "name": "Jamón ibérico + aceite de oliva + patatas fritas",
+      "id": "bocadillo-jamon-iberico",
+      "name": "Bocadillo de jamón ibérico",
+      "description": "Elige tu opción: + aceite + patatas fritas (11€) · + aceite + tomate + aros de cebolla (12.50€)",
       "price": 11,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
+      "image": "./assets/raxoi/dishes/jamon.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-6-42",
-      "name": "Jamón ibérico + aceite de oliva + tomate exprimido + aros de cebolla",
-      "price": 12.5,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-7-43",
-      "name": "Beicon + queso fundido + tomate + aros de cebolla",
+      "id": "bocadillo-beicon",
+      "name": "Bocadillo de beicon",
+      "description": "Elige tu opción: + queso fundido + tomate + aros de cebolla (7€) · + queso cheddar + tomate + huevo a la plancha + patatas (8€) · + huevo a la plancha + tomate + brotes + cebolla caramelizada + queso + aros (8.50€)",
       "price": 7,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/bocadillo-beicon.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-8-44",
-      "name": "Beicon + queso fundido cheddar + tomate + huevo a la plancha + patatas fritas",
-      "price": 8,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-9-45",
-      "name": "Beicon + huevo a la plancha + tomate + brotes de ensalada + cebolla caramelizada + queso fundido + aros de cebolla",
-      "price": 8.5,
-      "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-10-46",
-      "name": "Vegetal: Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas",
+      "id": "bocadillo-vegetal",
+      "name": "Bocadillo vegetal",
+      "description": "Lechuga + aceite de oliva + tomate + cebolla crujiente + ventresca + aguacate + patatas fritas (7.50€)",
       "price": 7.5,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg",
+      "image": "./assets/raxoi/dishes/bocadillo-vegetal.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-11-47",
-      "name": "Pulpo a la plancha + aceite de oliva + aros de cebolla",
-      "price": 10,
-      "category": "raciones",
-      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-12-48",
-      "name": "Pulpo a la plancha + aceite de oliva + queso fundido + patatas fritas",
-      "price": 12,
-      "category": "raciones",
-      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
-      "video": "./assets/raxoi/dishes/pulpoqueso.mp4",
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-13-49",
-      "name": "Zorza + patatas fritas",
-      "price": 7.5,
-      "category": "carnes",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-14-50",
-      "name": "Zorza + queso fundido + aros de cebolla",
-      "price": 8.5,
-      "category": "carnes",
-      "image": "./assets/raxoi/dishes/patatas-bravas.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-15-51",
-      "name": "Pechuga de pollo a la brasa + queso fundido + aros de cebolla",
-      "price": 7.5,
-      "category": "carnes",
-      "image": "./assets/raxoi/dishes/entrecot.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-16-52",
-      "name": "Pechuga de pollo a la brasa + beicon + queso cheddar fundido + tomate exprimido + cebolla caramelizada + patatas fritas",
-      "price": 9,
-      "category": "carnes",
-      "image": "./assets/raxoi/dishes/entrecot.jpg",
-      "available": true
-    },
-    {
-      "id": "bocadillo-n-17-53",
-      "name": "Calamares + patatas fritas",
+      "id": "bocadillo-calamares",
+      "name": "Bocadillo de calamares",
+      "description": "Calamares + patatas fritas",
       "price": 9,
       "category": "bocadillos",
       "image": "./assets/raxoi/dishes/calamar-ria.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-18-54",
-      "name": "Tortilla francesa + queso fundido + patatas fritas",
+      "id": "bocadillo-tortilla",
+      "name": "Bocadillo de tortilla francesa",
+      "description": "Elige tu opción: + queso fundido + patatas fritas (7.50€) · + queso cheddar + beicon + tomate + aros de cebolla (9€)",
       "price": 7.5,
       "category": "bocadillos",
       "image": "./assets/raxoi/dishes/tortilla.jpg",
       "available": true
     },
     {
-      "id": "bocadillo-n-19-55",
-      "name": "Tortilla francesa + queso fundido cheddar + beicon + tomate + aros de cebolla",
-      "price": 9,
+      "id": "bocadillo-pulpo",
+      "name": "Bocadillo de pulpo",
+      "description": "Elige tu opción: a la plancha + aceite + aros de cebolla (10€) · a la plancha + queso fundido + patatas fritas (12€)",
+      "price": 10,
       "category": "bocadillos",
-      "image": "./assets/raxoi/dishes/tortilla.jpg",
+      "image": "./assets/raxoi/dishes/pulpo-feira.jpg",
+      "video": "./assets/raxoi/dishes/pulpoqueso.mp4",
+      "popular": true,
       "available": true
     },
     {
-      "id": "bocadillo-n-20-56",
-      "name": "Tabla de nuestros bocadillos (nº 1 + nº 5 + nº 10 + nº 15) + patatas fritas + aros de cebolla",
+      "id": "bocadillo-zorza",
+      "name": "Bocadillo de zorza",
+      "description": "Elige tu opción: + patatas fritas (7.50€) · + queso fundido + aros de cebolla (8.50€)",
+      "price": 7.5,
+      "category": "bocadillos",
+      "image": "./assets/raxoi/dishes/bocadillo-zorza.jpg",
+      "available": true
+    },
+    {
+      "id": "bocadillo-pollo",
+      "name": "Bocadillo de pollo a la brasa",
+      "description": "Elige tu opción: + queso fundido + aros de cebolla (7.50€) · + beicon + queso cheddar + tomate + cebolla caramelizada + patatas fritas (9€)",
+      "price": 7.5,
+      "category": "bocadillos",
+      "image": "./assets/raxoi/dishes/bocadillo-pollo.jpg",
+      "available": true
+    },
+    {
+      "id": "bocadillo-tabla",
+      "name": "Tabla de bocadillos variados",
+      "description": "Jamón serrano + jamón ibérico + vegetal + pollo — con patatas fritas y aros de cebolla",
       "price": 29.5,
       "category": "bocadillos",
       "image": "./assets/raxoi/dishes/bocadillo.jpg",
@@ -638,7 +570,6 @@
       "price": 28,
       "category": "raciones",
       "image": "./assets/raxoi/dishes/jamon.jpg",
-      "video": "./assets/raxoi/dishes/jamon-cocina.mp4",
       "available": true
     },
     {
@@ -1638,7 +1569,7 @@
       "description": "",
       "price": 5.5,
       "category": "postres",
-      "image": "./assets/raxoi/dishes/croissant.jpg",
+      "image": "./assets/raxoi/dishes/nutella.png",
       "available": true
     },
     {
