@@ -52,7 +52,7 @@
       "id": "bocadillos",
       "label": "Bocadillos",
       "subtitle": "Pan recién hecho",
-      "image": "./assets/raxoi/dishes/bocadillo.jpg"
+      "image": "./assets/raxoi/dishes/bocadillojamonserrano.png"
     },
     {
       "id": "hamburguesas",
@@ -64,7 +64,7 @@
       "id": "tostas",
       "label": "Tostas",
       "subtitle": "Pan de masa madre",
-      "image": "./assets/raxoi/dishes/tostada.jpg"
+      "image": "./assets/raxoi/dishes/tostaserrano.png"
     },
     {
       "id": "raciones",
