@@ -13,6 +13,22 @@ export const DishModal = ({ dish, onClose }: Props) => {
   const config = useConfig();
   const [liked, setLiked] = useState(false);
   const [shared, setShared] = useState(false);
+  const [imgIdx, setImgIdx] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  // Galería auto-crossfade cuando hay images[]
+  useEffect(() => {
+    if (!dish?.images?.length) return;
+    const allImages = [dish.image, ...dish.images];
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setImgIdx((i) => (i + 1) % allImages.length);
+        setFading(false);
+      }, 400);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, [dish?.id, dish?.images]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -24,8 +40,13 @@ export const DishModal = ({ dish, onClose }: Props) => {
     };
   }, [dish, onClose]);
 
-  // Reset liked/shared al abrir otro plato
-  useEffect(() => { setLiked(false); setShared(false); }, [dish?.id]);
+  // Reset al abrir otro plato
+  useEffect(() => {
+    setLiked(false);
+    setShared(false);
+    setImgIdx(0);
+    setFading(false);
+  }, [dish?.id]);
 
   const handleShare = async () => {
     if (!dish) return;
@@ -40,6 +61,9 @@ export const DishModal = ({ dish, onClose }: Props) => {
   };
 
   if (!dish) return null;
+
+  const allImages = dish.images?.length ? [dish.image, ...dish.images] : [dish.image];
+  const currentImg = allImages[imgIdx];
 
   return (
     <div
@@ -67,10 +91,29 @@ export const DishModal = ({ dish, onClose }: Props) => {
             />
           ) : (
             <img
-              src={dish.image}
+              src={currentImg}
               alt={dish.name}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-400"
+              style={{ opacity: fading ? 0 : 1 }}
             />
+          )}
+
+          {/* Dots indicadores de galería */}
+          {!dish.video && allImages.length > 1 && (
+            <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+              {allImages.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setFading(true); setTimeout(() => { setImgIdx(i); setFading(false); }, 400); }}
+                  className="h-1.5 rounded-full transition-all duration-300"
+                  style={{
+                    width: i === imgIdx ? '20px' : '6px',
+                    background: i === imgIdx ? 'hsl(var(--primary))' : 'rgba(255,255,255,0.45)',
+                  }}
+                  aria-label={`Foto ${i + 1}`}
+                />
+              ))}
+            </div>
           )}
 
           {/* Badges sobre la imagen */}

@@ -142,25 +142,8 @@
     },
     {
       "id": "desayuno-n-8-8",
-      "name": "Tortitas + Nutella + frutas de temporada",
-      "price": 6.8,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tortitas.jpg",
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "desayuno-n-9-9",
-      "name": "Tortitas + crema Kínder + frutos rojos",
-      "price": 6.8,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tortitas.jpg",
-      "popular": true,
-      "available": true
-    },
-    {
-      "id": "desayuno-n-10-10",
-      "name": "Tortitas + Nutella + frutos secos",
+      "name": "Tortitas",
+      "description": "Elige tu relleno: Nutella + frutas de temporada (6.80€) · crema Kinder + frutos rojos (6.80€) · Nutella + frutos secos (4€)",
       "price": 4,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/tortitas.jpg",
@@ -169,63 +152,17 @@
     },
     {
       "id": "desayuno-n-12-12",
-      "name": "Tosta de queso de untar + frutos rojos",
-      "price": 5.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-13-13",
-      "name": "Tosta de mantequilla + mermelada de fresa casera",
-      "price": 4.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-14-14",
-      "name": "Tosta + aceite de oliva",
+      "name": "Tosta",
+      "description": "Elige tu opción: aceite de oliva (3€) · aceite + tomate (4€) · queso de untar + frutos rojos (5.50€) · mantequilla + mermelada de fresa casera (4.50€) · aceite + tomate + jamón serrano (6€) · guacamole + beicon + queso parmesano (7€) · aceite + revuelto de jamón + aguacate + mozzarella (7.50€)",
       "price": 3,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/tostada.jpg",
       "available": true
     },
     {
-      "id": "desayuno-n-15-15",
-      "name": "Tosta + aceite de oliva + tomate",
-      "price": 4,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-16-16",
-      "name": "Tosta + aceite de oliva + tomate + jamón serrano",
-      "price": 6,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-17-17",
-      "name": "Tosta + aceite de oliva + revuelto de jamón serrano + aguacate + mozzarella",
-      "price": 7.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-18-18",
-      "name": "Tosta de guacamole + beicon + queso parmesano",
-      "price": 7,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/tostada.jpg",
-      "available": true
-    },
-    {
       "id": "desayuno-n-19-19",
-      "name": "Tosta de jamón serrano + aceite + tomate + dos huevos a la plancha",
+      "name": "Tosta con huevos",
+      "description": "Jamón serrano + aceite + tomate + dos huevos a la plancha (7.50€)",
       "price": 7.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
@@ -234,35 +171,9 @@
     },
     {
       "id": "desayuno-n-20-20",
-      "name": "Revuelto de jamón serrano + tosta de queso de untar + aguacate",
-      "price": 7.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/revuelto.jpg",
-      "video": "./assets/raxoi/dishes/revuelto.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-21-21",
-      "name": "Revuelto de huevos + tosta de tomate Cherry + aguacate",
-      "price": 7,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/revuelto.jpg",
-      "video": "./assets/raxoi/dishes/revuelto.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-22-22",
-      "name": "Revuelto de huevos + queso país",
+      "name": "Revuelto",
+      "description": "Elige tu opción: queso país (6€) · queso país + jamón serrano (6.50€) · jamón serrano + tosta de queso de untar + aguacate (7.50€) · huevos + tosta de tomate cherry + aguacate (7€)",
       "price": 6,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/revuelto.jpg",
-      "video": "./assets/raxoi/dishes/revuelto.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-23-23",
-      "name": "Revuelto de huevos + queso país + jamón serrano",
-      "price": 6.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/revuelto.jpg",
       "video": "./assets/raxoi/dishes/revuelto.mp4",
@@ -270,26 +181,9 @@
     },
     {
       "id": "desayuno-n-24-24",
-      "name": "Dos huevos a la plancha + beicon",
+      "name": "Dos huevos a la plancha",
+      "description": "Elige tu opción: con beicon (6€) · con jamón serrano + beicon + aguacate (7.50€)",
       "price": 6,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
-      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-25-25",
-      "name": "Dos huevos a la plancha + beicon",
-      "price": 6,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
-      "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-26-26",
-      "name": "Dos huevos a la plancha + jamón serrano + beicon + aguacate",
-      "price": 7.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/huevos-plancha.jpg",
       "video": "./assets/raxoi/dishes/huevos-plancha.mp4",
@@ -297,7 +191,8 @@
     },
     {
       "id": "desayuno-n-27-27",
-      "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido",
+      "name": "Sandwich en pan brioche",
+      "description": "Elige tu opción: pechuga de pavo + queso fundido (5.50€) · pechuga de pavo + queso + huevo a la plancha (6.50€) · beicon + queso + huevo cocido (6.50€) · beicon + queso + aguacate laminado + huevo a la plancha (7.50€) · tomate + aguacate + brotes + queso + cebolla caramelizada (7€) · jamón serrano + tomate + queso país (7€)",
       "price": 5.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
@@ -305,69 +200,9 @@
       "available": true
     },
     {
-      "id": "desayuno-n-28-28",
-      "name": "Sandwich en pan brioche + pechuga de pavo + queso fundido + huevo a la plancha",
-      "price": 6.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
-      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-29-29",
-      "name": "Sandwich en pan brioche + beicon + queso fundido + aguacate laminado + huevo a la plancha",
-      "price": 7.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
-      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-30-30",
-      "name": "Sandwich en pan brioche + beicon + queso fundido + huevo cocido",
-      "price": 6.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
-      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-31-31",
-      "name": "Sandwich en pan brioche + tomate + aguacate laminado + brotes de ensalada + queso fundido + cebolla caramelizada",
-      "price": 7,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
-      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-32-32",
-      "name": "Sandwich en pan brioche + jamón serrano + rodajas de tomate + queso país",
-      "price": 7,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/sandwich-brioche.jpg",
-      "video": "./assets/raxoi/dishes/sandwich-brioche.mp4",
-      "available": true
-    },
-    {
       "id": "desayuno-n-33-33",
-      "name": "Bowl de yogur + frutos secos",
-      "price": 7.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bowl-yogur.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-34-34",
-      "name": "Bowl de yogur + frutas de temporada",
-      "price": 7.5,
-      "category": "desayunos",
-      "image": "./assets/raxoi/dishes/bowl-yogur.jpg",
-      "available": true
-    },
-    {
-      "id": "desayuno-n-35-35",
-      "name": "Bowl de yogur + frutos rojos",
+      "name": "Bowl de yogur",
+      "description": "Elige tu opción: con frutos secos · con frutas de temporada · con frutos rojos — todos a 7.50€",
       "price": 7.5,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/bowl-yogur.jpg",
@@ -375,7 +210,8 @@
     },
     {
       "id": "desayuno-n-36-36",
-      "name": "Tabla de nuestros desayunos variados (dos tostas + un sandwich + tortitas + yogur con frutos secos)",
+      "name": "Tabla de desayunos variados",
+      "description": "Dos tostas + un sandwich + tortitas + yogur con frutos secos",
       "price": 22,
       "category": "desayunos",
       "image": "./assets/raxoi/dishes/tortitas.jpg",
